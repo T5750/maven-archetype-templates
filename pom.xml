@@ -6,7 +6,11 @@
 
     <groupId>com.evangel</groupId>
     <artifactId>maven-archetype-templates</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>SpringMvcHibernateXML</module>
+    </modules>
 
 
 </project>
