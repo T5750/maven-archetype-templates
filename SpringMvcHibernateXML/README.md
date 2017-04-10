@@ -17,10 +17,6 @@
 * web页面具体路径：http://localhost:8080/SpringMvcHibernateXML
 * 点击home后，可以展示用户列表
 
-## Remarks
-
-例子代码比较简单，仅供参考……
-
 ## Links
 
 - [Spring 4和Hibernate 4集成教程第1部分：XML配置](http://blog.csdn.net/evangel_z/article/details/69791766)

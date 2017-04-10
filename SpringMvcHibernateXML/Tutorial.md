@@ -1,6 +1,6 @@
 在企业Java应用程序开发中，也许Spring和Hibernate集成是大多数程序员正在寻找和面对的最需要的主题之一。 Spring是领先的企业应用程序框架，Hibernate是领先的ORM框架，所以这两者的组合将是开发强大的企业应用程序的首选。
 
-这是一个分步教程，可以帮助您以清晰简洁的方式轻松构建Spring-Hibernate应用程序。在第一部分中，我们演示如何编写一个简单的Spring MVC应用程序，该应用程序显示MySQL数据库中的用户列表。 DAO实现使用Hibernate的SessionFactory来查询数据库，而不是使用<a href="http://www.codejava.net/frameworks/spring/spring-mvc-with-jdbctemplate-example" target="_blank">JdbcTemplate。
+这是一个分步教程，可以帮助您以清晰简洁的方式轻松构建Spring-Hibernate应用程序。在第一部分中，我们演示如何编写一个简单的Spring MVC应用程序，该应用程序显示MySQL数据库中的用户列表。 DAO实现使用Hibernate的SessionFactory来查询数据库，而不是使用<a href="http://www.codejava.net/frameworks/spring/spring-mvc-with-jdbctemplate-example" target="_blank">JdbcTemplate</a>。
 
 在演示应用中使用以下配置方法：
 
@@ -25,6 +25,7 @@
 
 ## 2.建立项目
 让我们使用Spring Tool Suite IDE创建一个Spring MVC项目（参见例子：<a href="http://www.codejava.net/frameworks/spring/spring-mvc-beginner-tutorial-with-spring-tool-suite-ide" target="_blank">Spring MVC beginner tutorial with Spring Tool Suite IDE</a>），将其命名为**SpringMvcHibernateXML**。
+
 ###创建数据库
 执行以下MySQL脚本以创建含表名为**users**的数据库**usersdb**：
 ``` sql
@@ -37,12 +38,16 @@ CREATE TABLE `users` (
   `email` varchar(45) NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1
-```
+``` 
 记住要插入一些虚拟数据来进行测试。
+
 ###项目结构
 以下屏幕截图显示了项目的最终结构：
+
 ![这里写图片描述](http://img.blog.csdn.net/20170410093008088?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZXZhbmdlbF96/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 **注意**：完成本教程后，您将创建一个如上所述的项目结构。
+
 ###Maven依赖关系
 声明Java和Spring框架的版本：
 ``` xml
@@ -125,6 +130,7 @@ CREATE TABLE `users` (
 >本书： <a href="http://www.amazon.com/gp/product/1480013978/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1480013978&linkCode=as2&tag=codejava-article-20" target="_blank">Getting started with Spring Framework</a>帮助您掌握所有主要概念，如Spring核心模块，依赖注入，Spring AOP，注释驱动开发等。
 
 ##3.编写模型类并配置Hibernate映射
+
 ###编写模型类
 在包`net.codejava.spring.model`中创建一个名为`User.java`的新类，其中包含以下源代码：
 ``` java
@@ -140,6 +146,7 @@ public class User {
 }
 ``` 
 该模型类用于将表用户和数据库映射到普通的Java对象（POJO）。
+
 ###为模型类创建Hibernate XML映射
 我们需要创建一个Hibernate XML映射文件，将`User`类映射到数据库中的`users`表。 使用以下XML代码创建与`User`类相同的包下的`User.hbm.xml`文件：
 ``` xml
@@ -159,6 +166,7 @@ public class User {
 </hibernate-mapping>
 ``` 
 **注意**：有关Hibernate XML映射的更多信息，请参阅：<a href="http://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-xml-mapping-example" target="_blank">Hibernate One-to-Many XML Mapping Example</a>。
+
 ###创建Hibernate XML配置文件
 在classpath的根目录（在项目的src目录下）中创建`hibernate.cfg.xml`文件，并使用以下XML代码：
 ``` xml
@@ -177,6 +185,7 @@ public class User {
 此Hibernate配置文件声明需要映射哪些资源（在本例中为`User.hbm.xml`文件）。
 
 ##4.编写DAO类
+
 ###编写UserDAO界面
 为`User`类创建一个非常简单的DAO接口，如下面的`UserDAO.java`类：
 ``` java
@@ -190,6 +199,7 @@ public interface UserDAO {
 }
 ``` 
 该接口只声明一个从数据库中检索所有用户的`list()`方法。
+
 ###编写UserDAO实现
 下面是我们对`UserDAO`接口的一个实现代码，`UserDAOImpl`类如下：
 ``` java
@@ -237,6 +247,7 @@ public class UserDAOImpl implements UserDAO {
     <property name="suffix" value=".jsp" />
 </bean>
 ``` 
+
 ###配置DataSource Bean
 我们使用Apache Commons DBCP作为具有连接池功能的数据源：
 ``` xml
@@ -248,6 +259,7 @@ public class UserDAOImpl implements UserDAO {
 </bean>
 ``` 
 **注意**：根据您的环境中的值更改数据库URL，用户名和密码。 该数据源将被注入到下面的`SessionFactory` bean中。
+
 ###配置SessionFactory Bean
 Spring 4通过`LocalSessionFactoryBean`提供对Hibernate 4的S`essionFactory`的支持，该实例是一个`FactoryBean`，它创建一个Hibernate的`SessionFactory`，然后将其注入到基于Hibernate的DAO bean中。 这是bean声明：
 ``` xml
@@ -257,6 +269,7 @@ Spring 4通过`LocalSessionFactoryBean`提供对Hibernate 4的S`essionFactory`�
 </bean>
 ``` 
 请注意，此`LocalSessionFactoryBean`需要先前声明的`DataSource` bean。 `configLocation`属性指定将搜索Hibernate配置文件的位置。 在这种情况下，它是类路径中的`hibernate.cfg.xml`文件。
+
 ###配置TransactionManager Bean
 以下声明用于`SessionFactory`的自动事务支持：
 ``` xml
@@ -266,6 +279,7 @@ Spring 4通过`LocalSessionFactoryBean`提供对Hibernate 4的S`essionFactory`�
 </bean>
 ``` 
 如`UserDAOImpl`类中所述，我们可以通过使用`@Transactional`注释来指定事务支持，用于事务感知方法。
+
 ###配置DAO Bean
 最后，我们的`UserDAOImpl` bean的配置很简单：
 ``` xml
@@ -351,7 +365,9 @@ public class HomeController {
 *http://localhost:8080/SpringMvcHibernateXML*
 
 如果一切正常，您会看到以下结果：
+
 ![这里写图片描述](http://img.blog.csdn.net/20170410101620356?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZXZhbmdlbF96/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 恭喜！ 您已经完成了Spring-Hibernate Integration系列的第一部分。 您可以下载本项目的源代码并进行实践。 还提供了可部署的WAR包，方便您使用。
  
 **参见第2部分**：[Spring 4 and Hibernate 4 Integration Tutorial Part 2: Java-based Configuration][1]
@@ -374,6 +390,7 @@ public class HomeController {
 ###源代码
  - <a href="http://www.codejava.net/download-attachment?fid=315" target="_blank">SpringMvcHibernateXML.war</a>	[Deploy-read WAR]	
  - <a href="http://www.codejava.net/download-attachment?fid=314" target="_blank">SpringMvcHibernateXML.zip</a>	[Eclipse-Maven Project] 
+ - <a href="https://github.com/T5750/maven-archetype-templates/tree/master/SpringMvcHibernateXML" target="_blank">SpringMvcHibernateXML</a>	[GitHub IDEA-Maven Project] 
 
 ###原文传送门
 <a href="http://www.codejava.net/frameworks/spring/spring-4-and-hibernate-4-integration-tutorial-part-1-xml-configuration" target="_blank">Spring 4 and Hibernate 4 Integration Tutorial Part 1: XML Configuration</a>

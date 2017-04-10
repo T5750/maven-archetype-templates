@@ -6,16 +6,16 @@ This repository contains commonly used Maven Archetype Templates.
 Installation:
 -------------
 1. Check out the templates
-2. From command line goto project root folder. For ex: C:/Apps/git/maven-archetype-templates/quickstart-web-app
+2. From command line goto project root folder. For ex: C:/Apps/git/maven-archetype-templates/SpringMvcHibernateXML
 3. Execute the following maven commands to install maven archetype:
 
-    quickstart-web-app> mvn clean
+    SpringMvcHibernateXML> mvn clean
 
-    quickstart-web-app> mvn archetype:create-from-project
+    SpringMvcHibernateXML> mvn archetype:create-from-project
 
-    quickstart-web-app> cd target/generated-sources/archetype
+    SpringMvcHibernateXML> cd target/generated-sources/archetype
 
-    quickstart-web-app/target/generated-sources/archetype> mvn clean install
+    SpringMvcHibernateXML/target/generated-sources/archetype> mvn clean install
 
 
 4. Repeat the same steps for all the archetype templates.
