@@ -42,7 +42,7 @@
 7. Testing the Application
 
 ## Result
-![Project Structure](http://img.my.csdn.net/uploads/201704/11/1491876303_9434.png)
+![Result](http://img.my.csdn.net/uploads/201704/11/1491876303_9434.png)
 
 ## Links
 
