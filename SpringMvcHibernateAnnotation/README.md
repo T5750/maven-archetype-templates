@@ -21,9 +21,13 @@
 * web页面具体路径：http://localhost:8080/SpringMvcHibernateAnnotation
 * 在首页点击User List后展示用户列表，可进行新增修改删除用户操作
 * 在首页点击Welcome to the Apache ActiveMQ!后进入欢迎界面，可进行发送接收消息
+* 配置QueueMessageListener.java，负责自动监听ActiveMQ中的队列消息
+> ActiveMQ管理员控制台 http://localhost:8161/admin/
 
 ## Result
 ![Result](http://img.my.csdn.net/uploads/201704/12/1491966044_1604.png)
+![Result](http://img.my.csdn.net/uploads/201704/12/1491977376_3927.png)
+![Result](http://img.my.csdn.net/uploads/201704/12/1491977377_1902.png)
 
 ## Links
 - [Spring4 MVC Hibernate4集成 Annotation](http://www.cnblogs.com/leiOOlei/p/3780290.html)
