@@ -1,12 +1,14 @@
 # Spring 4和Hibernate 4集成教程第2部分：基于Java的配置
 ---
 ## Runtime Environment
- - Java 6
- - Spring framework 4.0.3.RELEASED
- - Hibernate ORM 4.3.5.Final
- - IntelliJ IDEA 14.0.5
- - Maven 3
- - **Tomcat 7**
+ - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+ - [Java EE: Servlet 3.1, JSP 2.3, JSTL 1.2](http://www.oracle.com/technetwork/java/javaee/overview/index.html)
+ - [Spring framework 4.0.3.RELEASED](http://projects.spring.io/spring-framework)
+ - [Hibernate ORM 4.3.5.Final](http://hibernate.org/orm)
+ - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
+ - [Maven 3](http://maven.apache.org/)
+ - [MySQL 5.5](http://www.mysql.com/)
+ - [**Tomcat 7**](http://tomcat.apache.org/)
  > **NOTE**: Can not run in Tomcat 6!
 
 ## Project Structure
