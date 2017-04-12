@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="Struts2SpringDemo" namespace="/" extends="struts-default">
+
+        <action name="login" class="loginActionBean">
+            <result name="input">/LoginForm.jsp</result>
+            <result name="success">/LoginSuccess.jsp</result>
+            <result name="error">/LoginError.jsp</result>
+        </action>
+
+    </package>
+</struts>
