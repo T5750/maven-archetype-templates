@@ -42,19 +42,19 @@ In case you typed wrong username/password, the error page gets displayed:
 ## Links
 - [Spring 4 and Struts 2 Integration Tutorial Part 1: XML Configuration](http://www.codejava.net/frameworks/spring/spring-4-and-struts-2-integration-tutorial-part-1-xml-configuration)
 
-#### Related Tutorials:
+### Related Tutorials:
 - [Spring 4 and Hibernate 4 Integration Tutorial Part 1: XML Configuration](http://www.codejava.net/frameworks/spring/spring-4-and-hibernate-4-integration-tutorial-part-1-xml-configuration)
 - [Spring 4 and Hibernate 4 Integration Tutorial Part 2: Java-based Configuration](http://www.codejava.net/frameworks/spring/spring-4-and-hibernate-4-integration-tutorial-part-2-java-based-configuration)
 - [Struts 2 - Spring 4 - Hibernate 4 Integration Tutorial Part 1 - XML Configuration](http://www.codejava.net/frameworks/struts/struts-2-spring-4-hibernate-4-integration-tutorial-part-1-xml-configuration)
 - [Struts 2 - Spring 4 - Hibernate 4 Integration Tutorial Part 2 - Java-Based and Annotations](http://www.codejava.net/frameworks/struts/struts-spring-hibernate-integration-tutorial-part-2-java-based-and-annotations)
 
-#### You may be also interested in:
+### You may be also interested in:
 - [Understanding the core of Spring framework](http://www.codejava.net/frameworks/spring/understanding-the-core-of-spring-framework)
 - [Spring MVC beginner tutorial with Spring Tool Suite IDE](http://www.codejava.net/frameworks/spring/spring-mvc-beginner-tutorial-with-spring-tool-suite-ide)
 - [Introduction to Struts 2 framework](http://www.codejava.net/frameworks/struts/introduction-to-struts-2-framework)
 - [Struts2 beginner tutorial (Eclipse + Tomcat + XML)](http://www.codejava.net/frameworks/struts/struts2-beginner-tutorial-eclipse-tomcat-xml)
 
-#### References
+### References
 - [Struts’ Spring Plugin](https://struts.apache.org/release/2.3.x/docs/spring-plugin.html)
 - [Spring: Integrating with other web frameworks](http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/web-integration.html)
 
