@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="Struts2Spring4Hibernate4Demo" namespace="/" extends="struts-default">
+
+        <action name="listProduct" class="listProductActionBean">
+            <result name="success">/WEB-INF/views/ProductList.jsp</result>
+        </action>
+
+    </package>
+</struts>

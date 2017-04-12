@@ -13,6 +13,7 @@
         <module>SpringMvcHibernateJavaBased</module>
         <module>SpringMvcHibernateAnnotation</module>
         <module>SpringStrutsIntegrationDemo</module>
+        <module>Struts2Spring4Hibernate4XML</module>
     </modules>
 
 
