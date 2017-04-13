@@ -45,10 +45,22 @@
 ![Result](http://img.my.csdn.net/uploads/201704/11/1491876303_9434.png)
 
 ## Links
-
 - [Spring 4和Hibernate 4集成教程第1部分：XML配置](http://blog.csdn.net/evangel_z/article/details/69791766)
-
 - [Spring 4 and Hibernate 4 Integration Tutorial Part 1: XML Configuration](http://www.codejava.net/frameworks/spring/spring-4-and-hibernate-4-integration-tutorial-part-1-xml-configuration)
+
+### Related Tutorials:
+- [Spring 4 and Struts 2 Integration Tutorial Part 1: XML Configuration](http://www.codejava.net/frameworks/spring/spring-4-and-struts-2-integration-tutorial-part-1-xml-configuration)
+- [Spring 4 and Struts 2 Integration Tutorial Part 2: Java-Based and Annotations](http://www.codejava.net/frameworks/spring/spring-4-and-struts-2-integration-tutorial-part-2-java-based-and-annotations)
+- [Struts 2 - Spring 4 - Hibernate 4 Integration Tutorial Part 1 - XML Configuration](http://www.codejava.net/frameworks/struts/struts-2-spring-4-hibernate-4-integration-tutorial-part-1-xml-configuration)
+- [Struts 2 - Spring 4 - Hibernate 4 Integration Tutorial Part 2 - Java-Based and Annotations](http://www.codejava.net/frameworks/struts/struts-spring-hibernate-integration-tutorial-part-2-java-based-and-annotations)
+
+### You may be also interested in:
+- [Understanding the core of Spring framework](http://www.codejava.net/frameworks/spring/understanding-the-core-of-spring-framework)
+- [Spring MVC beginner tutorial with Spring Tool Suite IDE](http://www.codejava.net/frameworks/spring/spring-mvc-beginner-tutorial-with-spring-tool-suite-ide)
+- [Getting Started With Hibernate Annotations](http://www.codejava.net/frameworks/hibernate/getting-started-with-hibernate-annotations)
+
+### References
+- [Object Relational Mapping (ORM) Data Access](http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/orm.html#orm-hibernate)
 
 ## Copyright
 

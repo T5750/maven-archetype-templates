@@ -7,11 +7,11 @@
  - [Maven 3](http://maven.apache.org/)
 
 ## Quick Process
-1.Maven Projects
-2.mybatis-generator
-3.Plugins
-4.mybatis-generator
-5.mybatis-generator:generate
+1. Maven Projects
+2. mybatis-generator
+3. Plugins
+4. mybatis-generator
+5. mybatis-generator:generate
 
 ## MyBatis GeneratorXML Configuration File Reference
    In the most common use case, MyBatis Generator (MBG) is driven by an XML configuration file. The configuration file tells MBG:
