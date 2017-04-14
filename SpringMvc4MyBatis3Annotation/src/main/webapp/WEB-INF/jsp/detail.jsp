@@ -9,12 +9,12 @@
     <title>Show user</title>
 </head>
 <body>
-<c:out value="${user.id }"></c:out>
+<c:out value="${user.userId }"></c:out>
 <br>
-<c:out value="${user.userName }"></c:out>
+<c:out value="${user.username }"></c:out>
 <br>
 <c:out value="${user.password }"></c:out>
 <br>
-<c:out value="${user.age }"></c:out>
+<c:out value="${user.email }"></c:out>
 </body>
 </html>

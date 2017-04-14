@@ -20,7 +20,7 @@
 * 首页点击Show User List进入用户列表页面，可进行新增修改删除用户操作
 
 ## Result
-![Result](http://img.my.csdn.net/uploads/201704/13/1492071375_2812.png)
+![Result](http://img.my.csdn.net/uploads/201704/14/1492132405_8083.png)
 
 ## Links
 - [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)

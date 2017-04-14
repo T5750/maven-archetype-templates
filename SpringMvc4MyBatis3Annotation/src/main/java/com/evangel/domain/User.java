@@ -1,25 +1,25 @@
 package com.evangel.domain;
 
 public class User {
-	private Integer id;
-	private String userName;
+	private Integer userId;
+	private String username;
 	private String password;
-	private Integer age;
+	private String email;
 
-	public Integer getId() {
-		return id;
+	public Integer getUserId() {
+		return userId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName == null ? null : userName.trim();
+	public void setUsername(String username) {
+		this.username = username == null ? null : username.trim();
 	}
 
 	public String getPassword() {
@@ -30,11 +30,11 @@ public class User {
 		this.password = password == null ? null : password.trim();
 	}
 
-	public Integer getAge() {
-		return age;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setEmail(String email) {
+		this.email = email == null ? null : email.trim();
 	}
 }

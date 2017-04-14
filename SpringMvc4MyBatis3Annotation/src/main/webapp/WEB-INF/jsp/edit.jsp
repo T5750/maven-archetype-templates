@@ -10,25 +10,25 @@
     <title>Edit user</title>
 </head>
 <body>
-<c:url var="saveUrl" value="/user/save/${userAttribute.id }"/>
+<c:url var="saveUrl" value="/user/save/${userAttribute.userId }"/>
 <%--<form:form modelAttribute="userAttribute" action="${saveUrl }">--%>
 <form action="${saveUrl }" method="post">
     <table>
         <tr>
-            <td>ID:</td>
-            <td><input name="id" readonly="true" value="${userAttribute.id }"/></td>
+            <td>UserId:</td>
+            <td><input name="userId" readonly="true" value="${userAttribute.userId }"/></td>
         </tr>
         <tr>
             <td>Username:</td>
-            <td><input name="userName" value="${userAttribute.userName }"/></td>
+            <td><input name="username" value="${userAttribute.username }"/></td>
         </tr>
         <tr>
             <td>Password:</td>
             <td><input name="password" value="${userAttribute.password }" type="password"/></td>
         </tr>
         <tr>
-            <td>Age:</td>
-            <td><input name="age" value="${userAttribute.age }"/></td>
+            <td>Email:</td>
+            <td><input name="email" value="${userAttribute.email }"/></td>
         </tr>
     </table>
     <input type="submit" value="Save">

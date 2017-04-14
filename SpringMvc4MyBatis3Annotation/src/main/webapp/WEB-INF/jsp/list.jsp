@@ -12,20 +12,20 @@
 <a href="add">Add</a>
 <table>
     <tr>
-        <td>ID</td>
+        <td>UserId</td>
         <td>Username</td>
         <td>Password</td>
-        <td>Age</td>
+        <td>Email</td>
     </tr>
     <c:forEach var="user" items="${userList}">
         <tr>
-            <td>${user.id }</td>
-            <td>${user.userName }</td>
+            <td>${user.userId }</td>
+            <td>${user.username }</td>
             <td>${user.password }</td>
-            <td>${user.age }</td>
-            <td><a href="show/${user.id }">详细</a></td>
-            <td><a href="edit/${user.id }">编辑</a></td>
-            <td><a href="del/${user.id }">删除</a></td>
+            <td>${user.email }</td>
+            <td><a href="show/${user.userId }">详细</a></td>
+            <td><a href="edit/${user.userId }">编辑</a></td>
+            <td><a href="del/${user.userId }">删除</a></td>
         </tr>
     </c:forEach>
 </table>

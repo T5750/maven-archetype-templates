@@ -9,11 +9,11 @@
 </head>
 <body>
 <form action="add" method="post">
-    Name:<input id="userName" name="userName" type="text"/>
+    Username:<input id="username" name="username" type="text"/>
     <br>
     Password:<input id="password" name="password" type="password"/>
     <br>
-    Age:<input id="age" name="age" type="text"/>
+    Email:<input id="email" name="email" type="text"/>
     <br>
     <input type="submit" value="提交">
 </form>
