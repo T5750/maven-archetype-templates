@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="consumer"></dubbo:application>
+    <!-- 使用zookeeper注册中心暴露服务地址  -->
+    <dubbo:registry id="gege_center" protocol="dubbo" address="${dubbo.gege.address}"/>
+    <dubbo:provider group="${dubbo.gege.group}" version="${dubbo.gege.version}" registry="gege_center"/>
+    <dubbo:consumer group="${dubbo.gege.group}" version="${dubbo.gege.version}" registry="gege_center" check="false"/>
+
+    <!-- 声明需要引用的服务接口  -->
+    <dubbo:reference id="testService" interface="com.gege.service.ITestService" retries="${dubbo.gege.retries}"
+                     timeout="${dubbo.gege.timeout}"/>
+</beans>

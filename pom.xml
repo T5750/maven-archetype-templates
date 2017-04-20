@@ -16,6 +16,7 @@
         <module>Struts2Spring4Hibernate4XML</module>
         <module>SpringMVC4MyBatis3Annotation</module>
         <module>mybatis-generator</module>
+        <module>SpringMvcDubbo</module>
     </modules>
 
 
