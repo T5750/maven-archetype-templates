@@ -28,9 +28,10 @@
 5. 消费者工程的ConsumerServiceTest下，右键运行，就可以查看是否成功，正常结果：gege
 
 ## Links
+- [Dubbo 用户指南](http://dubbo.io/User+Guide-zh.htm)
 - [Dubbo+SpringMVC工程创建详解（附工程文件） by tuicool](http://www.tuicool.com/articles/jiiuMrf)
 - [Dubbo+SpringMVC工程创建详解（附工程文件） by AppZone](http://zoeminghong.github.io/2016/05/17/dubbo20160517/?utm_source=tuicool&utm_medium=referral)
-- [Dubbo 用户指南](http://dubbo.io/User+Guide-zh.htm)
+- [Dubbo与Zookeeper、SpringMVC整合和使用（负载均衡、容错）](http://blog.csdn.net/congcong68/article/details/41113239)
 
 ## Copyright
 Copyright 2016-2017 evangel_z.
