@@ -17,7 +17,8 @@
         <module>SpringMVC4MyBatis3Annotation</module>
         <module>mybatis-generator</module>
         <module>SpringMvcDubbo</module>
-    </modules>
+		<module>dubbo-wusc</module>
+	</modules>
 
 
 </project>
