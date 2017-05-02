@@ -13,7 +13,7 @@
 	<groupId>wusc.edu.demo</groupId>
 	<artifactId>edu-demo</artifactId>
 	<version>${edu-demo.version}</version>
-	<!--<packaging>war</packaging>-->
+	<packaging>war</packaging>
 
 	<name>edu-demo</name>
 	<url>http://maven.apache.org</url>

@@ -15,6 +15,9 @@
 	<modules>
 		<module>edu-common-parent</module>
 		<module>edu-demo</module>
+		<module>edu-facade-user</module>
+		<module>edu-service-user</module>
+		<module>edu-web-boss</module>
 	</modules>
 
 
