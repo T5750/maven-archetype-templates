@@ -14,11 +14,11 @@ import wusc.edu.facade.user.common.page.PageBean;
 import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.facade.user.enums.UserStatusEnum;
 import wusc.edu.facade.user.enums.UserTypeEnum;
-import wusc.edu.service.user.biz.PmsUserBiz;
+import wusc.edu.facade.user.service.PmsUserFacade;
 import wusc.edu.web.boss.base.BaseAction;
 
 /**
- * 
+ *
  * @描述: 用户信息管理 .
  * @作者: WuShuicheng .
  * @创建时间: 2015-1-25,下午9:36:46 .
@@ -27,20 +27,20 @@ import wusc.edu.web.boss.base.BaseAction;
 @Scope("prototype")
 public class PmsUserAction extends BaseAction {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 5588682213578275029L;
 	private static Log log = LogFactory.getLog(PmsUserAction.class);
 	@Autowired
-	private PmsUserBiz pmsUserBiz;
+	private PmsUserFacade pmsUserFacade;
 
 	// /////////////////////////////////// 用户管理
 	// //////////////////////////////////////////
 	/**
 	 * 分页列出用户信息，并可按登录名获姓名进行查询.
-	 * 
+	 *
 	 * @return listPmsUser or operateError .
-	 * 
+	 *
 	 */
 	public String listPmsUser() {
 		try {
@@ -48,7 +48,8 @@ public class PmsUserAction extends BaseAction {
 			paramMap.put("userNo", getString("userNo")); // 用户登录名（精确查询）
 			paramMap.put("userName", getString("userName")); // 用户姓名（模糊查询）
 			paramMap.put("status", getInteger("status")); // 状态
-			PageBean pageBean = pmsUserBiz.listPage(getPageParam(), paramMap);
+			PageBean pageBean = pmsUserFacade.listPage(getPageParam(),
+					paramMap);
 			this.pushData(pageBean);
 			PmsUser pmsUser = getLoginedUser();// 获取当前登录用户对象
 			this.putData("currUserNo", pmsUser.getUserNo());
@@ -67,13 +68,13 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 查看用户详情.
-	 * 
+	 *
 	 * @return .
 	 */
 	public String viewPmsUserUI() {
 		try {
 			Long userId = getLong("id");
-			PmsUser pmsUser = pmsUserBiz.getById(userId);
+			PmsUser pmsUser = pmsUserFacade.getById(userId);
 			if (pmsUser == null) {
 				return operateError("无法获取要查看的数据");
 			}
@@ -91,7 +92,7 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 转到添加用户页面 .
-	 * 
+	 *
 	 * @return addPmsUserUI or operateError .
 	 */
 	public String addPmsUserUI() {
@@ -106,7 +107,7 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 保存一个用户
-	 * 
+	 *
 	 */
 	public String addPmsUser() {
 		try {
@@ -128,12 +129,12 @@ public class PmsUserAction extends BaseAction {
 				return operateError(validateMsg); // 返回错误信息
 			}
 			// 校验用户登录名是否已存在
-			PmsUser userNoCheck = pmsUserBiz.findUserByUserNo(userNo);
+			PmsUser userNoCheck = pmsUserFacade.findUserByUserNo(userNo);
 			if (userNoCheck != null) {
 				return operateError("登录名【" + userNo + "】已存在");
 			}
 			pmsUser.setUserPwd(DigestUtils.sha1Hex(userPwd)); // 存存前对密码进行加密
-			pmsUserBiz.create(pmsUser);
+			pmsUserFacade.create(pmsUser);
 			return operateSuccess();
 		} catch (Exception e) {
 			log.error("== addPmsUser exception:", e);
@@ -143,7 +144,7 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 校验Pms用户表单数据.
-	 * 
+	 *
 	 * @param PmsUser
 	 *            用户信息.
 	 * @param roleUserStr
@@ -180,24 +181,24 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 删除用户
-	 * 
+	 *
 	 * @return
 	 */
 	public String deleteUserStatus() {
 		long id = getLong("id");
-		pmsUserBiz.deleteUserById(id);
+		pmsUserFacade.deleteUserById(id);
 		return this.operateSuccess("操作成功");
 	}
 
 	/**
 	 * 转到修改用户界面
-	 * 
+	 *
 	 * @return PmsUserEdit or operateError .
 	 */
 	public String editPmsUserUI() {
 		try {
 			Long id = getLong("id");
-			PmsUser pmsUser = pmsUserBiz.getById(id);
+			PmsUser pmsUser = pmsUserFacade.getById(id);
 			if (pmsUser == null) {
 				return operateError("无法获取要修改的数据");
 			}
@@ -220,13 +221,13 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 保存修改后的用户信息
-	 * 
+	 *
 	 * @return operateSuccess or operateError .
 	 */
 	public String editPmsUser() {
 		try {
 			Long id = getLong("id");
-			PmsUser pmsUser = pmsUserBiz.getById(id);
+			PmsUser pmsUser = pmsUserFacade.getById(id);
 			if (pmsUser == null) {
 				return operateError("无法获取要修改的用户信息");
 			}
@@ -245,7 +246,7 @@ public class PmsUserAction extends BaseAction {
 			if (StringUtils.isNotBlank(validateMsg)) {
 				return operateError(validateMsg); // 返回错误信息
 			}
-			pmsUserBiz.update(pmsUser);
+			pmsUserFacade.update(pmsUser);
 			return operateSuccess();
 		} catch (Exception e) {
 			log.error("== editPmsUser exception:", e);
@@ -255,13 +256,13 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 根据ID冻结或激活用户.
-	 * 
+	 *
 	 * @return operateSuccess or operateError .
 	 */
 	public String changeUserStatus() {
 		try {
 			Long userId = getLong("id");
-			PmsUser user = pmsUserBiz.getById(userId);
+			PmsUser user = pmsUserFacade.getById(userId);
 			if (user == null) {
 				return operateError("无法获取要操作的数据");
 			}
@@ -283,11 +284,11 @@ public class PmsUserAction extends BaseAction {
 							"【" + user.getUserNo() + "】为超级管理员，不能冻结");
 				}
 				user.setStatus(UserStatusEnum.INACTIVE.getValue());
-				pmsUserBiz.update(user);
+				pmsUserFacade.update(user);
 			} else {
 				user.setStatus(UserStatusEnum.ACTIVE.getValue());
 				user.setPwdErrorCount(0);
-				pmsUserBiz.update(user);
+				pmsUserFacade.update(user);
 			}
 			return operateSuccess();
 		} catch (Exception e) {
@@ -298,11 +299,11 @@ public class PmsUserAction extends BaseAction {
 
 	/***
 	 * 重置用户的密码（注意：不是修改当前登录用户自己的密码） .
-	 * 
+	 *
 	 * @return
 	 */
 	public String resetUserPwdUI() {
-		PmsUser user = pmsUserBiz.getById(getLong("id"));
+		PmsUser user = pmsUserFacade.getById(getLong("id"));
 		if (user == null) {
 			return operateError("无法获取要重置的信息");
 		}
@@ -318,13 +319,13 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 重置用户密码.
-	 * 
+	 *
 	 * @return
 	 */
 	public String resetUserPwd() {
 		try {
 			Long userId = getLong("userId");
-			PmsUser user = pmsUserBiz.getById(userId);
+			PmsUser user = pmsUserFacade.getById(userId);
 			if (user == null) {
 				return operateError("无法获取要重置密码的用户信息");
 			}
@@ -339,7 +340,7 @@ public class PmsUserAction extends BaseAction {
 			if (StringUtils.isNotBlank(validateMsg)) {
 				return operateError(validateMsg); // 返回错误信息
 			}
-			pmsUserBiz.updateUserPwd(userId, DigestUtils.sha1Hex(newPwd),
+			pmsUserFacade.updateUserPwd(userId, DigestUtils.sha1Hex(newPwd),
 					false);
 			return operateSuccess();
 		} catch (Exception e) {
@@ -350,7 +351,7 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 进入重置当前登录用户自己的密码的页面.
-	 * 
+	 *
 	 * @return
 	 */
 	public String userChangeOwnPwdUI() {
@@ -359,7 +360,7 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 重置当前登录用户自己的密码.
-	 * 
+	 *
 	 * @return
 	 */
 	public String userChangeOwnPwd() {
@@ -388,8 +389,8 @@ public class PmsUserAction extends BaseAction {
 				return operateError(validateMsg); // 返回错误信息
 			}
 			// 更新密码
-			pmsUserBiz.updateUserPwd(user.getId(), DigestUtils.sha1Hex(newPwd),
-					true);
+			pmsUserFacade.updateUserPwd(user.getId(),
+					DigestUtils.sha1Hex(newPwd), true);
 			return operateSuccess("密码修改成功，请重新登录!");
 		} catch (Exception e) {
 			log.error("== userChangeOwnPwd exception:", e);
@@ -399,7 +400,7 @@ public class PmsUserAction extends BaseAction {
 
 	/**
 	 * 当前登录的用户查看自己帐号的详细信息.
-	 * 
+	 *
 	 * @return
 	 */
 	public String userViewOwnInfo() {
@@ -408,7 +409,7 @@ public class PmsUserAction extends BaseAction {
 			if (pmsUser == null) {
 				return operateError("无法从会话中获取用户信息");
 			}
-			PmsUser user = pmsUserBiz.getById(pmsUser.getId());
+			PmsUser user = pmsUserFacade.getById(pmsUser.getId());
 			if (user == null) {
 				return operateError("无法获取用户信息");
 			}
@@ -426,7 +427,7 @@ public class PmsUserAction extends BaseAction {
 
 	/***
 	 * 验证重置密码
-	 * 
+	 *
 	 * @param newPwd
 	 * @param newPwd2
 	 * @return

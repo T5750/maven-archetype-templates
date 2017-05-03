@@ -15,15 +15,19 @@
 * 将源代码导入IDEA中
 * 执行maven-archetype-templates\dubbo-wusc\edu-demo\sql\dubbo-wusc.sql
 * 部署项目，启动tomcat服务器
-* web页面具体路径：http://localhost:8080/edu-demo/
+* edu-demo首页路径：http://localhost:8080/edu-demo/
+* edu-web-boss首页路径：http://localhost:8080/edu-demo/
 * 首页点击用户信息管理进入用户信息管理页面，可进行添加、查看、修改、删除用户操作
 
 > java -cp druid-0.2.23.jar com.alibaba.druid.filter.config.ConfigTools 123456
 
-> Caused by: java.lang.IllegalStateException: Duplicate spring bean id pmsUserFacade
-
 ## Result
 ![Result](http://img.my.csdn.net/uploads/201705/02/1493716965_2731.png)
+
+## Notes
+> Caused by: java.lang.IllegalStateException: Duplicate spring bean id pmsUserFacade
+
+* changed pmsUserBiz to pmsUserFacade for actions in edu-web-boss
 
 ## Links
 - [基于Dubbo的分布式系统架构实战](http://www.roncoo.com/course/view/85d6008fe77c4199b0cdd2885eaeee53#boxTwo)

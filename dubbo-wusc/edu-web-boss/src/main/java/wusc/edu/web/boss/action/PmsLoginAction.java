@@ -12,12 +12,12 @@ import org.springframework.context.annotation.Scope;
 import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.facade.user.enums.UserStatusEnum;
 import wusc.edu.facade.user.enums.UserTypeEnum;
-import wusc.edu.service.user.biz.PmsUserBiz;
+import wusc.edu.facade.user.service.PmsUserFacade;
 import wusc.edu.web.boss.base.BaseAction;
 import wusc.edu.web.common.constant.SessionConstant;
 
 /**
- * 
+ *
  * @描述: 用户登录 .
  * @作者: WuShuicheng .
  * @创建时间: 2015-1-25,下午7:50:22 .
@@ -28,11 +28,11 @@ public class PmsLoginAction extends BaseAction {
 	private static final long serialVersionUID = 1L;
 	private static final Log log = LogFactory.getLog(PmsLoginAction.class);
 	@Autowired
-	private PmsUserBiz pmsUserBiz;
+	private PmsUserFacade pmsUserFacade;
 
 	/**
 	 * 进入登录页面.
-	 * 
+	 *
 	 * @return
 	 */
 	public String loginPage() {
@@ -41,7 +41,7 @@ public class PmsLoginAction extends BaseAction {
 
 	/**
 	 * 登录验证Action
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -54,7 +54,7 @@ public class PmsLoginAction extends BaseAction {
 				return "input";
 			}
 			this.putData("userNo", userNo);
-			PmsUser user = pmsUserBiz.findUserByUserNo(userNo);
+			PmsUser user = pmsUserFacade.findUserByUserNo(userNo);
 			if (user == null) {
 				log.warn("== no such user");
 				this.putData("userNoMsg", "用户名或密码不正确");
@@ -99,7 +99,7 @@ public class PmsLoginAction extends BaseAction {
 					// 更新登录数据
 					user.setLastLoginTime(new Date());
 					user.setPwdErrorCount(0); // 错误次数设为0
-					pmsUserBiz.update(user);
+					pmsUserFacade.update(user);
 				} catch (Exception e) {
 					this.putData("errorMsg", e.getMessage());
 					return "input";
@@ -131,7 +131,7 @@ public class PmsLoginAction extends BaseAction {
 									- user.getPwdErrorCount().intValue())
 							+ "】次将冻结帐号";
 				}
-				pmsUserBiz.update(user);
+				pmsUserFacade.update(user);
 				this.putData("userPwdMsg", msg);
 				return "input";
 			}
@@ -148,7 +148,7 @@ public class PmsLoginAction extends BaseAction {
 
 	/**
 	 * 跳转到退出确认页面.
-	 * 
+	 *
 	 * @return LogOutConfirm.
 	 */
 	public String logoutConfirm() {
@@ -158,7 +158,7 @@ public class PmsLoginAction extends BaseAction {
 
 	/**
 	 * 退出登录
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -170,7 +170,7 @@ public class PmsLoginAction extends BaseAction {
 
 	/**
 	 * 跳转到登录超时确认页面.
-	 * 
+	 *
 	 * @return LogOutConfirm.
 	 * @throws Exception
 	 */
