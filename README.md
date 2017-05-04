@@ -17,7 +17,36 @@ Installation:
 
     SpringMvcHibernateXML/target/generated-sources/archetype> mvn clean install
 
-
 4. Repeat the same steps for all the archetype templates.
 5. From Your IDE, while creating maven project filter the archetypes using 'com.sivalabs' and choose the template you want.
 6. Enjoy :-)
+
+### What's included
+
+```
+maven-archetype-templates/
+├── v0.1
+│   └── SpringMvcHibernateXML
+├── v0.2
+│   └── SpringMvcHibernateJavaBased
+├── v0.3
+│   └── SpringMvcHibernateAnnotation
+├── v0.4
+│   └── SpringStrutsIntegrationDemo
+├── v0.5
+│   └── Struts2Spring4Hibernate4XML
+├── v0.6
+│   └── SpringMvc4MyBatis3Annotation
+├── v0.7
+│   └── SpringMvcDubbo/
+│       ├── api
+│       ├── consumer
+│       └── provider
+└── v0.8
+    └── dubbo-wusc/
+        ├── edu-common-parent
+        ├── edu-demo
+        ├── edu-facade-user
+        ├── edu-service-user
+        └── edu-web-boss
+```

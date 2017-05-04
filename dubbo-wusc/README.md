@@ -9,7 +9,10 @@
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
  - [Tomcat 7](http://tomcat.apache.org/)
+ - [MySQL 5.5](http://www.mysql.com/)
  - [Druid 0.2.23](https://github.com/alibaba/druid)
+ - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
+ - [J-UI](http://jui.org/)
 
 ## Quick Process
 * 将源代码导入IDEA中
