@@ -2,6 +2,7 @@ package com.alibaba.dubbo.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alibaba.bar.BarService;
@@ -17,9 +18,10 @@ public class BarAction {
 	private BarService barService;
 
 	@RequestMapping("/helloFooBar")
-	public String index() {
-		fooService.findFoo("Foo");
-		barService.findBar("Bar");
-		return "";
+	public String helloFooBar(Model model) {
+		String result_foo = fooService.findFoo("Foo");
+		String result_bar = barService.findBar("Bar");
+		model.addAttribute("result", result_foo + "<br/>" + result_bar);
+		return "result";
 	}
 }
