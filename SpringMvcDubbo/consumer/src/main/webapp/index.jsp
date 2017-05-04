@@ -2,5 +2,7 @@
 <body>
 <h2>Hello World!</h2>
 <a href="hello?zz=world">hello</a>
+<br/>
+<a href="helloFooBar">helloFooBar</a>
 </body>
 </html>

@@ -14,7 +14,8 @@
     <!--注解扫描-->
     <context:component-scan base-package="com.gege"/>
     <context:component-scan base-package="cn.test"/>
-    <context:annotation-config/>
+	<context:component-scan base-package="com.alibaba"/>
+	<context:annotation-config/>
 
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -25,5 +26,6 @@
         </property>
     </bean>
 
-    <import resource="dubbo-provider.xml"/>
+    <!--<import resource="dubbo-provider.xml"/>-->
+    <import resource="provider.xml"/>
 </beans>

@@ -5,12 +5,28 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
-	<dubbo:application name="consumer-of-helloworld-app"/>
+	<!--<dubbo:application name="consumer-of-helloworld-app"/>-->
 
 	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
-	<dubbo:registry address="multicast://224.5.6.7:1234"/>
+	<!--<dubbo:registry address="multicast://224.5.6.7:1234"/>-->
+
+	<!-- 公共信息，也可以用dubbo.properties配置 -->
+	<dubbo:application name="annotation-consumer"/>
+	<dubbo:registry id="consumer_center" protocol="dubbo" address="zookeeper://127.0.0.1:2181"/>
+	<dubbo:provider group="${dubbo.gege.group}" registry="consumer_center"/>
+	<dubbo:consumer group="${dubbo.gege.group}" registry="consumer_center" check="false"/>
+	<!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+	<!--<dubbo:annotation package="com.alibaba.dubbo.demo"/>-->
 
 	<!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
 	<dubbo:reference id="demoService" interface="com.alibaba.dubbo.demo.DemoService"/>
 
+	<!-- 声明需要引用的服务接口  -->
+	<dubbo:reference id="testService" interface="com.gege.service.ITestService" retries="${dubbo.gege.retries}"
+					 timeout="${dubbo.gege.timeout}"/>
+	<dubbo:reference id="testRegistryService" interface="cn.test.service.TestRegistryService" retries="${dubbo.gege.retries}"
+					 timeout="${dubbo.gege.timeout}"/>
+
+	<dubbo:reference interface="com.alibaba.bar.BarService" id="barService"/>
+	<dubbo:reference interface="com.alibaba.foo.FooService" id="fooService"/>
 </beans>

@@ -13,6 +13,7 @@
 	<task:annotation-driven/>
 	<context:component-scan base-package="com.gege"/>
 	<context:component-scan base-package="cn.test"/>
+	<context:component-scan base-package="com.alibaba"/>
 	<context:annotation-config/>
 
 	<bean id="propertyConfigurer"
@@ -24,5 +25,6 @@
 		</property>
 	</bean>
 
-	<import resource="classpath*:dubbo-customer.xml"/>
+	<!--<import resource="classpath*:dubbo-customer.xml"/>-->
+	<import resource="classpath:consumer.xml"/>
 </beans>

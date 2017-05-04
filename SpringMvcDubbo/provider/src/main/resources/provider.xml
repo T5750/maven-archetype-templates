@@ -5,18 +5,32 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="hello-world-app"/>
+	<!--<dubbo:application name="hello-world-app"/>-->
 
 	<!-- 使用multicast广播注册中心暴露服务地址 -->
-	<dubbo:registry address="multicast://224.5.6.7:1234"/>
+	<!--<dubbo:registry address="multicast://224.5.6.7:1234"/>-->
+
+	<!-- 公共信息，也可以用dubbo.properties配置 -->
+	<dubbo:application name="annotation-provider"/>
+	<dubbo:registry protocol="dubbo" address="zookeeper://127.0.0.1:2181" port="20880"/>
+
+	<!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+	<!--<dubbo:annotation package="com.alibaba.dubbo.demo.service"/>-->
 
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20880"/>
+	<dubbo:monitor protocol="registry"/>
 
 	<!-- 声明需要暴露的服务接口 -->
-	<dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService"/>
+	<dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService" group="${dubbo.gege.group}"/>
 
 	<!-- 和本地bean一样实现服务 -->
 	<bean id="demoService" class="com.alibaba.dubbo.demo.provider.DemoServiceImpl"/>
 
+	<dubbo:service ref="testServiceImpl" interface="com.gege.service.ITestService" group="${dubbo.gege.group}"/>
+	<dubbo:service ref="testRegistryService" interface="cn.test.service.TestRegistryService"
+				   group="${dubbo.gege.group}"/>
+
+	<dubbo:service interface="com.alibaba.bar.BarService" ref="barService" group="${dubbo.gege.group}"/>
+	<dubbo:service interface="com.alibaba.foo.FooService" ref="fooService" group="${dubbo.gege.group}"/>
 </beans>
