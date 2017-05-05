@@ -6,5 +6,7 @@
    http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
 
 	<!-- reference to the remote service -->
-	<motan:referer id="remoteService" interface="quickstart.FooService" directUrl="localhost:8002"/>
+	<!--<motan:referer id="remoteService" interface="quickstart.FooService" directUrl="localhost:8002"/>-->
+	<motan:referer id="remoteService" interface="quickstart.FooServiceAsync" directUrl="localhost:8002"/>
+
 </beans>

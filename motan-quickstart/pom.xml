@@ -15,19 +15,19 @@
 		<dependency>
 			<groupId>com.weibo</groupId>
 			<artifactId>motan-core</artifactId>
-			<version>0.2.2</version>
+			<version>0.3.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.weibo</groupId>
 			<artifactId>motan-transport-netty</artifactId>
-			<version>0.2.2</version>
+			<version>0.3.0</version>
 		</dependency>
 
-		<!-- only needed for spring-based features -->
+		<!-- dependencies blow were only needed for spring-based features -->
 		<dependency>
 			<groupId>com.weibo</groupId>
 			<artifactId>motan-springsupport</artifactId>
-			<version>0.2.2</version>
+			<version>0.3.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -36,4 +36,26 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.10</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources/annotations</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
