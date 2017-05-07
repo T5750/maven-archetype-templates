@@ -11,6 +11,12 @@
 
 	<groupId>com.evangel</groupId>
 	<artifactId>motan-quickstart</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>motan-demo-api</module>
+		<module>motan-demo-server</module>
+		<module>motan-demo-client</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<groupId>com.weibo</groupId>
@@ -34,6 +40,11 @@
 			<artifactId>spring-context</artifactId>
 			<version>4.2.4.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>com.weibo</groupId>
+			<artifactId>motan-registry-zookeeper</artifactId>
+			<version>0.2.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -55,6 +66,16 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<fork>true</fork>
+					<meminitial>512m</meminitial>
+					<maxmem>1048m</maxmem>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
