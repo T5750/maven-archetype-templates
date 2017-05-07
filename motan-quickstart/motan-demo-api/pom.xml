@@ -25,12 +25,6 @@
 			<version>0.2.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>4.3.3</version>
-		</dependency>
-
 		<!-- spring web -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -64,6 +58,11 @@
 			<version>1.7.11</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.3.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>

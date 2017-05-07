@@ -13,6 +13,11 @@
  */
 package com.weibo.motan.demo.client;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.weibo.yar.yarclient.HttpYarClient;
 
 public class YarClient {
@@ -22,5 +27,51 @@ public class YarClient {
 				"http://127.0.0.1:8003/openapi/yarserver/test", "testString",
 				String.class, "yar");
 		System.out.println(result);
+		result = yarClient.call("http://127.0.0.1:8003/openapi/yarserver/test",
+				"hello", String.class, "world");
+		System.out.println(result);
+		yarClient.call("http://127.0.0.1:8003/openapi/yarserver/test",
+				"testVoid", Void.class);
+		// System.out.println(result);
+		result = yarClient.call("http://127.0.0.1:8003/openapi/yarserver/test",
+				"testArgVoid", String.class);
+		System.out.println(result);
+		int result_int = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testInt",
+				int.class, 2017);
+		System.out.println(result_int);
+		Integer result_Integer = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testInteger",
+				Integer.class, 7102);
+		System.out.println(result_Integer);
+		Boolean result_boolean = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testBoolean",
+				boolean.class, true);
+		System.out.println(result_boolean);
+		Long result_Long = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testLong",
+				Long.class, 2017L);
+		System.out.println(result_Long);
+		float result_float = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testFloat",
+				float.class, 3.14f);
+		System.out.println(result_float);
+		double result_double = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testDouble",
+				double.class, 3.14);
+		System.out.println(result_double);
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(1);
+		list.add(2);
+		List result_list = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testList",
+				List.class, list);
+		System.out.println(result_list);
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("year", 2017);
+		Map result_map = yarClient.call(
+				"http://127.0.0.1:8003/openapi/yarserver/test", "testMap",
+				Map.class, map);
+		System.out.println(result_map.get("year"));
 	}
 }

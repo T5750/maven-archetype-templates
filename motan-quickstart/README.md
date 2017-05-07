@@ -16,9 +16,11 @@ Motan中分为服务提供方(RPC Server)，服务调用方(RPC Client)和服务
  - 当Server发生变更时，Registry会同步变更，Client感知后会对本地的服务列表作相应调整。
 
 三者的交互关系如下图：
+
 ![Motan Architecture](https://github.com/weibocom/motan/wiki/media/14612349319195.jpg)
 
 Motan框架中主要有register、transport、serialize、protocol几个功能模块，各个功能模块都支持通过SPI进行扩展，各模块的交互如下图所示：
+
 ![Motan Models](https://github.com/weibocom/motan/wiki/media/14612352579675.jpg)
 
 ## Quick Process
@@ -33,6 +35,18 @@ Motan框架中主要有register、transport、serialize、protocol几个功能�
 * 启动zkServer
 * 启动ServerZookeeper
 * 启动ClientZookeeper
+
+###其他调用示例
+
+####提供YAR协议服务
+
+* 启动YarServerDemo
+* 运行YarClient
+
+####Api
+
+* 启动MotanApiExportDemo
+* 运行MotanApiClientDemo
 
 ## Links
 - [Motan快速入门](https://github.com/weibocom/motan/wiki/zh_quickstart)
