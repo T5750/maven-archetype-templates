@@ -9,12 +9,12 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
+import wusc.edu.common.web.constants.SessionConstant;
 import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.facade.user.enums.UserStatusEnum;
 import wusc.edu.facade.user.enums.UserTypeEnum;
 import wusc.edu.facade.user.service.PmsUserFacade;
 import wusc.edu.web.boss.base.BaseAction;
-import wusc.edu.web.common.constant.SessionConstant;
 
 /**
  *

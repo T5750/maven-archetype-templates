@@ -44,7 +44,11 @@ maven-archetype-templates/
 │       └── provider
 ├── v0.8
 │   └── dubbo-wusc/
+│       ├── edu-common
+│       ├── edu-common-config
+│       ├── edu-common-core
 │       ├── edu-common-parent
+│       ├── edu-common-web
 │       ├── edu-demo
 │       ├── edu-facade-user
 │       ├── edu-service-user

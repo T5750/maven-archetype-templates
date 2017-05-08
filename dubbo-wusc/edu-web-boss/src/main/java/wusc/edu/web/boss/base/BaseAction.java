@@ -1,8 +1,8 @@
 package wusc.edu.web.boss.base;
 
+import wusc.edu.common.web.constants.SessionConstant;
+import wusc.edu.common.web.struts.Struts2ActionSupport;
 import wusc.edu.facade.user.entity.PmsUser;
-import wusc.edu.web.common.constant.SessionConstant;
-import wusc.edu.web.common.struts.Struts2ActionSupport;
 
 /**
  * 

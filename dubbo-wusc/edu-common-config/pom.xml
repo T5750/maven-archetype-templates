@@ -10,26 +10,30 @@
 		<relativePath>../edu-common-parent</relativePath>
 	</parent>
 
-	<groupId>wusc.edu.facade</groupId>
-	<artifactId>edu-facade-user</artifactId>
-	<version>${edu-facade-user.version}</version>
+	<artifactId>edu-common-config</artifactId>
+	<version>${edu-common-config.version}</version>
 	<packaging>jar</packaging>
 
-	<name>edu-facade-user</name>
+	<name>edu-common-config</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<dependencies>
-
-		<dependency>
-			<groupId>wusc.edu.common</groupId>
-			<artifactId>edu-common</artifactId>
-			<version>${edu-common.version}</version>
-		</dependency>
-
-	</dependencies>
+	<build>
+		<finalName>edu-common-config</finalName>
+		<resources>
+			<!-- 指定 src/main/resources下所有文件及文件夹为资源文件 -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>${project.build.directory}/classes</targetPath>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
 
 </project>

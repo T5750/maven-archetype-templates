@@ -49,6 +49,30 @@ dubbo-wusc/
     └── src\main\webapp
 ```
 
+```
+dubbo-wusc/
+├── edu-common/
+│   └── src\main\java\wusc\edu\common
+├── edu-common-config/
+│   └── src\main\resources
+├── edu-common-core/
+│   └── src\main\java\wusc\edu\common\core\dao
+├── edu-common-parent/
+├── edu-common-web/
+│   └── src\main\java\wusc\edu\common\web
+├── edu-facade-user/
+│   └── src\main\java\wusc\edu\facade\user
+├── edu-service-user/
+│   ├── src\main\java\wusc\edu
+│   ├── src\main\resources
+│   ├── src\main\webapp
+│   └── src\test
+└── edu-web-boss/
+    ├── src\main\java\wusc\edu\web\boss
+    ├── src\main\resources
+    └── src\main\webapp
+```
+
 ## Result
 ![Result](http://img.my.csdn.net/uploads/201705/02/1493716965_2731.png)
 

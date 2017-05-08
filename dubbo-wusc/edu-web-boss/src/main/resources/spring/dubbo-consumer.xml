@@ -11,9 +11,9 @@
 
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<!-- 注册中心地址 -->
-	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}"/>
 
 	<!-- 用户服务接口 -->
-	<dubbo:reference interface="wusc.edu.facade.user.service.PmsUserFacade" id="pmsUserFacade" check="false" />
+	<dubbo:reference interface="wusc.edu.facade.user.service.PmsUserFacade" id="pmsUserFacade" check="false"/>
 
 </beans>

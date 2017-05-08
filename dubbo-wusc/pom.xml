@@ -18,6 +18,10 @@
 		<module>edu-facade-user</module>
 		<module>edu-service-user</module>
 		<module>edu-web-boss</module>
+		<module>edu-common</module>
+		<module>edu-common-config</module>
+		<module>edu-common-core</module>
+		<module>edu-common-web</module>
 	</modules>
 
 
