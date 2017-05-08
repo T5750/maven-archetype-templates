@@ -22,14 +22,13 @@ import com.weibo.motan.demo.service.MotanDemoService;
 
 @RestController
 public class HelloController {
+	@MotanReferer(basicReferer = "motantestClientBasicConfig", group = "testgroup", directUrl = "127.0.0.1:8002")
+	MotanDemoService service;
 
-    @MotanReferer(basicReferer = "motantestClientBasicConfig", group = "testgroup", directUrl = "127.0.0.1:8002")
-    MotanDemoService service;
-
-    @RequestMapping("/")
-    @ResponseBody
-    public String home() {
-        String result = service.hello("test");
-        return result;
-    }
+	@RequestMapping("/")
+	@ResponseBody
+	public String home() {
+		String result = service.hello("test");
+		return result;
+	}
 }

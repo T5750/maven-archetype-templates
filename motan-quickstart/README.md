@@ -25,25 +25,30 @@ Motan框架中主要有register、transport、serialize、protocol几个功能�
 
 ## Quick Process
 
-###简单调用示例 同步/异步调用
+### 简单调用示例 同步/异步调用
 
 * 启动Server
 * 启动Client或ClientMotanAsync
 
-###集群调用示例 使用ZooKeeper作为注册中心
+### 集群调用示例 使用ZooKeeper作为注册中心
 
 * 启动zkServer
 * 启动ServerZookeeper
 * 启动ClientZookeeper
 
-###其他调用示例
+### 其他调用示例
 
-####提供YAR协议服务
+#### 提供YAR协议服务
 
 * 启动YarServerDemo
 * 运行YarClient
 
-####Api
+#### 使用注解方式配置motan
+
+* 启动AnnotationRpcServerDemo
+* 运行AnnotationRpcClientDemo
+
+#### Api
 
 * 启动MotanApiExportDemo
 * 运行MotanApiClientDemo
@@ -51,6 +56,7 @@ Motan框架中主要有register、transport、serialize、protocol几个功能�
 ## Links
 - [Motan快速入门](https://github.com/weibocom/motan/wiki/zh_quickstart)
 - [Motan用户指南](https://github.com/weibocom/motan/wiki/zh_userguide)
+- [Motan zh_errorcode](https://github.com/weibocom/motan/wiki/zh_errorcode)
 - [从motan看RPC框架设计](http://kriszhang.com/motan-rpc-impl/)
 
 ## Copyright

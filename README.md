@@ -42,11 +42,16 @@ maven-archetype-templates/
 │       ├── api
 │       ├── consumer
 │       └── provider
-└── v0.8
-    └── dubbo-wusc/
-        ├── edu-common-parent
-        ├── edu-demo
-        ├── edu-facade-user
-        ├── edu-service-user
-        └── edu-web-boss
+├── v0.8
+│   └── dubbo-wusc/
+│       ├── edu-common-parent
+│       ├── edu-demo
+│       ├── edu-facade-user
+│       ├── edu-service-user
+│       └── edu-web-boss
+└── v0.9
+    └── motan-quickstart/
+        ├── motan-demo-api
+        ├── motan-demo-client
+        └── motan-demo-server
 ```
