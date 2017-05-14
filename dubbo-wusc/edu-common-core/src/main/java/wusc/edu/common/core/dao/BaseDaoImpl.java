@@ -140,7 +140,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity>
 	 * @return T .
 	 */
 	public T getById(long id) {
-		return sessionTemplate.selectOne(getStatement(SQL_GET_BY_ID), id);
+		return (T)sessionTemplate.selectOne(getStatement(SQL_GET_BY_ID), id);
 	}
 
 	/**
@@ -216,7 +216,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity>
 		if (paramMap == null || paramMap.isEmpty()) {
 			return null;
 		}
-		return sessionTemplate.selectOne(getStatement(SQL_LIST_BY), paramMap);
+		return (T)sessionTemplate.selectOne(getStatement(SQL_LIST_BY), paramMap);
 	}
 
 	/**

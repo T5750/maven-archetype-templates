@@ -99,6 +99,12 @@
 		</dependency>
 		<!-- Struts2 Dependency End -->
 
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<classifier>jdk15</classifier>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 </project>
