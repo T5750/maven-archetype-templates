@@ -21,6 +21,7 @@
 * edu-demo首页路径：http://localhost:8080/edu-demo/
 * edu-web-boss首页路径：http://localhost:8080/edu-web-boss/
 * 首页点击用户信息管理进入用户信息管理页面，可进行添加、查看、修改、删除用户操作
+* 使用Maven构建Dubbo服务的可执行jar包`java -jar edu-service-user.jar &`
 
 > java -cp druid-0.2.23.jar com.alibaba.druid.filter.config.ConfigTools 123456
 

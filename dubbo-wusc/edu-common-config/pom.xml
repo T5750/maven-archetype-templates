@@ -22,7 +22,7 @@
 	</properties>
 
 	<build>
-		<finalName>edu-common-config</finalName>
+		<!--<finalName>edu-common-config</finalName>-->
 		<resources>
 			<!-- 指定 src/main/resources下所有文件及文件夹为资源文件 -->
 			<resource>
