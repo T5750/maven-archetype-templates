@@ -57,9 +57,11 @@ maven-archetype-templates/
 │       ├── edu-facade-user
 │       ├── edu-service-user
 │       └── edu-web-boss
-└── v0.9
-    └── motan-quickstart/
-        ├── motan-demo-api
-        ├── motan-demo-client
-        └── motan-demo-server
+├── v0.9
+│   └── motan-quickstart/
+│       ├── motan-demo-api
+│       ├── motan-demo-client
+│       └── motan-demo-server
+└── v0.10
+    └── Spring3RESTful
 ```

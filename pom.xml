@@ -19,6 +19,7 @@
         <module>SpringMvcDubbo</module>
 		<module>dubbo-wusc</module>
 		<module>motan-quickstart</module>
+		<module>Spring3RESTful</module>
 	</modules>
 
 
