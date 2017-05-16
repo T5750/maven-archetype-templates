@@ -20,6 +20,7 @@
 		<module>dubbo-wusc</module>
 		<module>motan-quickstart</module>
 		<module>Spring3RESTful</module>
+		<module>JerseyRESTful</module>
 	</modules>
 
 
