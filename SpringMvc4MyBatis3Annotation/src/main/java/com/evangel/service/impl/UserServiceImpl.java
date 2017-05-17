@@ -5,12 +5,14 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.evangel.dao.UserDao;
 import com.evangel.domain.User;
 import com.evangel.service.IUserService;
 
 @Service("userService")
+@Transactional
 public class UserServiceImpl implements IUserService {
 	@Resource
 	private UserDao userDao;

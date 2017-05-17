@@ -626,3 +626,13 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve resource locati
 [INFO] [2017-04-13 14:38:14][org.springframework.jdbc.datasource.DriverManagerDataSource]Loaded JDBC driver: com.mysql.jdbc.Driver
 [INFO] [2017-04-13 14:38:15][TestMyBatis]{"age":24,"id":1,"password":"sfasgfaf","userName":"测试"}
 [INFO] [2017-04-13 14:38:15][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1dd46f7: startup date [Thu Apr 13 14:38:14 CST 2017]; root of context hierarchy
+[INFO] [2017-05-17 14:04:01][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/spring/spring-mybatis.xml]
+[INFO] [2017-05-17 14:04:01][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@1908ca1: startup date [Wed May 17 14:04:01 CST 2017]; root of context hierarchy
+[INFO] [2017-05-17 14:04:02][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-05-17 14:04:02][org.springframework.jdbc.datasource.DriverManagerDataSource]Loaded JDBC driver: com.mysql.jdbc.Driver
+[INFO] [2017-05-17 14:04:03][com.evangel.core.ServiceAspect]before execution(User com.evangel.service.impl.UserServiceImpl.getUserById(int))
+[INFO] [2017-05-17 14:04:03][com.evangel.core.ServiceAspect]around execution(User com.evangel.service.impl.UserServiceImpl.getUserById(int))	Use time : 43 ms!
+[INFO] [2017-05-17 14:04:03][com.evangel.core.ServiceAspect]after execution(User com.evangel.service.impl.UserServiceImpl.getUserById(int))
+[INFO] [2017-05-17 14:04:03][com.evangel.core.ServiceAspect]afterReturn execution(User com.evangel.service.impl.UserServiceImpl.getUserById(int))
+[INFO] [2017-05-17 14:04:03][TestMyBatis]{"email":"root@gmail.com","password":"password","userId":16,"username":"root"}
+[INFO] [2017-05-17 14:04:03][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1908ca1: startup date [Wed May 17 14:04:01 CST 2017]; root of context hierarchy
