@@ -1,4 +1,4 @@
-# SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）
+# SpringMvc4MyBatis3Annotation
 
 ## Runtime Environment
 

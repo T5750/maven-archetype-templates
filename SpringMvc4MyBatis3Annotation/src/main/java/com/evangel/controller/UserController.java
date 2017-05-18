@@ -21,18 +21,19 @@ import com.evangel.service.IUserService;
 public class UserController {
 	@Resource
 	private IUserService userService;
+	private static final String _DIR_USER = "user/";
 
 	@RequestMapping("/list")
 	public String list(HttpServletRequest request, Model model) {
 		List<User> userList = this.userService.list();
 		model.addAttribute("userList", userList);
-		return "list";
+		return _DIR_USER + "list";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView getAdd() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("add");
+		mv.setViewName(_DIR_USER + "add");
 		return mv;
 	}
 
@@ -47,7 +48,7 @@ public class UserController {
 		User user = userService.getUserById(userid);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("user", user);
-		mv.setViewName("detail");
+		mv.setViewName(_DIR_USER + "detail");
 		return mv;
 	}
 
@@ -62,7 +63,7 @@ public class UserController {
 		User user = userService.getUserById(userid);
 		model.addAttribute("userAttribute", user);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("edit");
+		mv.setViewName(_DIR_USER + "edit");
 		return mv;
 	}
 
