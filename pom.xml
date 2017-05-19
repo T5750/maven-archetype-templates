@@ -21,6 +21,7 @@
 		<module>motan-quickstart</module>
 		<module>Spring3RESTful</module>
 		<module>JerseyRESTful</module>
+		<module>SpringRedis</module>
 	</modules>
 
 
