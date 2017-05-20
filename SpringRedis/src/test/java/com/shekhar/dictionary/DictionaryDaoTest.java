@@ -27,7 +27,7 @@ public class DictionaryDaoTest {
 
 	@After
 	public void tearDown() {
-		redisTemplate.getConnectionFactory().getConnection().flushDb();
+		redisTemplate.getConnectionFactory().getConnection().flushDb();// 仅删除当前数据库中的键
 	}
 
 	@Test

@@ -6,6 +6,7 @@
  - [Spring Framework 3.1.2.RELEASE](http://projects.spring.io/spring-framework)
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
+ - [Redis](https://redis.io)
 
 ## Introducing Redis
 

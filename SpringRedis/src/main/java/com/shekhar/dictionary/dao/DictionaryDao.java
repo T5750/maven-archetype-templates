@@ -18,6 +18,7 @@ public class DictionaryDao {
 		this.redisTemplate = redisTemplate;
 	}
 
+	// 返回添加到列表中的元素的索引。
 	public Long addWordWithItsMeaningToDictionary(String word, String meaning) {
 		Long index = redisTemplate.opsForList().rightPush(word, meaning);
 		return index;
@@ -25,6 +26,7 @@ public class DictionaryDao {
 
 	public List<String> getAllTheMeaningsForAWord(String word) {
 		List<String> meanings = redisTemplate.opsForList().range(word, 0, -1);
+		// range() 方法接受三个参数：键的名称、范围的起点和范围的终点。
 		return meanings;
 	}
 
