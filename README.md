@@ -64,6 +64,8 @@ maven-archetype-templates/
 │       └── motan-demo-server
 ├── v0.10
 │   └── Spring3RESTful
-└── v0.11
-    └── JerseyRESTful
+├── v0.11
+│   └── JerseyRESTful
+└── v0.12
+    └── SpringRedis
 ```
