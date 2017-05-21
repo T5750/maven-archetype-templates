@@ -22,6 +22,7 @@
 		<module>Spring3RESTful</module>
 		<module>JerseyRESTful</module>
 		<module>SpringRedis</module>
+		<module>SpringBoot</module>
 	</modules>
 
 
