@@ -7,6 +7,7 @@
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
  - [Redis 2.1.0](https://redis.io)
+ - [Redis on Windows 2.8.2402](https://github.com/MSOpenTech/redis/releases)
 
 ## Introducing Redis
 

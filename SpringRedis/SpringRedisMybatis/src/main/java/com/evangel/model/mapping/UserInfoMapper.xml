@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.evangel.dao.UserInfoMapper">
+
+	<resultMap id="BaseResultMap" type="com.evangel.model.UserInfo">
+		<id column="user_id" property="userId" jdbcType="INTEGER"/>
+		<result column="username" property="userName" jdbcType="VARCHAR"/>
+		<result column="password" property="userPwd" jdbcType="VARCHAR"/>
+	</resultMap>
+
+</mapper>

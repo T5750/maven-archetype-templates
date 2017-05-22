@@ -67,7 +67,10 @@ maven-archetype-templates/
 ├── v0.11
 │   └── JerseyRESTful
 ├── v0.12
-│   └── SpringRedis
+│   └── SpringRedis/
+│       ├── spring-data-redis
+│       ├── unused-spring-data-redis
+│       └── SpringRedisMybatis
 └── v0.13
     └── SpringBoot/
         ├── springboot-helloworld
