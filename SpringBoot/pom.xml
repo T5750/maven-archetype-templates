@@ -22,6 +22,9 @@
 		<module>springboot-mybatis-mutil-datasource</module>
 		<module>springboot-mybatis-redis</module>
 		<module>springboot-dubbo-server</module>
+		<module>springboot-dubbo-client</module>
+		<module>springboot-properties</module>
+		<module>springboot-elasticsearch</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

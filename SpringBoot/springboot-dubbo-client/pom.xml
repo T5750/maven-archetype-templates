@@ -10,7 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!--<groupId>com.evangel</groupId>-->
-	<artifactId>springboot-dubbo-server</artifactId>
+	<artifactId>springboot-dubbo-client</artifactId>
 
 	<properties>
 		<dubbo-spring-boot>1.0.0</dubbo-spring-boot>
