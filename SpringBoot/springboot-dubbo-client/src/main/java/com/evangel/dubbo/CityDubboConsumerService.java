@@ -14,7 +14,7 @@ import com.evangel.domain.City;
 public class CityDubboConsumerService {
 	@Reference(version = "1.0.0")
 	CityDubboService cityDubboService;
-	// TODO
+	// fixed the bug by poms
 	// java.lang.IllegalArgumentException: interface
 	// com.evangel.dubbo.CityDubboService is not visible from class loader
 

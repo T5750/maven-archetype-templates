@@ -2,33 +2,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<artifactId>SpringBoot</artifactId>
-		<groupId>com.evangel</groupId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
+	<!--<parent>-->
+	<!--<artifactId>SpringBoot</artifactId>-->
+	<!--<groupId>com.evangel</groupId>-->
+	<!--<version>1.0-SNAPSHOT</version>-->
+	<!--</parent>-->
 	<modelVersion>4.0.0</modelVersion>
 
 	<!--<groupId>com.evangel</groupId>-->
 	<artifactId>springboot-dubbo-server</artifactId>
-
+	<!-- Spring Boot 启动父依赖 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.1.RELEASE</version>
+	</parent>
 	<properties>
 		<dubbo-spring-boot>1.0.0</dubbo-spring-boot>
 	</properties>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<!-- Import dependency management from Spring Boot -->
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-parent</artifactId>
-				<version>1.3.6.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	<!--<dependencyManagement>-->
+	<!--<dependencies>-->
+	<!--<dependency>-->
+	<!--&lt;!&ndash; Import dependency management from Spring Boot &ndash;&gt;-->
+	<!--<groupId>org.springframework.boot</groupId>-->
+	<!--<artifactId>spring-boot-starter-parent</artifactId>-->
+	<!--<version>1.3.6.RELEASE</version>-->
+	<!--<type>pom</type>-->
+	<!--<scope>import</scope>-->
+	<!--</dependency>-->
+	<!--</dependencies>-->
+	<!--</dependencyManagement>-->
 	<dependencies>
-
 		<!-- Spring Boot Dubbo 依赖 -->
 		<dependency>
 			<groupId>io.dubbo.springboot</groupId>

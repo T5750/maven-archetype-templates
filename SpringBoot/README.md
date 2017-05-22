@@ -5,9 +5,14 @@
  - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
  - [Spring Framework 4.3.7.RELEASE](http://projects.spring.io/spring-framework)
  - [Spring Boot 1.5.2.RELEASE](https://projects.spring.io/spring-boot/y)
+ - [Spring MVC 4.3.7.RELEASE](http://projects.spring.io/spring-framework)
+ - [MyBatis 3.4.2](http://www.mybatis.org/mybatis-3/)
+ - [Druid 1.0.18](https://github.com/alibaba/druid)
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
  - [Redis](https://redis.io)
+ - [Dubbo 2.5.3](http://dubbo.io/)
+ - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
  - [Elasticsearch 2.3.2](https://www.elastic.co/downloads/past-releases/elasticsearch-2-3-2)
 
 ## Spring Boot
@@ -80,16 +85,20 @@
 * [《Spring Boot 整合 Elasticsearch》](http://www.bysocket.com/?p=1829)
 * 《Spring Boot 整合 Quartz》
 
-> 检查[spring-boot-dependencies pom](https://github.com/spring-projects/spring-boot/blob/v1.5.2.RELEASE/spring-boot-dependencies/pom.xml)以获取支持的属性列表
+## Tips
+
+* 检查[spring-boot-dependencies pom](https://github.com/spring-projects/spring-boot/blob/v1.5.2.RELEASE/spring-boot-dependencies/pom.xml)以获取支持的属性列表
+
+* springboot-learning-example: Commits on May 19, 2017
 
 ## Links
 
 - [Spring Boot 那些事](http://www.bysocket.com/?page_id=1639)
-- [原创出处: 泥瓦匠BYSocket](www.bysocket.com)
+- [原创出处: 泥瓦匠BYSocket](https://github.com/JeffLi1993/springboot-learning-example)
 - [Spring Boot Reference Guide](http://docs.spring.io/spring-boot/docs/1.5.2.RELEASE/reference/html/)
 - [Spring Boot中文文档（官方文档翻译 基于1.5.2.RELEASE）](https://my.oschina.net/geekidentity/blog/872888)
 - [spring-boot-samples](https://github.com/spring-projects/spring-boot/tree/v1.5.2.RELEASE/spring-boot-samples)
-- [《Spring Boot教程与Spring Cloud教程》](https://git.oschina.net/didispace/SpringBoot-Learning)
+- [Spring Boot教程与Spring Cloud教程](https://git.oschina.net/didispace/SpringBoot-Learning)
 
 ## Copyright
 
