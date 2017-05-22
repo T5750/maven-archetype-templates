@@ -6,7 +6,7 @@
  - [Spring Framework 3.1.2.RELEASE](http://projects.spring.io/spring-framework)
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
- - [Redis](https://redis.io)
+ - [Redis 2.1.0](https://redis.io)
 
 ## Introducing Redis
 
@@ -145,11 +145,13 @@ redis> HGETALL user:1
 * Configuring RedisConnectionFactory and RedisTemplate
 * Writing DictionaryDao
 
-
 ## Links
 
 - [Develop Spring Redis applications](https://www.ibm.com/developerworks/library/os-springredis/index.html)
 - [开发 Spring Redis 应用程序](https://www.ibm.com/developerworks/cn/java/os-springredis/)
+- [java之redis篇(spring-data-redis整合)](http://www.cnblogs.com/tankaixiong/p/3660075.html)
+- [tomcat+nginx+redis实现均衡负载、session共享(二)](http://www.cnblogs.com/zhrxidian/p/5491285.html)
+- [Redis中文官方网站](http://www.redis.cn)
 
 ## Copyright
 

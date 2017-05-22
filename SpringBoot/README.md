@@ -10,7 +10,7 @@
  - [Druid 1.0.18](https://github.com/alibaba/druid)
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
- - [Redis](https://redis.io)
+ - [Redis 2.9.0](https://redis.io)
  - [Dubbo 2.5.3](http://dubbo.io/)
  - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
  - [Elasticsearch 2.3.2](https://www.elastic.co/downloads/past-releases/elasticsearch-2-3-2)
