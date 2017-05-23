@@ -23,6 +23,7 @@
 		<module>JerseyRESTful</module>
 		<module>SpringRedis</module>
 		<module>SpringBoot</module>
+		<module>SpringCloud</module>
 	</modules>
 
 
