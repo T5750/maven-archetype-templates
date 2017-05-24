@@ -12,3 +12,6 @@ public class Application {
 	}
 }
 // http://localhost:1111/
+// Spring Cloud构建微服务架构（六）高可用服务注册中心
+// java -jar eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1
+// java -jar eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer2
