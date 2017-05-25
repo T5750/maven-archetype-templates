@@ -18,6 +18,7 @@
 		<module>compute-service-Camden</module>
 		<module>eureka-ribbon-Camden</module>
 		<module>eureka-feign-Camden</module>
+		<module>api-gateway-Camden</module>
 	</modules>
 
 	<parent>

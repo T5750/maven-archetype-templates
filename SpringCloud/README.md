@@ -31,15 +31,27 @@
 - chapter1-1-7：[Spring Cloud构建微服务架构（七）消息总线(Rabbit)](http://blog.didispace.com/springcloud7/)
 - chapter1-1-7：[Spring Cloud构建微服务架构（七）消息总线(Kafka)](http://blog.didispace.com/springcloud7-2/)
 
+### 《Spring Cloud构建微服务架构（Camden/Dalston版）》系列入门教程
+
+#### Camden版本
+
+- [Spring Cloud构建微服务架构：服务注册与发现（Eureka、Consul）](http://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247483757&idx=1&sn=9dc4dd5e9202a91e844174fc996da3c7&scene=19#wechat_redirect)
+- [Spring Cloud构建微服务架构：服务消费者（Ribbon、Feign）](http://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247483774&idx=1&sn=950c4ab109ac10d902c90eef8dac0358&scene=19#wechat_redirect)
+
 ### 《Spring Cloud源码分析》系列博文
 
 - [Spring Cloud源码分析（一）Eureka](http://blog.didispace.com/springcloud-sourcecode-eureka/)
 - [Spring Cloud源码分析（二）Ribbon](http://blog.didispace.com/springcloud-sourcecode-ribbon/)
+- [Spring Cloud源码分析（四）Zuul：核心过滤器](http://blog.didispace.com/spring-cloud-source-zuul/)
 
 ### 《Spring Cloud实战小贴士》系列博文
 
 - [Spring Cloud实战小贴士：版本依赖关系](http://blog.didispace.com/spring-cloud-tips-1/)
 - [Spring Cloud实战小贴士：随机端口](http://blog.didispace.com/spring-cloud-tips-2/)
+- [Spring Cloud实战小贴士：健康检查](http://blog.didispace.com/spring-cloud-tips-3/)
+- [Spring Cloud实战小贴士：Zuul处理Cookie和重定向](http://blog.didispace.com/spring-cloud-zuul-cookie-redirect/)
+- [Spring Cloud实战小贴士：Zuul统一异常处理（一）](http://blog.didispace.com/spring-cloud-zuul-exception/)
+- [Spring Cloud实战小贴士：Zuul统一异常处理（二）](http://blog.didispace.com/spring-cloud-zuul-exception-2/)
 
 ### 其他文章
 
@@ -48,6 +60,8 @@
 - [Consul注销实例时候的问题](http://blog.didispace.com/consul-deregister/)
 - [使用Spring Boot Actuator、Jolokia和Grafana实现准实时监控](http://blog.didispace.com/spring-boot-jolokia-grafana-monitor/)
 - [Netflix Zuul与Nginx的性能对比](http://blog.didispace.com/zuul-vs-nginx-performance/)
+- [基于Consul的分布式锁实现](http://blog.didispace.com/spring-cloud-consul-lock-and-semphore/)
+- [基于Consul的分布式信号量实现](http://blog.didispace.com/spring-cloud-consul-lock-and-semphore-2/)
 
 ## Links
 
