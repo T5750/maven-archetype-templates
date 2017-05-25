@@ -24,6 +24,7 @@
 		<module>api-gateway</module>
 		<module>config-server-eureka-kafka</module>
 		<module>config-client-eureka-kafka</module>
+		<module>SpringCloudCamden</module>
 	</modules>
 
 

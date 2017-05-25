@@ -98,5 +98,10 @@ maven-archetype-templates/
         ├── config-client-eureka
         ├── api-gateway
         ├── config-server-eureka-kafka
-        └── config-client-eureka-kafka
+        ├── config-client-eureka-kafka
+        └── SpringCloudCamden
+            ├── eureka-server-Camden
+            ├── compute-service-Camden
+            ├── eureka-ribbon-Camden
+            └── eureka-feign-Camden
 ```

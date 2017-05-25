@@ -17,6 +17,7 @@
  - [RabbitMQ Server 3.6.5](https://www.rabbitmq.com/download.html)
  - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
  - [Kafka 0.10.1.1](http://kafka.apache.org/downloads.html)
+ - [Consul 0.8.3](https://www.consul.io/downloads.html)
 
 ### 《Spring Cloud构建微服务架构》系列博文示例
 
@@ -52,6 +53,7 @@
 
 - [Spring Cloud基础教程](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)
 - [SpringCloud-Learning](https://github.com/dyc87112/SpringCloud-Learning)
+- [史上最简单的 SpringCloud 教程](http://blog.csdn.net/column/details/15197.html)
 
 ## Copyright
 
