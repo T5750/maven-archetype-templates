@@ -22,6 +22,8 @@
 		<module>config-server-eureka</module>
 		<module>config-client-eureka</module>
 		<module>api-gateway</module>
+		<module>config-server-eureka-kafka</module>
+		<module>config-client-eureka-kafka</module>
 	</modules>
 
 

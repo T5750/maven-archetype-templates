@@ -6,6 +6,17 @@
  - [Spring Framework 4.2.6.RELEASE](http://projects.spring.io/spring-framework)
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
+ - [Spring Cloud Brixton.RELEASE](http://projects.spring.io/spring-cloud/)
+ - [Spring Boot 1.3.5.RELEASE](https://projects.spring.io/spring-boot/)
+ - [Eureka 1.4.6](https://github.com/Netflix/eureka)
+ - [Ribbon 2.1.5](https://github.com/Netflix/ribbon)
+ - [Feign 1.1.0](https://github.com/spring-cloud/spring-cloud-netflix)
+ - [Hystrix 1.5.2](https://github.com/Netflix/Hystrix)
+ - [Zuul 1.1.0](https://github.com/Netflix/zuul)
+ - [Erlang/OTP 19.3](http://www.erlang.org/downloads)
+ - [RabbitMQ Server 3.6.5](https://www.rabbitmq.com/download.html)
+ - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
+ - [Kafka 0.10.1.1](http://kafka.apache.org/downloads.html)
 
 ### 《Spring Cloud构建微服务架构》系列博文示例
 

@@ -71,18 +71,32 @@ maven-archetype-templates/
 │       ├── spring-data-redis
 │       ├── unused-spring-data-redis
 │       └── SpringRedisMybatis
-└── v0.13
-    └── SpringBoot/
-        ├── springboot-helloworld
-        ├── springboot-restful
-        ├── springboot-freemarker
-        ├── springboot-validation-over-json
-        ├── springboot-mybatis
-        ├── springboot-mybatis-annotation
-        ├── springboot-mybatis-mutil-datasource
-        ├── springboot-mybatis-redis
-        ├── springboot-dubbo-server
-        ├── springboot-dubbo-client
-        ├── springboot-properties
-        └── springboot-elasticsearch
+├── v0.13
+│   └── SpringBoot/
+│       ├── springboot-helloworld
+│       ├── springboot-restful
+│       ├── springboot-freemarker
+│       ├── springboot-validation-over-json
+│       ├── springboot-mybatis
+│       ├── springboot-mybatis-annotation
+│       ├── springboot-mybatis-mutil-datasource
+│       ├── springboot-mybatis-redis
+│       ├── springboot-dubbo-server
+│       ├── springboot-dubbo-client
+│       ├── springboot-properties
+│       └── springboot-elasticsearch
+└── v0.14
+    └── SpringCloud/
+        ├── eureka-server
+        ├── compute-service
+        ├── eureka-ribbon
+        ├── eureka-feign
+        ├── config-server
+        ├── config-client
+        ├── config-repo
+        ├── config-server-eureka
+        ├── config-client-eureka
+        ├── api-gateway
+        ├── config-server-eureka-kafka
+        └── config-client-eureka-kafka
 ```
