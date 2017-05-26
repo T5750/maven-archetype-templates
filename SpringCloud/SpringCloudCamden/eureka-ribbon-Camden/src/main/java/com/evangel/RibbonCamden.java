@@ -20,3 +20,5 @@ public class RibbonCamden {
 		SpringApplication.run(RibbonCamden.class, args);
 	}
 }
+// http://localhost:3333/add
+// http://localhost:3333/hello

@@ -16,5 +16,12 @@ public class ConsumerController {
 		return restTemplate.getForEntity("http://COMPUTE-SERVICE/add?a=10&b=20",
 				String.class).getBody();
 	}
+
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String helloConsumer() {
+		return restTemplate.getForObject("http://COMPUTE-SERVICE/hello",
+				String.class);
+	}
 }
 // http://localhost:3333/add
+// 为Spring Cloud Ribbon配置请求重试（Camden.SR2+）

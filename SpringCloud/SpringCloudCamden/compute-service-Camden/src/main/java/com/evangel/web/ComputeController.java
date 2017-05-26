@@ -23,4 +23,13 @@ public class ComputeController {
 				+ instance.getServiceId() + ", result:" + r);
 		return r;
 	}
+
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String hello() {
+		ServiceInstance instance = client.getLocalServiceInstance();
+		String r = "Hello Spring Cloud";
+		logger.info("/hello, host:" + instance.getHost() + ", service_id:"
+				+ instance.getServiceId() + ", result:" + r);
+		return r;
+	}
 }
