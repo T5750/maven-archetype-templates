@@ -5,6 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.evangel.domain.AccountInfo;
 
@@ -28,6 +29,8 @@ public interface UserDao extends Repository<AccountInfo, Long> {
 	// public Page<AccountInfo> findByBalanceGreaterThan(
 	// @Param("balance")Integer balance,Pageable pageable);
 
+	// TransactionRequiredException: Executing an update/delete query
+	@Transactional
 	@Modifying
 	@Query("update AccountInfo a set a.balance = ?1 where a.balance < ?2")
 	public int increaseSalary(int after, int before);
