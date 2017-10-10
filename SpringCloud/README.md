@@ -7,7 +7,7 @@
  - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
  - [Maven 3](http://maven.apache.org/)
  - [Spring Cloud Brixton.RELEASE](http://projects.spring.io/spring-cloud/)
- - [Spring Boot 1.3.5.RELEASE](https://projects.spring.io/spring-boot/)
+ - [Spring Boot 1.3.5.RELEASE](https://projects.spring.io/spring-boot)
  - [Eureka 1.4.6](https://github.com/Netflix/eureka)
  - [Ribbon 2.1.5](https://github.com/Netflix/ribbon)
  - [Feign 1.1.0](https://github.com/spring-cloud/spring-cloud-netflix)

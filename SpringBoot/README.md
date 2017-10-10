@@ -4,7 +4,7 @@
 
  - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
  - [Spring Framework 4.3.7.RELEASE](http://projects.spring.io/spring-framework)
- - [Spring Boot 1.5.2.RELEASE](https://projects.spring.io/spring-boot/y)
+ - [Spring Boot 1.5.2.RELEASE](https://projects.spring.io/spring-boot)
  - [Spring MVC 4.3.7.RELEASE](http://projects.spring.io/spring-framework)
  - [MyBatis 3.4.2](http://www.mybatis.org/mybatis-3/)
  - [Druid 1.0.18](https://github.com/alibaba/druid)

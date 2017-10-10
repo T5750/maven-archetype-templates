@@ -105,6 +105,9 @@ maven-archetype-templates/
 │           ├── eureka-ribbon-Camden
 │           └── eureka-feign-Camden
 └── v0.15
-    └── SpringData/
-        └── SpringDataJPA
+│   └── SpringData/
+│       └── SpringDataJPA
+└── v0.16
+    └── SpringCache/
+        └── springboot-cache
 ```
