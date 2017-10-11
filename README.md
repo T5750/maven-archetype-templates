@@ -109,5 +109,6 @@ maven-archetype-templates/
 │       └── SpringDataJPA
 └── v0.16
     └── SpringCache/
-        └── springboot-cache
+        ├── springboot-cache
+        └── spring-cache
 ```

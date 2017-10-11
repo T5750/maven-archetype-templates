@@ -7,6 +7,7 @@
  - [Spring Boot 1.5.3.RELEASE](https://projects.spring.io/spring-boot)
  - [Spring MVC 4.3.8.RELEASE](http://projects.spring.io/spring-framework)
  - [Maven 3](http://maven.apache.org)
+ - [Ehcache 2.6.8](http://www.ehcache.org/downloads)
 
 ## 注释驱动的 Spring Cache
 
@@ -82,13 +83,92 @@ beforeInvocation | 是否在方法执行前就清空，缺省为 false，如果�
 - @CacheEvict 的可靠性问题
 - 非 public 方法问题
 
-## Guava实现
+## 附
+
+### @CacheConfig
+
+@CacheConfig 的作用：@CacheConfig is a class-level annotation that allows to share the cache names，如果你在你的方法写别的名字，那么依然以方法的名字为准。
+
+```
+@CacheConfig("books")
+public class BookRepositoryImpl implements BookRepository {
+
+    @Cacheable
+    public Book findBook(ISBN isbn) {...}
+}
+```
+
+### 条件缓存
+
+```
+//@Cacheable将在执行方法之前( #result还拿不到返回值)判断condition，如果返回true，则查缓存；
+@Cacheable(value = "user", key = "#id", condition = "#id lt 10")
+public User conditionFindById(final Long id)
+
+//@CachePut将在执行完方法后（#result就能拿到返回值了）判断condition，如果返回true，则放入缓存；
+@CachePut(value = "user", key = "#id", condition = "#result.username ne 'zhang'")
+public User conditionSave(final User user)
+
+//@CachePut将在执行完方法后（#result就能拿到返回值了）判断unless，如果返回false，则放入缓存；（即跟condition相反）
+@CachePut(value = "user", key = "#user.id", unless = "#result.username eq 'zhang'")
+public User conditionSave2(final User user)
+
+//@CacheEvict， beforeInvocation=false表示在方法执行之后调用（#result能拿到返回值了）；且判断condition，如果返回true，则移除缓存；
+@CacheEvict(value = "user", key = "#user.id", beforeInvocation = false, condition = "#result.username ne 'zhang'")
+public User conditionDelete(final User user)
+```
+
+### @Caching
+
+```
+@Caching(put = {
+@CachePut(value = "user", key = "#user.id"),
+@CachePut(value = "user", key = "#user.username"),
+@CachePut(value = "user", key = "#user.email")
+})
+public User save(User user) {
+```
+
+### 自定义缓存注解
+
+```
+@Caching(put = {
+@CachePut(value = "user", key = "#user.id"),
+@CachePut(value = "user", key = "#user.username"),
+@CachePut(value = "user", key = "#user.email")
+})
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
+public @interface UserSaveCache {
+}
+```
+
+```
+@UserSaveCache
+public User save(User user)
+```
+
+### SpEL上下文数据
+
+名称 | 位置 | 描述 | 示例
+----|------|----|----
+methodName | root对象 | 当前被调用的方法名 | root.methodName
+method | root对象 | 当前被调用的方法 | root.method.name
+target | root对象 | 当前被调用的目标对象 | root.target
+targetClass | root对象 | 当前被调用的目标对象类 | root.targetClass
+args | root对象 | 当前被调用的方法的参数列表 | root.args[0]
+caches | root对象 | 当前方法调用使用的缓存列表（如@Cacheable(value={“cache1”, “cache2”})），则有两个cache | 	root.caches[0].name
+argument name | 执行上下文 | 当前被调用的方法的参数，如findById(Long id)，我们可以通过#id拿到参数 | user.id
+result | 执行上下文 | 方法执行后的返回值（仅当方法执行之后的判断有效，如‘unless’，’cache evict’的beforeInvocation=false） | result
+
+### Guava实现
 
 运行结果
 
 ![运行结果](http://img.blog.csdn.net/20160921154530249?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-## Redis实现
+### Redis实现
 
 运行结果
 
@@ -98,6 +178,8 @@ beforeInvocation | 是否在方法执行前就清空，缺省为 false，如果�
 
 - [注释驱动的 Spring cache 缓存介绍](https://www.ibm.com/developerworks/cn/opensource/os-cn-spring-cache/)
 - [SpringBoot数据缓存Cache [Guava和Redis实现]](http://blog.csdn.net/xiaoliuliu2050/article/details/53931296)
+- [Spring Cache抽象详解](http://jinnianshilongnian.iteye.com/blog/2001040)
+- [Spring缓存注解@Cacheable,@CachePut , @CacheEvict使用](http://blog.csdn.net/whatlookingfor/article/details/51833378)
 
 ## Copyright
 
