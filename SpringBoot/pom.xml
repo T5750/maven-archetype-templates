@@ -25,6 +25,7 @@
 		<module>springboot-dubbo-client</module>
 		<module>springboot-properties</module>
 		<module>springboot-elasticsearch</module>
+		<module>springboot-others</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
