@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+	<deployment>
+		<exclusions>
+			<!-- <module name="org.slf4j" />
+			<module name="org.slf4j.impl" />
+			<module name="org.slf4j.jcl-over-slf4j" />
+			<module name="org.slf4j.ext" /> -->
+		</exclusions>
+	</deployment>
+</jboss-deployment-structure>

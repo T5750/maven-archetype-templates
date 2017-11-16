@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%@taglib prefix="s" uri="/struts-tags" %>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Order <s:property value="id" /></title>    
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+
+	        <div class="page-header">
+		        <h1>Order <s:property value="id" /></h1>
+	        </div>
+
+	        <s:fielderror  cssClass="alert alert-error"/>
+
+            <s:form method="post" action="%{#request.contextPath}/rest/orders/%{id}" cssClass="form-horizontal" theme="simple">
+                <s:hidden name="_method" value="put" />
+                <div class="control-group">
+                    <label class="control-label" for="id">ID</label>
+                    <div class="controls">
+                        <s:textfield id="id" name="id" disabled="true"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="clientName">Client</label>
+                    <div class="controls">
+                        <s:textfield id="clientName" name="clientName"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="amount">Amount</label>
+                    <div class="controls">
+                        <s:textfield id="amount" name="amount" />
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <s:submit cssClass="btn btn-primary"/>
+                </div>
+                <table>
+            </s:form>
+	        <a href="${pageContext.request.contextPath}/rest/orders" class="btn btn-info">
+		        <i class="icon icon-arrow-left"></i> Back to Orders
+	        </a>
+        </div><!--/row-->
+    </div><!--/span-->
+</div><!--/row-->
+</body>
+</html>
+	

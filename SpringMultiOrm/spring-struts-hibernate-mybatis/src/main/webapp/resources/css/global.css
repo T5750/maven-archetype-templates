@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* =Reset
+-----------------------------------------------------------------------------*/
+body,h1,h2,h3,h4,h5,h6,p,pre,blockquote,dl,dt,dd,ul,ol,li,form,fieldset,legend,input,textarea,button,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,img {
+	border: none;
+}
+
+caption,strong,th {
+	font-weight: normal;
+}
+
+address,cite,dfn,em,var {
+	font-style: normal;
+}
+
+code,kbd,pre,samp,tt {
+	font-family: "Courier New", Courier, monospace;
+}
+
+ul,ol {
+	list-style: none outside;
+}
+
+caption,th {
+	text-align: left;
+}
+
+q:before,q:after {
+	content: '';
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+select,input,button,textarea {
+	font-size: 100%;
+}
+
+textarea {
+	overflow-y: auto;
+}
+
+body {
+	_word-break: break-all;
+}
+
+img {
+	vertical-align: middle;
+}
+
+html,legend {
+	color: #333;
+	background: #FFF;
+}
+
+body {
+	font: 12px/1.5 arial;
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #E17009;
+	text-decoration: none;
+}
+
+hr {
+	color: #E4E4E4;
+	background-color: #E4E4E4;
+	border: none;
+	height: 1px;
+}
+
+del {
+	font-family: simsun;
+	color: #CCC;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	_font-size: 100%;
+	_font-weight: normal;
+}
+
+select,input,button,textarea {
+	_font-size: 100%;
+}
+
+body {
+	font: 12px/1.5 "Lucida Grande", arial, helvetica, sans-serif;
+	color: #333333;
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+/* =Layout-----------------------------------------------------------------------------*/
+.clearfix:after {
+	content: "\0020";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.f14b {
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+.f16b {
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.fb {
+	font-weight: bolder;
+}
+
+.lower {
+	color: #ACBED7 !important;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mr5 {
+	margin-right: 5px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.pr40 {
+	padding-right: 40px;
+}

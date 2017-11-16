@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+		"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<bean name="xmlHandler" type="org.apache.struts2.rest.handler.ContentTypeHandler"
+		  class="com.cnblogs.yjmyzz.handler.XStreamHandler"/>
+
+	<bean name="jsonHandler" type="org.apache.struts2.rest.handler.ContentTypeHandler"
+		  class="com.cnblogs.yjmyzz.handler.JacksonHandler"/>
+
+	<!-- Overwrite Convention -->
+	<constant name="struts.convention.action.suffix" value="Controller"/>
+	<constant name="struts.convention.action.mapAllMatches" value="true"/>
+	<!--<constant name="struts.rest.content.restrictToGET" value="false" /> -->
+	<constant name="struts.convention.default.parent.package"
+			  value="rest-default"/>
+	<constant name="struts.convention.package.locators" value="action"/>
+	<!-- <constant name="struts.rest.namespace" value="/rest" /> -->
+	<constant name="struts.convention.action.includeJars" value=".*?/_wl_cls_gen.*?jar(!/)?"/>
+	<constant name="struts.convention.exclude.parentClassLoader"
+			  value="true"/>
+	<constant name="struts.convention.action.fileProtocols" value="jar,zip,vfsfile,vfszip"/>
+
+	<constant name="struts.mapper.class"
+			  value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper"/>
+	<constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts"/>
+	<constant name="struts.mapper.alwaysSelectFullNamespace"
+			  value="false"/>
+
+	<package name="base-default" extends="struts-default">
+		<global-results>
+			<result name="error">/WEB-INF/common/error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+							   result="error"/>
+		</global-exception-mappings>
+	</package>
+
+	<!-- 所有rest服务Action，都使用rest-package包 -->
+	<package name="rest-package" namespace="/rest" extends="base-default">
+		<result-types>
+			<result-type name="redirect"
+						 class="org.apache.struts2.dispatcher.ServletRedirectResult">
+				<param name="statusCode">303</param>
+			</result-type>
+			<result-type name="redirectAction"
+						 class="org.apache.struts2.dispatcher.ServletActionRedirectResult">
+				<param name="statusCode">303</param>
+			</result-type>
+		</result-types>
+		<interceptors>
+			<interceptor name="rest"
+						 class="org.apache.struts2.rest.ContentTypeInterceptor"/>
+			<interceptor name="restWorkflow"
+						 class="org.apache.struts2.rest.RestWorkflowInterceptor"/>
+			<interceptor name="messages"
+						 class="org.apache.struts2.interceptor.MessageStoreInterceptor"/>
+			<interceptor name="exceptionInterceptor"
+						 class="com.cnblogs.yjmyzz.interceptor.ExceptionInterceptor">
+			</interceptor>
+			<interceptor-stack name="restDefaultStack">
+				<!-- <interceptor-ref name="exception" /> -->
+				<!-- <interceptor-ref name="alias" /> -->
+				<!-- <interceptor-ref name="servletConfig" /> -->
+				<interceptor-ref name="messages">
+					<param name="operationMode">AUTOMATIC</param>
+				</interceptor-ref>
+				<!-- <interceptor-ref name="prepare" /> -->
+				<!-- <interceptor-ref name="i18n" /> -->
+				<!-- <interceptor-ref name="chain" /> -->
+				<!-- <interceptor-ref name="debugging" /> -->
+				<!-- <interceptor-ref name="profiling" /> -->
+				<interceptor-ref name="actionMappingParams"/>
+				<interceptor-ref name="scopedModelDriven"/>
+				<interceptor-ref name="modelDriven">
+					<param name="refreshModelBeforeResult">true</param>
+				</interceptor-ref>
+				<!-- <interceptor-ref name="fileUpload" /> -->
+				<!-- <interceptor-ref name="checkbox" /> -->
+				<interceptor-ref name="staticParams"/>
+				<interceptor-ref name="params">
+					<param name="excludeParams">dojo\..*</param>
+				</interceptor-ref>
+				<interceptor-ref name="rest"/>
+				<interceptor-ref name="conversionError"/>
+				<!-- <interceptor-ref name="validation">
+					<param name="excludeMethods">input,back,cancel,browse,index,show,edit,editNew,deleteConfirm,destroy,create</param>
+				</interceptor-ref> -->
+				<interceptor-ref name="restWorkflow">
+					<param name="excludeMethods">
+						input,back,cancel,browse,index,show,edit,editNew,deleteConfirm,destroy,create
+					</param>
+				</interceptor-ref>
+				<interceptor-ref name="exceptionInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="restDefaultStack"/>
+		<default-class-ref class="org.apache.struts2.rest.RestActionSupport"/>
+	</package>
+
+	<!-- 所有非rest服务常规页面的Action，都使用page-package包 -->
+	<package name="page-package" namespace="/" extends="base-default">
+		<interceptors>
+			<interceptor name="exceptionInterceptor"
+						 class="com.cnblogs.yjmyzz.interceptor.ExceptionInterceptor">
+			</interceptor>
+			<interceptor-stack name="appStack">
+				<interceptor-ref name="defaultStack">
+					<param name="modelDriven.refreshModelBeforeResult">true</param>
+				</interceptor-ref>
+				<interceptor-ref name="exceptionInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="appStack"/>
+	</package>
+
+</struts>

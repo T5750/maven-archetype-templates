@@ -26,6 +26,7 @@
 		<module>SpringCloud</module>
 		<module>SpringData</module>
 		<module>SpringCache</module>
+		<module>SpringMultiOrm</module>
 	</modules>
 
 
