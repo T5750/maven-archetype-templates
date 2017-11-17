@@ -104,11 +104,14 @@ maven-archetype-templates/
 │           ├── compute-service-Camden
 │           ├── eureka-ribbon-Camden
 │           └── eureka-feign-Camden
-└── v0.15
+├── v0.15
 │   └── SpringData/
 │       └── SpringDataJPA
-└── v0.16
-    └── SpringCache/
-        ├── springboot-cache
-        └── spring-cache
+├── v0.16
+│   └── SpringCache/
+│       ├── springboot-cache
+│       └── spring-cache
+└── v0.17
+    └── SpringMultiOrm/
+        └── spring-struts-hibernate-mybatis
 ```
