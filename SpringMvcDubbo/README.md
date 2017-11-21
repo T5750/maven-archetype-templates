@@ -10,7 +10,9 @@
  - [Tomcat 7](http://tomcat.apache.org/)
 
 ## Dubbo Architecture
-![Dubbo Architecture](http://dubbo.io/dubbo-architecture.jpg-version=1&modificationDate=1330892870000.jpg)
+![Dubbo Architecture](http://dubbo.io/images//dubbo-architecture.png)
+
+![配置之间的关系](http://s1.wailian.download/2017/11/21/dubbo.jpg)
 
 ## Project Structure
 ![Project Structure](http://img.my.csdn.net/uploads/201704/20/1492672291_4276.png)
