@@ -16,6 +16,7 @@
 		<module>unused-spring-data-redis</module>
 		<module>SpringRedisMybatis</module>
 		<module>spring-data-redis</module>
+		<module>springboot-redis-sentinel</module>
 	</modules>
 	<packaging>pom</packaging>
 
