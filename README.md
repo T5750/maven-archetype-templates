@@ -70,7 +70,8 @@ maven-archetype-templates/
 │   └── SpringRedis/
 │       ├── spring-data-redis
 │       ├── unused-spring-data-redis
-│       └── SpringRedisMybatis
+│       ├── SpringRedisMybatis
+│       └── springboot-redis-sentinel
 ├── v0.13
 │   └── SpringBoot/
 │       ├── springboot-helloworld
