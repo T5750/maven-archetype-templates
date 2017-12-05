@@ -6,7 +6,7 @@
  - [Spring Boot 1.5.3.RELEASE](https://projects.spring.io/spring-boot)
  - [Redis 3.0.7](https://redis.io)
 
-## Getting started with Redis
+## Getting started with Redis Sentinel
 sentinel_26379.conf:
 ```
 port 26379
@@ -62,3 +62,4 @@ src/redis-cli -h 192.168.100.163 -p 26380
 
 ## Links
 - [Redis Sentinel主从高可用方案（附Jedis Sentinel教程）](http://wosyingjun.iteye.com/blog/2289593)
+- [Redis 的 Sentinel 文档](http://www.redis.cn/topics/sentinel.html)

@@ -17,6 +17,7 @@
 		<module>SpringRedisMybatis</module>
 		<module>spring-data-redis</module>
 		<module>springboot-redis-sentinel</module>
+		<module>springboot-redis-cluster</module>
 	</modules>
 	<packaging>pom</packaging>
 
