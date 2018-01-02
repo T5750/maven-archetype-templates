@@ -13,6 +13,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>springboot-undertow</module>
+		<module>springboot-swagger-druid</module>
 	</modules>
 
 </project>

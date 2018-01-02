@@ -86,7 +86,10 @@ maven-archetype-templates/
 │       ├── springboot-dubbo-server
 │       ├── springboot-dubbo-client
 │       ├── springboot-properties
-│       └── springboot-elasticsearch
+│       ├── springboot-elasticsearch
+│       └── springboot-others
+│           ├── springboot-undertow
+│           └── springboot-swagger-druid
 ├── v0.14
 │   └── SpringCloud/
 │       ├── eureka-server
