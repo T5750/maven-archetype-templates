@@ -89,7 +89,8 @@ maven-archetype-templates/
 │       ├── springboot-elasticsearch
 │       └── springboot-others
 │           ├── springboot-undertow
-│           └── springboot-swagger-druid
+│           ├── springboot-swagger-druid
+│           └── springboot-canal-mysql-redis
 ├── v0.14
 │   └── SpringCloud/
 │       ├── eureka-server
