@@ -96,9 +96,11 @@
 - `SimpleCanalClientExample`
 - Simple客户端例子：`SimpleCanalClientTest`
 - Cluster客户端例子：`ClusterCanalClientTest`
+- `RedisCanalClient`
 
 ## Links
 - [使用canal实现redis缓存刷新](https://github.com/Ac-heron/hero-canal)
+- [使用canal进行mysql数据同步到Redis](http://blog.csdn.net/tb3039450/article/details/53928351)
 - [QuickStart](https://github.com/alibaba/canal/wiki/QuickStart)
 - [AdminGuide](https://github.com/alibaba/canal/wiki/AdminGuide)
 - [SimpleCanalClientTest](https://github.com/alibaba/canal/blob/master/example/src/main/java/com/alibaba/otter/canal/example/SimpleCanalClientTest.java)
