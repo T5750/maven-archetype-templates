@@ -15,6 +15,7 @@
 		<module>springboot-undertow</module>
 		<module>springboot-swagger-druid</module>
 		<module>springboot-canal-mysql-redis</module>
+		<module>springboot-easyadmin</module>
 	</modules>
 
 </project>

@@ -90,7 +90,8 @@ maven-archetype-templates/
 │       └── springboot-others
 │           ├── springboot-undertow
 │           ├── springboot-swagger-druid
-│           └── springboot-canal-mysql-redis
+│           ├── springboot-canal-mysql-redis
+│           └── springboot-easyadmin
 ├── v0.14
 │   └── SpringCloud/
 │       ├── eureka-server
