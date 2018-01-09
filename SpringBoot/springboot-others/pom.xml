@@ -16,6 +16,7 @@
 		<module>springboot-swagger-druid</module>
 		<module>springboot-canal-mysql-redis</module>
 		<module>springboot-easyadmin</module>
+		<module>springboot-jjwt-security</module>
 	</modules>
 
 </project>
