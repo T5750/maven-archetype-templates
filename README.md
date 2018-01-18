@@ -125,5 +125,6 @@ maven-archetype-templates/
 └── v0.18
     └── SpringSecurity/
         ├── SpringSecurityOAuth2
-        └── SecureRESTApiWithBasicAuthentication
+        ├── SecureRESTApiWithBasicAuthentication
+        └── AngularClientWithBasicAuth
 ```
