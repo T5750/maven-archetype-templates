@@ -17,10 +17,10 @@ OAuth2 is an standardized authorization protocol/framework. As per Official [OAu
 - `authorization server`
 
 ### 2. OAuth2 Authorization Grant types
-- `authorization code`
-- `implicit`
-- `resource owner password credentials`
-- `client credentials`
+- `authorization code`: 授权码模式
+- `implicit`: 简化模式
+- `resource owner password credentials`: 密码模式
+- `client credentials`: 客户端模式
 
 ### 3. OAuth2 Tokens
 - `Access Token`
@@ -64,3 +64,4 @@ First add an authorization header with client credentials [my-trusted-client/sec
 
 ## Links
 - [Secure Spring REST API using OAuth2](http://websystique.com/spring-security/secure-spring-rest-api-using-oauth2/)
+- [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)

@@ -119,7 +119,10 @@ maven-archetype-templates/
 │   └── SpringCache/
 │       ├── springboot-cache
 │       └── spring-cache
-└── v0.17
-    └── SpringMultiOrm/
-        └── spring-struts-hibernate-mybatis
+├── v0.17
+│   └── SpringMultiOrm/
+│       └── spring-struts-hibernate-mybatis
+└── v0.18
+    └── SpringSecurity/
+        └── SpringSecurityOAuth2
 ```
