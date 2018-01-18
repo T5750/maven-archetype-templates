@@ -4,7 +4,7 @@
 - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
 - [Spring Framework 4.3.1.RELEASE](http://projects.spring.io/spring-framework)
 - [Spring Security 4.1.1 RELEASE](http://projects.spring.io/spring-security)
-- [Spring Security OAuth 4.1.1 RELEASE](https://projects.spring.io/spring-security-oauth)
+- [Spring Security OAuth 2.0.10 RELEASE](https://projects.spring.io/spring-security-oauth)
 
 ## What is OAuth2
 OAuth2 is an standardized authorization protocol/framework. As per Official [OAuth2 Specification](https://tools.ietf.org/html/rfc6749):
