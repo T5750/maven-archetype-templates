@@ -124,5 +124,6 @@ maven-archetype-templates/
 │       └── spring-struts-hibernate-mybatis
 └── v0.18
     └── SpringSecurity/
-        └── SpringSecurityOAuth2
+        ├── SpringSecurityOAuth2
+        └── SecureRESTApiWithBasicAuthentication
 ```

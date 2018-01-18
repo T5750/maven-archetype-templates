@@ -13,6 +13,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>SpringSecurityOAuth2</module>
+		<module>SecureRESTApiWithBasicAuthentication</module>
 	</modules>
 
 
