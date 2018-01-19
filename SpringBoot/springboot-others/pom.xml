@@ -18,6 +18,7 @@
 		<module>springboot-easyadmin</module>
 		<module>springboot-jjwt-security</module>
 		<module>springboot-jpa-angularjs</module>
+		<module>springboot-jjwt-angular</module>
 	</modules>
 
 </project>

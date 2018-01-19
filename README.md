@@ -29,103 +29,86 @@ Installation:
 
 ```
 maven-archetype-templates/
-├── v0.1
-│   └── SpringMvcHibernateXML
-├── v0.2
-│   └── SpringMvcHibernateJavaBased
-├── v0.3
-│   └── SpringMvcHibernateAnnotation
-├── v0.4
-│   └── SpringStrutsIntegrationDemo
-├── v0.5
-│   └── Struts2Spring4Hibernate4XML
-├── v0.6
-│   └── SpringMvc4MyBatis3Annotation
-├── v0.7
-│   └── SpringMvcDubbo/
-│       ├── api
-│       ├── consumer
-│       └── provider
-├── v0.8
-│   └── dubbo-wusc/
-│       ├── edu-common
-│       ├── edu-common-config
-│       ├── edu-common-core
-│       ├── edu-common-parent
-│       ├── edu-common-web
-│       ├── edu-demo
-│       ├── edu-facade-user
-│       ├── edu-service-user
-│       └── edu-web-boss
-├── v0.9
-│   └── motan-quickstart/
-│       ├── motan-demo-api
-│       ├── motan-demo-client
-│       └── motan-demo-server
-├── v0.10
-│   └── Spring3RESTful
-├── v0.11
-│   └── JerseyRESTful
-├── v0.12
-│   └── SpringRedis/
-│       ├── spring-data-redis
-│       ├── unused-spring-data-redis
-│       ├── SpringRedisMybatis
-│       ├── springboot-redis-sentinel
-│       └── springboot-redis-cluster
-├── v0.13
-│   └── SpringBoot/
-│       ├── springboot-helloworld
-│       ├── springboot-restful
-│       ├── springboot-freemarker
-│       ├── springboot-validation-over-json
-│       ├── springboot-mybatis
-│       ├── springboot-mybatis-annotation
-│       ├── springboot-mybatis-mutil-datasource
-│       ├── springboot-mybatis-redis
-│       ├── springboot-dubbo-server
-│       ├── springboot-dubbo-client
-│       ├── springboot-properties
-│       ├── springboot-elasticsearch
-│       └── springboot-others
-│           ├── springboot-undertow
-│           ├── springboot-swagger-druid
-│           ├── springboot-canal-mysql-redis
-│           ├── springboot-easyadmin
-│           ├── springboot-jjwt-security
-│           └── springboot-jpa-angularjs
-├── v0.14
-│   └── SpringCloud/
-│       ├── eureka-server
-│       ├── compute-service
-│       ├── eureka-ribbon
-│       ├── eureka-feign
-│       ├── config-server
-│       ├── config-client
-│       ├── config-repo
-│       ├── config-server-eureka
-│       ├── config-client-eureka
-│       ├── api-gateway
-│       ├── config-server-eureka-kafka
-│       ├── config-client-eureka-kafka
-│       └── SpringCloudCamden
-│           ├── eureka-server-Camden
-│           ├── compute-service-Camden
-│           ├── eureka-ribbon-Camden
-│           └── eureka-feign-Camden
-├── v0.15
-│   └── SpringData/
-│       └── SpringDataJPA
-├── v0.16
-│   └── SpringCache/
-│       ├── springboot-cache
-│       └── spring-cache
-├── v0.17
-│   └── SpringMultiOrm/
-│       └── spring-struts-hibernate-mybatis
-└── v0.18
-    └── SpringSecurity/
-        ├── SpringSecurityOAuth2
-        ├── SecureRESTApiWithBasicAuthentication
-        └── AngularClientWithBasicAuth
+├── [v0.1] SpringMvcHibernateXML
+├── [v0.2] SpringMvcHibernateJavaBased
+├── [v0.3] SpringMvcHibernateAnnotation
+├── [v0.4] SpringStrutsIntegrationDemo
+├── [v0.5] Struts2Spring4Hibernate4XML
+├── [v0.6] SpringMvc4MyBatis3Annotation
+├── [v0.7] SpringMvcDubbo/
+│    ├── api
+│    ├── consumer
+│    └── provider
+├── [v0.8] dubbo-wusc/
+│    ├── edu-common
+│    ├── edu-common-config
+│    ├── edu-common-core
+│    ├── edu-common-parent
+│    ├── edu-common-web
+│    ├── edu-demo
+│    ├── edu-facade-user
+│    ├── edu-service-user
+│    └── edu-web-boss
+├── [v0.9] motan-quickstart/
+│    ├── motan-demo-api
+│    ├── motan-demo-client
+│    └── motan-demo-server
+├── [v0.10] Spring3RESTful
+├── [v0.11] JerseyRESTful
+├── [v0.12] SpringRedis/
+│    ├── spring-data-redis
+│    ├── [v0.12.1] unused-spring-data-redis
+│    ├── [v0.12.2] SpringRedisMybatis
+│    ├── springboot-redis-sentinel
+│    └── [v0.12.3] springboot-redis-cluster
+├── [v0.13] SpringBoot/
+│    ├── springboot-helloworld
+│    ├── springboot-restful
+│    ├── springboot-freemarker
+│    ├── springboot-validation-over-json
+│    ├── springboot-mybatis
+│    ├── springboot-mybatis-annotation
+│    ├── springboot-mybatis-mutil-datasource
+│    ├── springboot-mybatis-redis
+│    ├── springboot-dubbo-server
+│    ├── springboot-dubbo-client
+│    ├── springboot-properties
+│    ├── springboot-elasticsearch
+│    └── springboot-others
+│        ├── [v0.13.1] springboot-undertow
+│        ├── [v0.13.2] springboot-swagger-druid
+│        ├── [v0.13.3] springboot-canal-mysql-redis
+│        ├── [v0.13.4] springboot-easyadmin
+│        ├── [v0.13.5] springboot-jjwt-security
+│        ├── [v0.13.6] springboot-jpa-angularjs
+│        └── [v0.13.7] springboot-jjwt-angular
+├── [v0.14] SpringCloud/
+│    ├── eureka-server
+│    ├── compute-service
+│    ├── eureka-ribbon
+│    ├── eureka-feign
+│    ├── config-server
+│    ├── config-client
+│    ├── config-repo
+│    ├── config-server-eureka
+│    ├── config-client-eureka
+│    ├── api-gateway
+│    ├── config-server-eureka-kafka
+│    ├── config-client-eureka-kafka
+│    └── SpringCloudCamden
+│        ├── eureka-server-Camden
+│        ├── compute-service-Camden
+│        ├── eureka-ribbon-Camden
+│        └── eureka-feign-Camden
+├── [v0.15] SpringData/
+│    └── SpringDataJPA
+├── [v0.16] SpringCache/
+│    ├── springboot-cache
+│    └── [v0.16.1] spring-cache
+├── [v0.17] SpringMultiOrm/
+│    └── spring-struts-hibernate-mybatis
+└── [v0.18] SpringSecurity/
+     ├── SpringSecurityOAuth2
+     ├── [v0.18.1] SecureRESTApiWithBasicAuthentication
+     └── [v0.18.2] AngularClientWithBasicAuth
 ```
