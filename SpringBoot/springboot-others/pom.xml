@@ -17,6 +17,7 @@
 		<module>springboot-canal-mysql-redis</module>
 		<module>springboot-easyadmin</module>
 		<module>springboot-jjwt-security</module>
+		<module>springboot-jpa-angularjs</module>
 	</modules>
 
 </project>

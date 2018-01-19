@@ -92,7 +92,8 @@ maven-archetype-templates/
 │           ├── springboot-swagger-druid
 │           ├── springboot-canal-mysql-redis
 │           ├── springboot-easyadmin
-│           └── springboot-jjwt-security
+│           ├── springboot-jjwt-security
+│           └── springboot-jpa-angularjs
 ├── v0.14
 │   └── SpringCloud/
 │       ├── eureka-server
