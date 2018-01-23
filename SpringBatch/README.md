@@ -15,3 +15,5 @@ A job is launched via **JobLauncher**, and **JobRepository** stores the meta dat
 
 ## Links
 - [Spring Batch Tutorial](http://websystique.com/spring-batch-tutorial/)
+- [Spring Batch Reference](http://docs.spring.io/spring-batch/reference/html/)
+- [Quartz Reference Manual](http://quartz-scheduler.org/documentation)

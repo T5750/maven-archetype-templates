@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UniversityExamResultList>
+	<ExamResult>
+		<dob>1985-02-01</dob>
+		<percentage>76.0</percentage>
+		<studentName>Brian Burlet</studentName>
+	</ExamResult>
+	<ExamResult>
+		<dob>1970-02-01</dob>
+		<percentage>61.0</percentage>
+		<studentName>Renard konig</studentName>
+	</ExamResult>
+	<ExamResult>
+		<dob>1993-02-01</dob>
+		<percentage>92.0</percentage>
+		<studentName>Rita Paul</studentName>
+	</ExamResult>
+	<ExamResult>
+		<dob>1965-02-01</dob>
+		<percentage>83.0</percentage>
+		<studentName>Han Yenn</studentName>
+	</ExamResult>
+</UniversityExamResultList>

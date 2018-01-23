@@ -113,5 +113,6 @@ maven-archetype-templates/
 │    ├── [v0.18.1] SecureRESTApiWithBasicAuthentication
 │    └── [v0.18.2] AngularClientWithBasicAuth
 └── [v0.19] SpringBatch/
-     └── SpringBatchCsvToXml
+     ├── SpringBatchCsvToXml
+     └── [v0.19.1] SpringBatchXmlToCsv
 ```
