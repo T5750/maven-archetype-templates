@@ -26,7 +26,6 @@ Installation:
 6. Enjoy :-)
 
 ### What's included
-
 ```
 maven-archetype-templates/
 ├── [v0.1] SpringMvcHibernateXML
@@ -115,5 +114,6 @@ maven-archetype-templates/
 └── [v0.19] SpringBatch/
      ├── SpringBatchCsvToXml
      ├── [v0.19.1] SpringBatchXmlToCsv
-     └── [v0.19.2] SpringBatchXmlToDatabase
+     ├── [v0.19.2] SpringBatchXmlToDatabase
+     └── [v0.19.3] SpringBatchDatabaseToCsv
 ```

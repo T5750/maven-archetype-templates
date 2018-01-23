@@ -15,6 +15,7 @@
 		<module>SpringBatchCsvToXml</module>
 		<module>SpringBatchXmlToCsv</module>
 		<module>SpringBatchXmlToDatabase</module>
+		<module>SpringBatchDatabaseToCsv</module>
 	</modules>
 
 	<properties>
