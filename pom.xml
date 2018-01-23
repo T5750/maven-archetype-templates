@@ -28,6 +28,7 @@
 		<module>SpringCache</module>
 		<module>SpringMultiOrm</module>
 		<module>SpringSecurity</module>
+		<module>SpringBatch</module>
 	</modules>
 
 	<properties>

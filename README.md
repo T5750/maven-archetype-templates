@@ -108,8 +108,10 @@ maven-archetype-templates/
 │    └── [v0.16.1] spring-cache
 ├── [v0.17] SpringMultiOrm/
 │    └── spring-struts-hibernate-mybatis
-└── [v0.18] SpringSecurity/
-     ├── SpringSecurityOAuth2
-     ├── [v0.18.1] SecureRESTApiWithBasicAuthentication
-     └── [v0.18.2] AngularClientWithBasicAuth
+├── [v0.18] SpringSecurity/
+│    ├── SpringSecurityOAuth2
+│    ├── [v0.18.1] SecureRESTApiWithBasicAuthentication
+│    └── [v0.18.2] AngularClientWithBasicAuth
+└── [v0.19] SpringBatch/
+     └── SpringBatchCsvToXml
 ```
