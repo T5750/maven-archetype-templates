@@ -114,5 +114,6 @@ maven-archetype-templates/
 │    └── [v0.18.2] AngularClientWithBasicAuth
 └── [v0.19] SpringBatch/
      ├── SpringBatchCsvToXml
-     └── [v0.19.1] SpringBatchXmlToCsv
+     ├── [v0.19.1] SpringBatchXmlToCsv
+     └── [v0.19.2] SpringBatchXmlToDatabase
 ```
