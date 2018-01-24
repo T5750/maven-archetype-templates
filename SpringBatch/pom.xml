@@ -16,6 +16,7 @@
 		<module>SpringBatchXmlToCsv</module>
 		<module>SpringBatchXmlToDatabase</module>
 		<module>SpringBatchDatabaseToCsv</module>
+		<module>SpringBatchMultiReaderHibernateWriter</module>
 	</modules>
 
 	<properties>

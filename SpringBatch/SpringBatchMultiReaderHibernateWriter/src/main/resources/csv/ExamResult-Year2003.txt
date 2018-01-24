@@ -1,0 +1,4 @@
+Igor Watson    |   01/02/1986  |   34
+Peet Sampras   |   01/02/1978  |   97
+Rita Paul      |   01/02/1993  |   92
+Han Yenn       |   01/02/1965  |   83
