@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	   default-autowire="byName" default-init-method="init">
+
+	<import resource="batch-context.xml"/>
+
+	<bean id="applicationContextUtil" class="com.websystique.springbatch.quartz.ApplicationContextUtil"/>
+
+	<bean id="springBatchJob" class="com.websystique.springbatch.SpringBatchJob">
+		<property name="jobName" value="examResultBatchJob"/>
+		<property name="jobLocator" ref="jobRegistry"/>
+		<property name="jobLauncher" ref="jobLauncher"/>
+	</bean>
+
+	<bean name="taskJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.websystique.springbatch.quartz.SchedulerJob"/>
+		<property name="jobDataMap">
+			<map>
+				<entry key="batchJob" value="springBatchJob"/>
+			</map>
+		</property>
+		<property name="durability" value="true"/>
+	</bean>
+
+	<!-- Run the job every 1 minute -->
+	<bean id="taskCronTrigger" class="com.websystique.springbatch.quartz.CronTriggerFactoryBean">
+		<constructor-arg index="0" value="taskJobDetail"/>
+		<constructor-arg index="1" value="0 0/1 * * * ?"/>
+	</bean>
+
+	<bean id="quartzSchedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobDetails">
+			<list>
+				<ref bean="taskJobDetail"/>
+			</list>
+		</property>
+		<property name="triggers">
+			<list>
+				<ref bean="taskCronTrigger"/>
+			</list>
+		</property>
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.jobStore.class">org.quartz.simpl.RAMJobStore</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

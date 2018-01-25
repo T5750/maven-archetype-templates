@@ -1,0 +1,83 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:batch="http://www.springframework.org/schema/batch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/batch	http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	   default-autowire="byName" default-init-method="init">
+
+	<!-- JobRepository and JobLauncher are configuration/setup classes -->
+	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean"/>
+
+	<bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository"/>
+	</bean>
+
+	<bean id="jobRegistry" class="org.springframework.batch.core.configuration.support.MapJobRegistry"/>
+
+	<!-- A BeanPostProcessor that registers Job beans with a JobRegistry.-->
+	<bean class="org.springframework.batch.core.configuration.support.JobRegistryBeanPostProcessor">
+		<property name="jobRegistry" ref="jobRegistry"/>
+	</bean>
+
+	<!-- Thanks to this bean, you can now refer dynamic files in input folder whose names can be different on each run-->
+	<bean id="inputExamResultJobFile" class="org.springframework.core.io.FileSystemResource" scope="step">
+		<constructor-arg value="#{jobParameters[examResultInputFile]}"/>
+	</bean>
+
+	<!-- ItemReader reads a complete line one by one from input file -->
+	<bean id="flatFileItemReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
+		<property name="resource" ref="inputExamResultJobFile"/>
+		<property name="lineMapper">
+			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+				<property name="fieldSetMapper">
+					<!-- Mapper which maps each individual items in a record to properties in POJO -->
+					<bean class="com.websystique.springbatch.ExamResultFieldSetMapper"/>
+				</property>
+				<property name="lineTokenizer">
+					<!-- A tokenizer class to be used when items in input record are separated by specific characters -->
+					<bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+						<property name="delimiter" value="|"/>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- ItemWriter writes a line into output flat file -->
+	<bean id="flatFileItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
+		<property name="resource" value="file:SpringBatch/SpringBatchQuartz/csv/examResultOutput.txt"/>
+		<property name="appendAllowed" value="true"/>
+		<property name="lineAggregator">
+			<!-- An Aggregator which converts an object into delimited list of strings -->
+			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+				<property name="delimiter" value="|"/>
+				<property name="fieldExtractor">
+					<!-- Extractor which returns the value of beans property through reflection -->
+					<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+						<property name="names" value="studentName, percentage, dob"/>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- Optional ItemProcessor to perform business logic/filtering on the input records -->
+	<bean id="itemProcessor" class="com.websystique.springbatch.ExamResultItemProcessor"/>
+
+	<!-- Step will need a transaction manager -->
+	<bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager"/>
+
+	<bean id="fileArchivingTasklet" class="com.websystique.springbatch.FileArchivingTasklet"/>
+
+	<!-- Actual Job -->
+	<batch:job id="examResultBatchJob" restartable="true">
+		<batch:step id="processFiles" next="archiveFiles">
+			<batch:tasklet allow-start-if-complete="false" start-limit="1" transaction-manager="transactionManager">
+				<batch:chunk reader="flatFileItemReader" writer="flatFileItemWriter" processor="itemProcessor"
+							 commit-interval="10"/>
+			</batch:tasklet>
+		</batch:step>
+		<batch:step id="archiveFiles">
+			<batch:tasklet ref="fileArchivingTasklet"/>
+		</batch:step>
+	</batch:job>
+</beans>

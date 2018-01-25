@@ -116,5 +116,6 @@ maven-archetype-templates/
      ├── [v0.19.1] SpringBatchXmlToCsv
      ├── [v0.19.2] SpringBatchXmlToDatabase
      ├── [v0.19.3] SpringBatchDatabaseToCsv
-     └── [v0.19.4] SpringBatchMultiReaderHibernateWriter
+     ├── [v0.19.4] SpringBatchMultiReaderHibernateWriter
+     └── [v0.19.5] SpringBatchQuartz
 ```

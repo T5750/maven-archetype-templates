@@ -17,6 +17,7 @@
 		<module>SpringBatchXmlToDatabase</module>
 		<module>SpringBatchDatabaseToCsv</module>
 		<module>SpringBatchMultiReaderHibernateWriter</module>
+		<module>SpringBatchQuartz</module>
 	</modules>
 
 	<properties>
