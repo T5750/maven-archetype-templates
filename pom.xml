@@ -29,6 +29,7 @@
 		<module>SpringMultiOrm</module>
 		<module>SpringSecurity</module>
 		<module>SpringBatch</module>
+		<module>SpringStruts2</module>
 	</modules>
 
 	<properties>
