@@ -120,5 +120,6 @@ maven-archetype-templates/
 │    └── [v0.19.5] SpringBatchQuartz
 └── [v0.20] SpringStruts2/
      ├── Struts2TokenInterceptor
-     └── [v0.20.1] Struts2Interceptor
+     ├── [v0.20.1] Struts2Interceptor
+     └── [v0.20.2] Struts2ExecAndWait
 ```
