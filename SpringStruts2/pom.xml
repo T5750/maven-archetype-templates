@@ -13,6 +13,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>Struts2TokenInterceptor</module>
+		<module>Struts2Interceptor</module>
 	</modules>
 
 	<properties>
