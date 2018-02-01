@@ -1,13 +1,11 @@
 # Spring 4和Hibernate 4集成教程第1部分：XML配置
----
-## Runtime Environment
 
- - Java 6
- - Spring framework 4.0.3.RELEASED
- - Hibernate ORM 4.3.5.Final
- - IntelliJ IDEA 14.0.5
- - Maven 3
- - Tomcat 6
+## Runtime Environment
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring framework 4.0.3.RELEASED](http://projects.spring.io/spring-framework)
+- [Hibernate ORM 4.3.5.Final](http://hibernate.org/orm)
+- [Maven 3](http://maven.apache.org/)
+- [Tomcat 6](http://tomcat.apache.org/)
 
 ## Project Structure
 ![Project Structure](http://img.my.csdn.net/uploads/201704/11/1491874576_1112.png)
@@ -61,7 +59,3 @@
 
 ### References
 - [Object Relational Mapping (ORM) Data Access](http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/orm.html#orm-hibernate)
-
-## Copyright
-
-Copyright 2016-2017 evangel_z.

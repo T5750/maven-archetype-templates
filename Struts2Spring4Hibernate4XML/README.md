@@ -1,14 +1,13 @@
 # Struts 2 - Spring 4 - Hibernate 4集成教程第1部分 - XML配置
----
+
 ## Runtime Environment
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Spring Framework 4.1.4.RELEASE](http://projects.spring.io/spring-framework)
- - [Struts Framework 2.3.20](http://struts.apache.org)
- - [Hibernate ORM 4.3.8.Final](http://hibernate.org/orm)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Tomcat 7](http://tomcat.apache.org/)
- - [Apache Commons DBCP](http://commons.apache.org/proper/commons-dbcp/)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring Framework 4.1.4.RELEASE](http://projects.spring.io/spring-framework)
+- [Struts Framework 2.3.20](http://struts.apache.org)
+- [Hibernate ORM 4.3.8.Final](http://hibernate.org/orm)
+- [Maven 3](http://maven.apache.org/)
+- [Tomcat 7](http://tomcat.apache.org/)
+- [Apache Commons DBCP](http://commons.apache.org/proper/commons-dbcp/)
 
 ## Project Structure
 ![Project Structure](http://img.my.csdn.net/uploads/201704/12/1491985608_4120.png)
@@ -54,6 +53,3 @@
 
 ### References
 - [Spring Plug-in](http://struts.apache.org/docs/spring-plugin.html)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

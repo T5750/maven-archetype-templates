@@ -1,13 +1,12 @@
 # SpringCache
 
 ## Runtime Environment
-
- - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
- - [Spring Framework 4.3.8.RELEASE](http://projects.spring.io/spring-framework)
- - [Spring Boot 1.5.3.RELEASE](https://projects.spring.io/spring-boot)
- - [Spring MVC 4.3.8.RELEASE](http://projects.spring.io/spring-framework)
- - [Maven 3](http://maven.apache.org)
- - [Ehcache 2.6.8](http://www.ehcache.org/downloads)
+- [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+- [Spring Framework 4.3.8.RELEASE](http://projects.spring.io/spring-framework)
+- [Spring Boot 1.5.3.RELEASE](https://projects.spring.io/spring-boot)
+- [Spring MVC 4.3.8.RELEASE](http://projects.spring.io/spring-framework)
+- [Maven 3](http://maven.apache.org)
+- [Ehcache 2.6.8](http://www.ehcache.org/downloads)
 
 ## 注释驱动的 Spring Cache
 
@@ -175,12 +174,7 @@ result | 执行上下文 | 方法执行后的返回值（仅当方法执行之�
 ![运行结果](http://img.blog.csdn.net/20160921154539937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ## Links
-
 - [注释驱动的 Spring cache 缓存介绍](https://www.ibm.com/developerworks/cn/opensource/os-cn-spring-cache/)
 - [SpringBoot数据缓存Cache [Guava和Redis实现]](http://blog.csdn.net/xiaoliuliu2050/article/details/53931296)
 - [Spring Cache抽象详解](http://jinnianshilongnian.iteye.com/blog/2001040)
 - [Spring缓存注解@Cacheable,@CachePut , @CacheEvict使用](http://blog.csdn.net/whatlookingfor/article/details/51833378)
-
-## Copyright
-
-Copyright 2016-2017 evangel_z.

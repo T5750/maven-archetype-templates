@@ -1,18 +1,17 @@
 # 基于Dubbo的分布式系统架构
----
+
 ## Runtime Environment
- - [Dubbo 2.5.3](https://github.com/alibaba/dubbo)
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Spring Framework 3.2.4.RELEASE](http://projects.spring.io/spring-framework)
- - [Struts Framework 2.3.15](http://struts.apache.org)
- - [MyBatis 3.2.2](http://www.mybatis.org/mybatis-3/)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Tomcat 7](http://tomcat.apache.org/)
- - [MySQL 5.5](http://www.mysql.com/)
- - [Druid 0.2.23](https://github.com/alibaba/druid)
- - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
- - [J-UI](http://jui.org/)
+- [Dubbo 2.5.3](https://github.com/alibaba/dubbo)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring Framework 3.2.4.RELEASE](http://projects.spring.io/spring-framework)
+- [Struts Framework 2.3.15](http://struts.apache.org)
+- [MyBatis 3.2.2](http://www.mybatis.org/mybatis-3/)
+- [Maven 3](http://maven.apache.org/)
+- [Tomcat 7](http://tomcat.apache.org/)
+- [MySQL 5.5](http://www.mysql.com/)
+- [Druid 0.2.23](https://github.com/alibaba/druid)
+- [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
+- [J-UI](http://jui.org/)
 
 ## Quick Process
 * 将源代码导入IDEA中
@@ -85,6 +84,3 @@ dubbo-wusc/
 ## Links
 - [基于Dubbo的分布式系统架构实战](http://www.roncoo.com/course/view/85d6008fe77c4199b0cdd2885eaeee53#boxTwo)
 - [安装Dubbo注册中心(Zookeeper-3.4.6)](http://www.roncoo.com/article/detail/125953)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

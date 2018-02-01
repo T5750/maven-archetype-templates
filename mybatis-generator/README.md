@@ -1,10 +1,9 @@
 # MyBatis Generator自动生成代码
----
+
 ## Runtime Environment
- - [MyBatis Generator 1.3.5](http://www.mybatis.org/generator/index.html)
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
+- [MyBatis Generator 1.3.5](http://www.mybatis.org/generator/index.html)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Maven 3](http://maven.apache.org/)
 
 ## Quick Process
 1. Maven Projects
@@ -15,9 +14,9 @@
 
 ## MyBatis GeneratorXML Configuration File Reference
    In the most common use case, MyBatis Generator (MBG) is driven by an XML configuration file. The configuration file tells MBG:
- - How to connect to the database
- - What objects to generate, and how to generate them
- - What tables should be used for object generation
+- How to connect to the database
+- What objects to generate, and how to generate them
+- What tables should be used for object generation
 
 The following is an example MBG configuration file. See the individual pages for each element for more information about the elements and the values of the attributes.
 ```xml
@@ -69,6 +68,3 @@ The following is an example MBG configuration file. See the individual pages for
 - [MyBatis GeneratorXML Configuration File Reference](http://www.mybatis.org/generator/configreference/xmlconfig.html)
 - [MyBatis Generator介绍](http://mbg.cndocs.tk/)
 - [MyBatis Generator 详解](http://blog.csdn.net/isea533/article/details/42102297)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

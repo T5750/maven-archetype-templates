@@ -1,12 +1,12 @@
 # spring-struts-hibernate-mybatis
 
 ## Runtime Environment
- - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Spring Framework 4.1.1.RELEASE](http://projects.spring.io/spring-framework)
- - [Struts 2 Framework 2.3.16.3](http://struts.apache.org/download.cgi#struts23163)
- - [Hibernate ORM 4.3.6.Final](http://hibernate.org/orm)
- - [MyBatis 3.2.8](http://www.mybatis.org/mybatis-3/)
- - [MySQL 5.5](http://www.mysql.com/)
+- [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring Framework 4.1.1.RELEASE](http://projects.spring.io/spring-framework)
+- [Struts 2 Framework 2.3.16.3](http://struts.apache.org/download.cgi#struts23163)
+- [Hibernate ORM 4.3.6.Final](http://hibernate.org/orm)
+- [MyBatis 3.2.8](http://www.mybatis.org/mybatis-3/)
+- [MySQL 5.5](http://www.mysql.com/)
 
 ## Summary
 

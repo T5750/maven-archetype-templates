@@ -1,12 +1,11 @@
 # Motan快速入门
----
+
 ## Runtime Environment
- - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Motan 0.3.0](https://github.com/weibocom/motan)
- - [Spring Framework 4.2.4.RELEASE](http://projects.spring.io/spring-framework)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
+- [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Motan 0.3.0](https://github.com/weibocom/motan)
+- [Spring Framework 4.2.4.RELEASE](http://projects.spring.io/spring-framework)
+- [Maven 3](http://maven.apache.org/)
+- [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
 
 ## Motan Architecture
 Motan中分为服务提供方(RPC Server)，服务调用方(RPC Client)和服务注册中心(Registry)三个角色。
@@ -58,6 +57,3 @@ Motan框架中主要有register、transport、serialize、protocol几个功能�
 - [Motan用户指南](https://github.com/weibocom/motan/wiki/zh_userguide)
 - [Motan zh_errorcode](https://github.com/weibocom/motan/wiki/zh_errorcode)
 - [从motan看RPC框架设计](http://kriszhang.com/motan-rpc-impl/)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

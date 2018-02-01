@@ -1,15 +1,14 @@
 # Spring 4和Hibernate 4集成教程第2部分：基于Java的配置
----
+
 ## Runtime Environment
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Java EE: Servlet 3.1, JSP 2.3, JSTL 1.2](http://www.oracle.com/technetwork/java/javaee/overview/index.html)
- - [Spring framework 4.0.3.RELEASED](http://projects.spring.io/spring-framework)
- - [Hibernate ORM 4.3.5.Final](http://hibernate.org/orm)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [MySQL 5.5](http://www.mysql.com/)
- - [**Tomcat 7**](http://tomcat.apache.org/)
- > **NOTE**: Can not run in Tomcat 6!
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Java EE: Servlet 3.1, JSP 2.3, JSTL 1.2](http://www.oracle.com/technetwork/java/javaee/overview/index.html)
+- [Spring framework 4.0.3.RELEASED](http://projects.spring.io/spring-framework)
+- [Hibernate ORM 4.3.5.Final](http://hibernate.org/orm)
+- [Maven 3](http://maven.apache.org/)
+- [MySQL 5.5](http://www.mysql.com/)
+- [**Tomcat 7**](http://tomcat.apache.org/)
+> **NOTE**: Can not run in Tomcat 6!
 
 ## Project Structure
 ![Project Structure](http://img.my.csdn.net/uploads/201704/12/1491961289_2384.png)
@@ -55,6 +54,3 @@
 
 ### References
 - [Object Relational Mapping (ORM) Data Access](http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/orm.html#orm-hibernate)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

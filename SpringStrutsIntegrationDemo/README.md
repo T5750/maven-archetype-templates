@@ -1,12 +1,11 @@
 # Spring 4和Struts 2集成教程第1部分：XML配置
----
+
 ## Runtime Environment
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Spring Framework 4.1.2.RELEASE](http://projects.spring.io/spring-framework)
- - [Struts 2 Framework 2.3.16.3](http://struts.apache.org/download.cgi#struts23163)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Tomcat 7](http://tomcat.apache.org/)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring Framework 4.1.2.RELEASE](http://projects.spring.io/spring-framework)
+- [Struts 2 Framework 2.3.16.3](http://struts.apache.org/download.cgi#struts23163)
+- [Maven 3](http://maven.apache.org/)
+- [Tomcat 7](http://tomcat.apache.org/)
 
 ## Project Structure
 ![Project Structure](http://img.my.csdn.net/uploads/201704/12/1491982717_9230.png)
@@ -57,6 +56,3 @@ In case you typed wrong username/password, the error page gets displayed:
 ### References
 - [Struts’ Spring Plugin](https://struts.apache.org/release/2.3.x/docs/spring-plugin.html)
 - [Spring: Integrating with other web frameworks](http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/web-integration.html)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

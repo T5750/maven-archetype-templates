@@ -1,20 +1,16 @@
 # SpringRedis
 
 ## Runtime Environment
-
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Spring Framework 3.1.2.RELEASE](http://projects.spring.io/spring-framework)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Redis 2.1.0](https://redis.io)
- - [Redis on Windows 2.8.2402](https://github.com/MSOpenTech/redis/releases)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring Framework 3.1.2.RELEASE](http://projects.spring.io/spring-framework)
+- [Maven 3](http://maven.apache.org/)
+- [Redis 2.1.0](https://redis.io)
+- [Redis on Windows 2.8.2402](https://github.com/MSOpenTech/redis/releases)
 
 ## Introducing Redis
-
 Redis is an in-memory datastore that can also write to disk for durability. Redis can persist data in two ways: RDB and AOF. RDB persistence performs point-in-time snapshots of your data set at specified intervals. It's not very durable, and you might lose some data, but it is very fast. AOF persistence is much more durable and logs every write operation that the server receives. The write operations are reexecuted at server startup, reconstructing the original data set. When you query Redis, data is served from memory and never from disk, and Redis performs all operations on keys and values that are stored in memory.
 
 ## Getting started with Redis
-
 The compiled binary files are now available in the src directory. Run Redis with:
 * src/redis-server
 
@@ -24,7 +20,6 @@ To interact with Redis by using the built-in client, launch the client from the 
 ## Redis data types by example
 
 ### Strings
-
 ```
 redis> SET firstname shekhar
 OK
@@ -46,7 +41,6 @@ redis> DECR votes
 ```
 
 ### Lists
-
 ```
 redis> LPUSH words austerity
 (integer) 1
@@ -69,7 +63,6 @@ redis 127.0.0.1:6379> DEL words
 ```
 
 ### Sets
-
 ```
 redis> SADD uniquewords austerity
 (integer) 1
@@ -105,7 +98,6 @@ redis 127.0.0.1:6379> SUNION uniquewords newwords
 ```
 
 ### Sorted sets
-
 ```
 redis> ZADD wordswithlength 9 austerity
 (integer) 1
@@ -123,7 +115,6 @@ redis 127.0.0.1:6379> ZCARD wordswithlength
 ```
 
 ### Hashes
-
 ```
 redis> HSET user:1 name shekhar
 (integer) 1
@@ -140,20 +131,14 @@ redis> HGETALL user:1
 ```
 
 ## Developing a Spring Redis application
-
 * Create a template project by using Spring Tool Suite
 * Updating pom.xml with dependencies
 * Configuring RedisConnectionFactory and RedisTemplate
 * Writing DictionaryDao
 
 ## Links
-
 - [Develop Spring Redis applications](https://www.ibm.com/developerworks/library/os-springredis/index.html)
 - [开发 Spring Redis 应用程序](https://www.ibm.com/developerworks/cn/java/os-springredis/)
 - [java之redis篇(spring-data-redis整合)](http://www.cnblogs.com/tankaixiong/p/3660075.html)
 - [tomcat+nginx+redis实现均衡负载、session共享(二)](http://www.cnblogs.com/zhrxidian/p/5491285.html)
 - [Redis中文官方网站](http://www.redis.cn)
-
-## Copyright
-
-Copyright 2016-2017 evangel_z.

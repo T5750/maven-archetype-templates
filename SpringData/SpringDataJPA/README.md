@@ -1,14 +1,12 @@
 # SpringDataJPA
 
 ## Runtime Environment
-
- - [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
- - [Spring Data JPA 1.11.3.RELEASE](http://projects.spring.io/spring-data-jpa/)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Spring framework 4.3.8.RELEASED](http://projects.spring.io/spring-framework)
- - [Hibernate ORM 4.3.5.Final](http://hibernate.org/orm)
- - [MySQL 5.5](http://www.mysql.com/)
+- [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- [Spring Data JPA 1.11.3.RELEASE](http://projects.spring.io/spring-data-jpa/)
+- [Maven 3](http://maven.apache.org/)
+- [Spring framework 4.3.8.RELEASED](http://projects.spring.io/spring-framework)
+- [Hibernate ORM 4.3.5.Final](http://hibernate.org/orm)
+- [MySQL 5.5](http://www.mysql.com/)
 
 ## Features
 
@@ -48,10 +46,5 @@ Spring Data JPA 为此提供了一些表达条件查询的关键字，大致如�
 * 运行SimpleSpringJpaDemo
 
 ## Links
-
 - [使用 Spring Data JPA 简化 JPA 开发](https://www.ibm.com/developerworks/cn/opensource/os-cn-spring-jpa/index.html)
 - [Getting started with Spring Data JPA](https://spring.io/blog/2011/02/10/getting-started-with-spring-data-jpa/?cm_mc_uid=79741654675514944833285&cm_mc_sid_50200000=1496379927)
-
-## Copyright
-
-Copyright 2016-2017 evangel_z.

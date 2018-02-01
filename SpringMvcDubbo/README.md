@@ -1,13 +1,12 @@
 # Dubbo+SpringMVC工程创建详解
----
+
 ## Runtime Environment
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Spring Framework 3.2.8.RELEASE](http://projects.spring.io/spring-framework)
- - [Dubbo 2.5.3](http://dubbo.io/)
- - [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Tomcat 7](http://tomcat.apache.org/)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Spring Framework 3.2.8.RELEASE](http://projects.spring.io/spring-framework)
+- [Dubbo 2.5.3](http://dubbo.io/)
+- [ZooKeeper 3.4.10](https://zookeeper.apache.org/)
+- [Maven 3](http://maven.apache.org/)
+- [Tomcat 7](http://tomcat.apache.org/)
 
 ## Dubbo Architecture
 ![Dubbo Architecture](http://dubbo.io/images//dubbo-architecture.png)
@@ -35,6 +34,3 @@
 - [Dubbo+SpringMVC工程创建详解（附工程文件） by tuicool](http://www.tuicool.com/articles/jiiuMrf)
 - [Dubbo+SpringMVC工程创建详解（附工程文件） by AppZone](http://zoeminghong.github.io/2016/05/17/dubbo20160517/?utm_source=tuicool&utm_medium=referral)
 - [Dubbo与Zookeeper、SpringMVC整合和使用（负载均衡、容错）](http://blog.csdn.net/congcong68/article/details/41113239)
-
-## Copyright
-Copyright 2016-2017 evangel_z.

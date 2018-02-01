@@ -1,12 +1,10 @@
 # JerseyRESTful
 
 ## Runtime Environment
-
- - [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
- - [Jersey 1.0.3](https://jersey.java.net/)
- - [IntelliJ IDEA 14.0.5](http://www.jetbrains.com/idea/download/index.html)
- - [Maven 3](http://maven.apache.org/)
- - [Tomcat 7](http://tomcat.apache.org/)
+- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Jersey 1.0.3](https://jersey.java.net/)
+- [Maven 3](http://maven.apache.org/)
+- [Tomcat 7](http://tomcat.apache.org/)
 
 ## RESTful Web service introduction
 
@@ -74,10 +72,5 @@ huangyim: Huang Yi Ming
 ```
 
 ## Links
-
 - [Build a RESTful Web service using Jersey and Apache Tomcat](https://www.ibm.com/developerworks/library/wa-aj-tomcat/?S_TACT=105AGX01&S_CMP=HP)
 - [使用 Jersey 和 Apache Tomcat 构建 RESTful Web 服务](https://www.ibm.com/developerworks/cn/web/wa-aj-tomcat/index.html)
-
-## Copyright
-
-Copyright 2016-2017 evangel_z.
