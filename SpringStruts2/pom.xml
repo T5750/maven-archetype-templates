@@ -15,6 +15,7 @@
 		<module>Struts2TokenInterceptor</module>
 		<module>Struts2Interceptor</module>
 		<module>Struts2ExecAndWait</module>
+		<module>Struts2FileUpload</module>
 	</modules>
 
 	<properties>
