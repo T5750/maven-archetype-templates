@@ -122,5 +122,6 @@ maven-archetype-templates/
      ├── Struts2TokenInterceptor
      ├── [v0.20.1] Struts2Interceptor
      ├── [v0.20.2] Struts2ExecAndWait
-     └── [v0.20.3] Struts2FileUpload
+     ├── [v0.20.3] Struts2FileUpload
+     └── [v0.20.4] Struts2Example
 ```

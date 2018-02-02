@@ -16,6 +16,7 @@
 		<module>Struts2Interceptor</module>
 		<module>Struts2ExecAndWait</module>
 		<module>Struts2FileUpload</module>
+		<module>Struts2Example</module>
 	</modules>
 
 	<properties>
