@@ -17,6 +17,7 @@
 		<module>Struts2ExecAndWait</module>
 		<module>Struts2FileUpload</module>
 		<module>Struts2Example</module>
+		<module>struts2-csrf</module>
 	</modules>
 
 	<properties>

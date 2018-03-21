@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+		"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.convention.result.path" value="/"></constant>
+
+	<package name="user" namespace="/" extends="struts-default">
+		<action name="login">
+			<result>/login.jsp</result>
+		</action>
+		<action name="referer" class="com.evangel.action.RefererAction">
+			<result name="success">/referer.jsp</result>
+		</action>
+		<action name="removeToken" class="com.evangel.action.RefererAction" method="removeToken">
+			<result name="success" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">login</param>
+			</result>
+		</action>
+		<action name="error">
+			<result>/error.jsp</result>
+		</action>
+	</package>
+</struts>
