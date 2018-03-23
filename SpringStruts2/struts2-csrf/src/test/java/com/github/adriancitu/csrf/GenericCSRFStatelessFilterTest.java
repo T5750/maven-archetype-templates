@@ -158,7 +158,7 @@ public class GenericCSRFStatelessFilterTest extends TestCase {
 		//this will say to the DefaultResourceCheckerHookImpl that the request
 		//should be CSRF protected
 		when(request.getMethod()).thenReturn("POST");
-		when(request.getHeader(any().toString())).thenReturn(initialCSRFToken);
+		when(request.getHeader(any())).thenReturn(initialCSRFToken);
 
 		when(request.getCookies()).thenReturn(
 				new Cookie[]{
@@ -201,7 +201,7 @@ public class GenericCSRFStatelessFilterTest extends TestCase {
 		//this will say to the DefaultResourceCheckerHookImpl that the request
 		//should be CSRF protected
 		when(request.getMethod()).thenReturn("POST");
-		when(request.getHeader(any().toString())).thenReturn("someHeaderValue");
+		when(request.getHeader(any())).thenReturn("someHeaderValue");
 		when(request.getCookies()).thenReturn(
 				new Cookie[]{
 						new Cookie(
@@ -241,7 +241,7 @@ public class GenericCSRFStatelessFilterTest extends TestCase {
 		//this will say to the DefaultResourceCheckerHookImpl that the request
 		//should be CSRF protected
 		when(request.getMethod()).thenReturn("POST");
-		when(request.getHeader(any().toString())).thenReturn("someHeaderValue");
+		when(request.getHeader(any())).thenReturn("someHeaderValue");
 
 		HttpServletResponse response = mock(HttpServletResponse.class);
 
@@ -353,6 +353,6 @@ public class GenericCSRFStatelessFilterTest extends TestCase {
 		filter.init(fc);
 		filter.doFilter(request, response, chain);
 
-		verify(response, times(1)).addCookie((Cookie)any());
+		verify(response, times(1)).addCookie(any());
 	}
 }
