@@ -29,7 +29,6 @@ public class CsrfFilter implements Filter {
 		if ((referer != null)
 				&& (referer.trim()
 						.startsWith(ConstantUtil.getBasePath(request)))) {
-			// chain.doFilter(request, response);
 			HttpSession session = request.getSession();
 			// 从 session 中得到 csrftoken 属性
 			String sToken = (String) session.getAttribute(CSRF_TOKEN);
