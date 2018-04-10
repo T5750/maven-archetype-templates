@@ -33,7 +33,7 @@ import io.netty.handler.stream.ChunkedNioFile;
 public class HttpRequestHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 	private Logger loger = LogManager.getLogger();
 	private final String webUri;
-	private final String INDEX = "E:\\oworkspace\\test\\src\\main\\webapp\\index.html";
+	private final String INDEX = "D:\\home\\index.html";
 	
 	public HttpRequestHandler(String webUri) {
 		this.webUri = webUri;
