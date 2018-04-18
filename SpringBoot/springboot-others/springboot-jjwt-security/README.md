@@ -35,5 +35,9 @@ understandable.
 ## Tips
 * Commits on Sep 11, 2017
 
+## 认证流程
+![authflow](http://www.wailian.work/images/2018/04/18/authflow-min.png)
+
 ## Links
 - [jwt-spring-security-demo](https://github.com/szerhusenBC/jwt-spring-security-demo)
+- [rest-security-demo](https://github.com/jonsychen/rest-security-demo)
