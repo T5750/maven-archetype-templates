@@ -22,6 +22,7 @@
 		<module>springboot-rest-api</module>
 		<module>springboot-websocket-netty-server</module>
 		<module>springboot-all-parent</module>
+		<module>springboot-admin</module>
 	</modules>
 
 </project>

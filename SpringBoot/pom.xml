@@ -27,13 +27,18 @@
 		<module>springboot-elasticsearch</module>
 		<module>springboot-others</module>
 	</modules>
+
+	<properties>
+		<springboot.version>1.5.2.RELEASE</springboot.version>
+	</properties>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.5.2.RELEASE</version>
+				<version>${springboot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -57,7 +62,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>1.5.2.RELEASE</version>
+				<version>${springboot.version}</version>
 			</plugin>
 		</plugins>
 	</build>
