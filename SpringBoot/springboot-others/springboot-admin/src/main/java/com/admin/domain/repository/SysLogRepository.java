@@ -4,16 +4,14 @@ import java.util.List;
 
 import com.admin.domain.modle.SysLog;
 
-
 /**
  * @author Jonsy
  *
  */
 public interface SysLogRepository {
+	void add(SysLog sysLog);
 
-    void add(SysLog sysLog);
+	List<SysLog> list();
 
-    List<SysLog> list();
-
-    void clear();
+	void clear();
 }

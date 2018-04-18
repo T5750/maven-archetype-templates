@@ -6,43 +6,40 @@ package com.admin.domain.modle;
  * @author Jonsy
  */
 public class SelectRole {
+	private String rid;// role id
+	private String name;// role name
+	private boolean checked;
 
-    private String rid;//role id
+	public SelectRole() {
+	}
 
-    private String name;//role name
+	public SelectRole(String rid, String name, boolean checked) {
+		this.rid = rid;
+		this.name = name;
+		this.checked = checked;
+	}
 
-    private boolean checked;
+	public String getRid() {
+		return rid;
+	}
 
-    public SelectRole() {
-    }
+	public boolean isChecked() {
+		return checked;
+	}
 
-    public SelectRole(String rid, String name, boolean checked) {
-        this.rid = rid;
-        this.name = name;
-        this.checked = checked;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getRid() {
-        return rid;
-    }
+	public void setRid(String rid) {
+		this.rid = rid;
+	}
 
-    public boolean isChecked() {
-        return checked;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
-
-    public void setRid(String rid) {
-        this.rid = rid;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setChecked(boolean checked) {
-        this.checked = checked;
-    }
+	public void setChecked(boolean checked) {
+		this.checked = checked;
+	}
 }

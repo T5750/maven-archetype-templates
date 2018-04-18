@@ -4,29 +4,24 @@ import java.util.List;
 
 import com.admin.domain.modle.Resource;
 
-
 /**
  * @author Jonsy
  *
  */
 public interface ResourceRepository {
+	void add(Resource resource);
 
-    void add(Resource resource);
+	void update(Resource resource);
 
-    void update(Resource resource);
+	Resource get(String code);
 
-    Resource get(String code);
+	List<Resource> list();
 
-    List<Resource> list();
+	void remove(String code);
 
-    void remove(String code);
+	void switchStatus(String code, boolean disabled);
 
-    void switchStatus(String code, boolean disabled);
+	List<Resource> listByRole(String roleId);
 
-    List<Resource> listByRole(String roleId);
-
-    List<Resource> getEnableResources();
-
-
-
+	List<Resource> getEnableResources();
 }

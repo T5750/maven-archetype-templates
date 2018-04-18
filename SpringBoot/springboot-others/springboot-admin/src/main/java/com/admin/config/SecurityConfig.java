@@ -1,5 +1,13 @@
 package com.admin.config;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,155 +41,151 @@ import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuc
 import com.admin.security.UrlSecurityInterceptor;
 import com.admin.security.UserDetailService;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Jonsy
  *
  */
 @Configuration
-@EnableWebSecurity //注释掉可以既能享受到springboot的自动配置又能覆盖某些配置
+@EnableWebSecurity
+// 注释掉可以既能享受到springboot的自动配置又能覆盖某些配置
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	@Autowired
+	protected UserDetailService userDetailService;
+	@Autowired
+	protected Md5PasswordEncoder md5PasswordEncoder;
+	@Value("${remember.key}")
+	private String key = "jonsychen@hotmail.com";
 
-    @Autowired
-    protected UserDetailService userDetailService;
+	@Bean
+	public UrlSecurityInterceptor urlSecurityInterceptor() {
+		return new UrlSecurityInterceptor();
+	}
 
+	@Bean
+	public AuthenticationManager authenticationManager(
+			AuthenticationConfiguration configuration) throws Exception {
+		return configuration.getAuthenticationManager();
+	}
 
-    @Autowired
-    protected Md5PasswordEncoder md5PasswordEncoder;
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.cors().disable();
+		http.headers().disable();
+		http.jee().disable();
+		http.x509().disable();
+		http.servletApi().disable();
+		http.anonymous().disable();
+		http.requestCache().disable();
+		http.rememberMe().userDetailsService(userDetailService).key(key)
+				.useSecureCookie(false).alwaysRemember(true);
+		http.addFilterAt(urlSecurityInterceptor(),
+				FilterSecurityInterceptor.class);// 处理自定义的权限
+		// http.authorizeRequests()对应FilterSecurityInterceptor，不配置就不会加入FilterSecurityInterceptor
+		http.formLogin().loginProcessingUrl("/login").loginPage("/to-login")
+				.defaultSuccessUrl("/")
+				.successHandler(new AuthenticationSuccessHandler());
+		http.logout().logoutSuccessHandler(new LogoutSuccessHandler());
+		http.exceptionHandling()
+				.authenticationEntryPoint(new MyAuthenticationEntryPoint())
+				.accessDeniedHandler(new MyAccessDeniedHandler());
+	}
 
-    @Value("${remember.key}")
-    private String key = "jonsychen@hotmail.com";
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth)
+			throws Exception {
+		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+		provider.setPasswordEncoder(md5PasswordEncoder);
+		provider.setUserDetailsService(userDetailService);
+		ReflectionSaltSource saltSource = new ReflectionSaltSource();
+		saltSource.setUserPropertyToUse("getSalt");
+		provider.setSaltSource(saltSource);
+		auth.authenticationProvider(provider);
+	}
 
+	@Bean
+	protected AccessDecisionManager accessDecisionManager() {
+		RoleVoter roleVoter = new RoleVoter();
+		roleVoter.setRolePrefix("");
+		List voters = new ArrayList<>();
+		voters.add(roleVoter);
+		AccessDecisionManager accessDecisionManager = new AffirmativeBased(
+				voters);
+		return accessDecisionManager;
+	}
 
-    @Bean
-    public UrlSecurityInterceptor urlSecurityInterceptor() {
-        return new UrlSecurityInterceptor();
-    }
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/**/*.js", "/**/*.js.map", "/**/*.ts",
+				"/**/*.css", "/**/*.css.map", "/**/*.png", "/**/*.gif",
+				"/**/*.jpg", "/**/*.fco", "/**/*.woff", "/**/*.woff2",
+				"/**/*.font", "/**/*.svg", "/**/*.ttf", "/**/*.pdf", "/*.ico",
+				"/admin/api/**", "/404", "/401", "/403", "/error");
+	}
 
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
-        return configuration.getAuthenticationManager();
-    }
+	// 由于springboot默认会将所要的servlet,filter,listenr等标准servlet组件自动加入到servlet的过滤器链中，自定义的UrlSecurityInterceptor只希望加入security的过滤器链，中，所以这里配置不向servlet容器中注册
+	@Bean
+	public FilterRegistrationBean registration(UrlSecurityInterceptor filter) {
+		FilterRegistrationBean registration = new FilterRegistrationBean(filter);
+		registration.setEnabled(false);
+		return registration;
+	}
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.cors().disable();
-        http.headers().disable();
-        http.jee().disable();
-        http.x509().disable();
-        http.servletApi().disable();
-        http.anonymous().disable();
-        http.requestCache().disable();
+	protected boolean isAjax(HttpServletRequest request) {
+		return StringUtils.isNotBlank(request.getHeader("X-Requested-With"));
+	}
 
-        http.rememberMe().userDetailsService(userDetailService).key(key).useSecureCookie(false).alwaysRemember(true);
-        http.addFilterAt(urlSecurityInterceptor(), FilterSecurityInterceptor.class);//处理自定义的权限
-        //http.authorizeRequests()对应FilterSecurityInterceptor，不配置就不会加入FilterSecurityInterceptor
-        http.formLogin().loginProcessingUrl("/login").loginPage("/to-login").defaultSuccessUrl("/").successHandler(new AuthenticationSuccessHandler());
-        http.logout().logoutSuccessHandler(new LogoutSuccessHandler());
-        http.exceptionHandling().authenticationEntryPoint(new MyAuthenticationEntryPoint()).accessDeniedHandler(new MyAccessDeniedHandler());
-    }
+	private class AuthenticationSuccessHandler extends
+			SimpleUrlAuthenticationSuccessHandler {
+		@Override
+		public void onAuthenticationSuccess(HttpServletRequest request,
+				HttpServletResponse response, Authentication authentication)
+				throws ServletException, IOException {
+			clearAuthenticationAttributes(request);
+			if (!isAjax(request)) {
+				super.onAuthenticationSuccess(request, response, authentication);
+			}
+		}
+	}
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setPasswordEncoder(md5PasswordEncoder);
-        provider.setUserDetailsService(userDetailService);
-        ReflectionSaltSource saltSource = new ReflectionSaltSource();
-        saltSource.setUserPropertyToUse("getSalt");
-        provider.setSaltSource(saltSource);
-        auth.authenticationProvider(provider);
+	private class LogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler {
+		@Override
+		public void onLogoutSuccess(HttpServletRequest request,
+				HttpServletResponse response, Authentication authentication)
+				throws IOException, ServletException {
+			if (!isAjax(request)) {
+				super.onLogoutSuccess(request, response, authentication);
+			}
+		}
+	}
 
-    }
+	private class MyAuthenticationEntryPoint implements
+			AuthenticationEntryPoint {
+		@Override
+		public void commence(HttpServletRequest request,
+				HttpServletResponse response,
+				AuthenticationException authException) throws IOException {
+			response.setCharacterEncoding("utf-8");
+			if (isAjax(request)) {
+				response.getWriter().println("请登录");
+			} else {
+				response.sendRedirect("/to-login");
+			}
+		}
+	}
 
-    @Bean
-    protected AccessDecisionManager accessDecisionManager() {
-        RoleVoter roleVoter = new RoleVoter();
-        roleVoter.setRolePrefix("");
-        List voters = new ArrayList<>();
-        voters.add(roleVoter);
-        AccessDecisionManager accessDecisionManager = new AffirmativeBased(voters);
-        return accessDecisionManager;
-    }
-
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/**/*.js", "/**/*.js.map", "/**/*.ts", "/**/*.css", "/**/*.css.map", "/**/*.png", "/**/*.gif", "/**/*.jpg", "/**/*.fco", "/**/*.woff", "/**/*.woff2", "/**/*.font", "/**/*.svg", "/**/*.ttf", "/**/*.pdf","/*.ico", "/admin/api/**", "/404", "/401","/403", "/error");
-    }
-
-    //由于springboot默认会将所要的servlet,filter,listenr等标准servlet组件自动加入到servlet的过滤器链中，自定义的UrlSecurityInterceptor只希望加入security的过滤器链，中，所以这里配置不向servlet容器中注册
-    @Bean
-    public FilterRegistrationBean registration(UrlSecurityInterceptor filter) {
-        FilterRegistrationBean registration = new FilterRegistrationBean(filter);
-        registration.setEnabled(false);
-        return registration;
-    }
-
-    protected boolean isAjax(HttpServletRequest request) {
-        return StringUtils.isNotBlank(request.getHeader("X-Requested-With"));
-    }
-
-
-    private class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
-
-        @Override
-        public void onAuthenticationSuccess(HttpServletRequest request,
-                                            HttpServletResponse response, Authentication authentication)
-                throws ServletException, IOException {
-
-            clearAuthenticationAttributes(request);
-            if (!isAjax(request)) {
-                super.onAuthenticationSuccess(request, response, authentication);
-            }
-        }
-    }
-
-    private class LogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler {
-
-        @Override
-        public void onLogoutSuccess(HttpServletRequest request,
-                                    HttpServletResponse response, Authentication authentication)
-                throws IOException, ServletException {
-            if (!isAjax(request)) {
-                super.onLogoutSuccess(request, response, authentication);
-            }
-        }
-    }
-
-    private class MyAuthenticationEntryPoint implements AuthenticationEntryPoint {
-
-        @Override
-        public void commence(HttpServletRequest request,
-                             HttpServletResponse response,
-                             AuthenticationException authException) throws IOException {
-            response.setCharacterEncoding("utf-8");
-            if (isAjax(request)) {
-                response.getWriter().println("请登录");
-            } else {
-                response.sendRedirect("/to-login");
-            }
-
-        }
-    }
-
-    private class MyAccessDeniedHandler implements AccessDeniedHandler {
-        @Override
-        public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
-            response.setCharacterEncoding("utf-8");
-            if (isAjax(request)) {
-                response.getWriter().println("您无权访问");
-            } else {
-                response.sendRedirect("/403");
-            }
-
-        }
-    }
-
-
+	private class MyAccessDeniedHandler implements AccessDeniedHandler {
+		@Override
+		public void handle(HttpServletRequest request,
+				HttpServletResponse response,
+				AccessDeniedException accessDeniedException)
+				throws IOException, ServletException {
+			response.setCharacterEncoding("utf-8");
+			if (isAjax(request)) {
+				response.getWriter().println("您无权访问");
+			} else {
+				response.sendRedirect("/403");
+			}
+		}
+	}
 }

@@ -4,26 +4,19 @@ import java.io.Serializable;
 import java.util.UUID;
 
 /**
- * Created by Jonsy
- * url资源
+ * Created by Jonsy url资源
  */
 public class Resource implements Serializable {
-
 	/** 唯一资源编码 */
 	private String id = UUID.randomUUID().toString();
-
 	/** 资源名称 */
 	private String title;
-
-	/** 状态 是否禁用*/
+	/** 状态 是否禁用 */
 	private boolean disabled;
-
 	/** 地址 */
 	private String url;
-
 	/** 描述 */
 	private String description;
-
 
 	public String getTitle() {
 		return title;
@@ -32,7 +25,6 @@ public class Resource implements Serializable {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 
 	public boolean isDisabled() {
 		return disabled;
@@ -66,16 +58,14 @@ public class Resource implements Serializable {
 		this.description = description;
 	}
 
-
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
 		Resource resource = (Resource) o;
-
 		return id != null ? id.equals(resource.id) : resource.id == null;
-
 	}
 
 	@Override

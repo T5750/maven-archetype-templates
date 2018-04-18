@@ -9,30 +9,27 @@ import com.admin.domain.modle.Role;
  *
  */
 public interface RoleRepository {
+	void add(Role role);
 
-    void add(Role role);
+	void update(Role role);
 
-    void update(Role role);
+	void updateMenus(String rid, List<String> mids);
 
-    void updateMenus(String rid, List<String> mids);
+	void updateResources(String rid, List<String> resources);
 
-    void updateResources(String rid, List<String> resources);
+	boolean contains(String roleName);
 
-    boolean contains(String roleName);
+	Role get(String id);
 
-    Role get(String id);
+	List<Role> list();
 
-    List<Role> list();
+	void remove(String id);
 
-    void remove(String id);
+	void removeRoleMenuByMenuId(String menuId);
 
-    void removeRoleMenuByMenuId(String menuId);
+	void removeRoleResourceByResourceId(String resourceId);
 
-    void removeRoleResourceByResourceId(String resourceId);
+	void switchStatus(String id, boolean disabled);
 
-    void switchStatus(String id, boolean disabled);
-
-    List<Role> getRoles(String userId);
-
-
+	List<Role> getRoles(String userId);
 }

@@ -7,6 +7,7 @@
 - [Spring Security 4.2.2 RELEASE](http://projects.spring.io/spring-security)
 - [MySQL 5.6](http://www.mysql.com/)
 - [Druid 1.0.18](https://github.com/alibaba/druid)
+- [AdminLTE](https://adminlte.io/)
 
 ## Summary
 基于Spring Boot/Spring Security/thymeleaf的通用后台管理系统
@@ -17,7 +18,7 @@ springboot-admin项目实现了基础的用户/菜单/角色/权限功能，可�
 - `springboot-admin.sql`
 - `AdminApplication`
 - [http://localhost:8080/to-login](http://localhost:8080/to-login)
-- username: root, password: root
+- username: root/test, password: root/root
 
 ## Results
 首页

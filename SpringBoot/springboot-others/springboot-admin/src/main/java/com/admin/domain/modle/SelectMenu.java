@@ -1,48 +1,44 @@
 package com.admin.domain.modle;
 
-
 /**
  * @author Jonsy
  *
  */
 public class SelectMenu {
+	private String mid;// 菜单id
+	private String label;
+	private boolean checked;// 角色是否有此菜单权限
 
-    private String mid;//菜单id
+	public SelectMenu() {
+	}
 
-    private String label;
+	public SelectMenu(String mid, String label, boolean checked) {
+		this.mid = mid;
+		this.label = label;
+		this.checked = checked;
+	}
 
-    private boolean checked;//角色是否有此菜单权限
+	public String getMid() {
+		return mid;
+	}
 
-    public SelectMenu() {
-    }
+	public String getLabel() {
+		return label;
+	}
 
-    public SelectMenu(String mid, String label, boolean checked) {
-        this.mid = mid;
-        this.label = label;
-        this.checked = checked;
-    }
+	public boolean isChecked() {
+		return checked;
+	}
 
-    public String getMid() {
-        return mid;
-    }
+	public void setMid(String mid) {
+		this.mid = mid;
+	}
 
-    public String getLabel() {
-        return label;
-    }
+	public void setLabel(String label) {
+		this.label = label;
+	}
 
-    public boolean isChecked() {
-        return checked;
-    }
-
-    public void setMid(String mid) {
-        this.mid = mid;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public void setChecked(boolean checked) {
-        this.checked = checked;
-    }
+	public void setChecked(boolean checked) {
+		this.checked = checked;
+	}
 }

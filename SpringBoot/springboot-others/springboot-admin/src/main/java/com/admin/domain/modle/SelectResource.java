@@ -1,48 +1,44 @@
 package com.admin.domain.modle;
 
-
 /**
  * @author Jonsy
  *
  */
 public class SelectResource {
+	private String rid;// resource id
+	private String label;
+	private boolean checked;
 
-    private String rid;//resource id
+	public SelectResource() {
+	}
 
-    private String label;
+	public SelectResource(String rid, String label, boolean checked) {
+		this.rid = rid;
+		this.label = label;
+		this.checked = checked;
+	}
 
-    private boolean checked;
+	public String getLabel() {
+		return label;
+	}
 
-    public SelectResource() {
-    }
+	public String getRid() {
+		return rid;
+	}
 
-    public SelectResource(String rid, String label, boolean checked) {
-        this.rid = rid;
-        this.label = label;
-        this.checked = checked;
-    }
+	public boolean isChecked() {
+		return checked;
+	}
 
-    public String getLabel() {
-        return label;
-    }
+	public void setRid(String rid) {
+		this.rid = rid;
+	}
 
-    public String getRid() {
-        return rid;
-    }
+	public void setLabel(String label) {
+		this.label = label;
+	}
 
-    public boolean isChecked() {
-        return checked;
-    }
-
-    public void setRid(String rid) {
-        this.rid = rid;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    public void setChecked(boolean checked) {
-        this.checked = checked;
-    }
+	public void setChecked(boolean checked) {
+		this.checked = checked;
+	}
 }

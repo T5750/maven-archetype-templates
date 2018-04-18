@@ -4,28 +4,26 @@ import java.util.List;
 
 import com.admin.domain.modle.Menu;
 
-
 /**
  * @author Jonsy
  *
  */
 public interface MenuRepository {
+	void add(Menu menu);
 
-    void add(Menu menu);
+	void update(Menu menu);
 
-    void update(Menu menu);
+	Menu get(String code);
 
-    Menu get(String code);
+	boolean contains(String code);
 
-    boolean contains(String code);
+	List<Menu> list();
 
-    List<Menu> list();
+	void remove(String code);
 
-    void remove(String code);
+	void switchStatus(String code, boolean disabled);
 
-    void switchStatus(String code, boolean disabled);
+	List<Menu> roleMenus(String roleId);
 
-    List<Menu> roleMenus(String roleId);
-
-    List<Menu> getNavMenus(String userId);
+	List<Menu> getNavMenus(String userId);
 }

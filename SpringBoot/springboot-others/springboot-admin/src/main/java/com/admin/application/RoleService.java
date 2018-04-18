@@ -1,5 +1,8 @@
 package com.admin.application;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
@@ -13,10 +16,6 @@ import com.admin.domain.repository.ResourceRepository;
 import com.admin.domain.repository.RoleRepository;
 import com.admin.domain.service.ResourceSelectService;
 
-import java.util.List;
-import java.util.UUID;
-
-
 /**
  * @author Jonsy
  *
@@ -24,82 +23,67 @@ import java.util.UUID;
 @Service
 @CacheConfig(cacheNames = "role")
 public class RoleService {
+	@Autowired
+	protected RoleRepository roleRepository;
+	@Autowired
+	protected ResourceRepository resourceRepository;
+	@Autowired
+	protected ResourceSelectService resourceSelectService;
+	@Autowired
+	protected MenuRepository menuRepository;
 
-    @Autowired
-    protected RoleRepository roleRepository;
+	@Caching(evict = @CacheEvict(key = "'list'"), put = @CachePut(key = "#role.id"))
+	public Role create(Role role) {
+		Assert.hasText(role.getName(), "Role name is empty");
+		role.setId(UUID.randomUUID().toString());
+		roleRepository.add(role);
+		return role;
+	}
 
-    @Autowired
-    protected ResourceRepository resourceRepository;
+	@Caching(evict = @CacheEvict(key = "'list'"), put = @CachePut(key = "#newRole.id"))
+	public Role modify(Role newRole) {
+		Assert.hasText(newRole.getId(), "Role id is empty");
+		Assert.hasText(newRole.getName(), "Role name is empty");
+		roleRepository.update(newRole);
+		return newRole;
+	}
 
-    @Autowired
-    protected ResourceSelectService resourceSelectService;
+	@Cacheable
+	public Role get(String id) {
+		return roleRepository.get(id);
+	}
 
-    @Autowired
-    protected MenuRepository menuRepository;
+	@Cacheable(key = "'list'")
+	public List<Role> list() {
+		return roleRepository.list();
+	}
 
+	@Caching(evict = { @CacheEvict(key = "'list'"), @CacheEvict(key = "#id") })
+	public void delete(String id) {
+		roleRepository.remove(id);
+	}
 
-    @Caching(
-            evict = @CacheEvict(key = "'list'"),
-            put = @CachePut(key = "#role.id")
-    )
-    public Role create(Role role) {
-        Assert.hasText(role.getName(),"Role name is empty");
-        role.setId(UUID.randomUUID().toString());
-         roleRepository.add(role);
-        return role;
-    }
+	@Caching(evict = { @CacheEvict(key = "'list'"), @CacheEvict(key = "#id") })
+	public void switchStatus(String id, boolean disable) {
+		roleRepository.switchStatus(id, disable);
+	}
 
-    @Caching(
-            evict = @CacheEvict(key = "'list'"),
-            put = @CachePut(key = "#newRole.id")
-    )
-    public Role modify(Role newRole) {
-        Assert.hasText(newRole.getId(),"Role id is empty");
-        Assert.hasText(newRole.getName(),"Role name is empty");
-        roleRepository.update(newRole);
-        return newRole;
-    }
+	public void grantResource(String roleId, List<String> resources) {
+		roleRepository.updateResources(roleId, resources);
+	}
 
-    @Cacheable
-    public Role get(String id){
-        return roleRepository.get(id);
-    }
+	@CacheEvict(value = "user-nav-menu", allEntries = true)
+	public void grantMenu(String roleId, List<String> menus) {
+		roleRepository.updateMenus(roleId, menus);
+	}
 
-    @Cacheable(key = "'list'")
-    public List<Role> list(){
-        return roleRepository.list();
-    }
+	public List<SelectResource> selectResources(String roleId) {
+		return resourceSelectService.mergeResource(resourceRepository.list(),
+				resourceRepository.listByRole(roleId));
+	}
 
-    @Caching(
-            evict = {@CacheEvict(key = "'list'"), @CacheEvict(key = "#id")}
-    )
-    public void delete(String id){
-        roleRepository.remove(id);
-    }
-
-    @Caching(
-            evict = {@CacheEvict(key = "'list'"), @CacheEvict(key = "#id")}
-    )
-    public void switchStatus(String id,boolean disable){
-        roleRepository.switchStatus(id,disable);
-    }
-
-    public void grantResource(String roleId, List<String> resources){
-        roleRepository.updateResources(roleId, resources);
-    }
-
-
-    @CacheEvict(value = "user-nav-menu", allEntries = true)
-    public void grantMenu(String roleId, List<String> menus){
-        roleRepository.updateMenus(roleId, menus);
-    }
-
-
-    public List<SelectResource> selectResources(String roleId) {
-        return resourceSelectService.mergeResource(resourceRepository.list(), resourceRepository.listByRole(roleId));
-    }
-
-    public List<SelectMenu> selectMenus(String roleId) {
-        return resourceSelectService.mergeMenus(menuRepository.list(), menuRepository.roleMenus(roleId));
-    }
+	public List<SelectMenu> selectMenus(String roleId) {
+		return resourceSelectService.mergeMenus(menuRepository.list(),
+				menuRepository.roleMenus(roleId));
+	}
 }

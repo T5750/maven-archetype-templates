@@ -6,29 +6,27 @@ package com.admin.interfaces.facade.dto;
  * @author Jonsy
  */
 public class MyProfile {
+	private String username;
+	private String email;
 
-    private String username;
+	public MyProfile(String username, String email) {
+		this.username = username;
+		this.email = email;
+	}
 
-    private String email;
+	public String getUsername() {
+		return username;
+	}
 
-    public MyProfile(String username, String email) {
-        this.username = username;
-        this.email = email;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 }
