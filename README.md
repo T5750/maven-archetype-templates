@@ -1,6 +1,6 @@
 maven-archetype-templates
 =========================
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/T5750/maven-archetype-templates/blob/master/LICENSE.md)
+[![License](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/T5750/maven-archetype-templates/blob/master/LICENSE.txt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/T5750/maven-archetype-templates/pulls)
 [![GitHub stars](https://img.shields.io/github/stars/T5750/maven-archetype-templates.svg?style=social&label=Stars)](https://github.com/T5750/maven-archetype-templates)
 [![GitHub forks](https://img.shields.io/github/forks/T5750/maven-archetype-templates.svg?style=social&label=Fork)](https://github.com/T5750/maven-archetype-templates)
