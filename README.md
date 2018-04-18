@@ -81,7 +81,9 @@ maven-archetype-templates/
 │        ├── [v0.13.5] springboot-jjwt-security
 │        ├── [v0.13.6] springboot-jpa-angularjs
 │        ├── [v0.13.7] springboot-jjwt-angular
-│        └── [v0.13.8] springboot-rest-api
+│        ├── [v0.13.8] springboot-rest-api
+│        ├── [v0.13.9] springboot-all-parent
+│        └── [v0.13.9] springboot-websocket-netty-server
 ├── [v0.14] SpringCloud/
 │    ├── eureka-server
 │    ├── compute-service
