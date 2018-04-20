@@ -41,6 +41,9 @@
     - `resources\public\bootstrap\js`
     - `resources\public\dist\img`
     - `resources\public\plugins`
+* TODO:
+	- logout !!!
+	- resources
 
 ## Links
 - [admin](https://github.com/jonsychen/admin)
