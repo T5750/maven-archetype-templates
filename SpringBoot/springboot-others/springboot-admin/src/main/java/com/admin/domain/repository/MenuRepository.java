@@ -2,7 +2,7 @@ package com.admin.domain.repository;
 
 import java.util.List;
 
-import com.admin.domain.modle.Menu;
+import com.admin.domain.model.Menu;
 
 /**
  * @author Jonsy

@@ -7,8 +7,8 @@ import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.admin.domain.modle.Menu;
-import com.admin.domain.modle.TreeModel;
+import com.admin.domain.model.Menu;
+import com.admin.domain.model.TreeModel;
 import com.admin.domain.repository.MenuRepository;
 import com.admin.domain.repository.RoleRepository;
 import com.admin.security.SecurityUtil;

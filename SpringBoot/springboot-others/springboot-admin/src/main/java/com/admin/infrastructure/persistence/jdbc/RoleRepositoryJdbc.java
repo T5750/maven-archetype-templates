@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.Role;
+import com.admin.domain.model.Role;
 import com.admin.domain.repository.RoleRepository;
 
 /**

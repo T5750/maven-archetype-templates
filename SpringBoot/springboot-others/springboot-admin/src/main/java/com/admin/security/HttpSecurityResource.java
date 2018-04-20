@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.Resource;
-import com.admin.domain.modle.Role;
+import com.admin.domain.model.Resource;
+import com.admin.domain.model.Role;
 import com.admin.domain.repository.ResourceRepository;
 import com.admin.domain.repository.RoleRepository;
 

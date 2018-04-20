@@ -25,7 +25,7 @@ import org.springframework.security.web.access.intercept.FilterSecurityIntercept
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.Resource;
+import com.admin.domain.model.Resource;
 import com.admin.domain.repository.ResourceRepository;
 
 /**

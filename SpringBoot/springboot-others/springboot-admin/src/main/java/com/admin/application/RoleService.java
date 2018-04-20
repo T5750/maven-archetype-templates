@@ -8,9 +8,9 @@ import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.admin.domain.modle.Role;
-import com.admin.domain.modle.SelectMenu;
-import com.admin.domain.modle.SelectResource;
+import com.admin.domain.model.Role;
+import com.admin.domain.model.SelectMenu;
+import com.admin.domain.model.SelectResource;
 import com.admin.domain.repository.MenuRepository;
 import com.admin.domain.repository.ResourceRepository;
 import com.admin.domain.repository.RoleRepository;

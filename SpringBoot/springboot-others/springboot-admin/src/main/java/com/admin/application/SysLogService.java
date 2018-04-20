@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.admin.domain.modle.SysLog;
+import com.admin.domain.model.SysLog;
 import com.admin.domain.repository.SysLogRepository;
 
 /**

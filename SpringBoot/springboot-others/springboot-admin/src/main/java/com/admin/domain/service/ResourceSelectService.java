@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.Menu;
-import com.admin.domain.modle.Resource;
-import com.admin.domain.modle.SelectMenu;
-import com.admin.domain.modle.SelectResource;
+import com.admin.domain.model.Menu;
+import com.admin.domain.model.Resource;
+import com.admin.domain.model.SelectMenu;
+import com.admin.domain.model.SelectResource;
 
 /**
  * @author Jonsy

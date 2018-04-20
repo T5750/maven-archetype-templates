@@ -14,8 +14,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.Role;
-import com.admin.domain.modle.User;
+import com.admin.domain.model.Role;
+import com.admin.domain.model.User;
 import com.admin.domain.repository.RoleRepository;
 import com.admin.domain.repository.UserRepository;
 

@@ -1,4 +1,4 @@
-package com.admin.domain.modle;
+package com.admin.domain.model;
 
 import java.io.Serializable;
 import java.util.Date;

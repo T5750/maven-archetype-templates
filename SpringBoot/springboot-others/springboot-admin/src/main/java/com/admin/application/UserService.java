@@ -11,8 +11,8 @@ import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.admin.domain.modle.SelectRole;
-import com.admin.domain.modle.User;
+import com.admin.domain.model.SelectRole;
+import com.admin.domain.model.User;
 import com.admin.domain.repository.RoleRepository;
 import com.admin.domain.repository.UserRepository;
 import com.admin.domain.service.RoleSelectService;

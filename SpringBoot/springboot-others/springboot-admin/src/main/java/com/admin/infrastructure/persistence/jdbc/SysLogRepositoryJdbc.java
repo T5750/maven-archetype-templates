@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.admin.domain.modle.SysLog;
+import com.admin.domain.model.SysLog;
 import com.admin.domain.repository.SysLogRepository;
 
 /**

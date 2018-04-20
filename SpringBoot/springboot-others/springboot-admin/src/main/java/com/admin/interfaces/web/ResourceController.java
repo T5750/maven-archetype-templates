@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import com.admin.application.ResourceService;
-import com.admin.domain.modle.Resource;
+import com.admin.domain.model.Resource;
 
 /**
  * @author Jonsy

@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.User;
+import com.admin.domain.model.User;
 import com.admin.infrastructure.BeanUtil;
 import com.admin.interfaces.facade.commondobject.ProfileCommand;
 import com.admin.interfaces.facade.commondobject.UserCommond;

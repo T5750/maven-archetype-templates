@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.admin.domain.modle.Resource;
+import com.admin.domain.model.Resource;
 import com.admin.domain.repository.ResourceRepository;
 
 /**

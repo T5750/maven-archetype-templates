@@ -13,7 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.User;
+import com.admin.domain.model.User;
 import com.admin.domain.repository.UserRepository;
 
 /**

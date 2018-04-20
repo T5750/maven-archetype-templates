@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import com.admin.application.RoleService;
-import com.admin.domain.modle.Role;
+import com.admin.domain.model.Role;
 import com.google.common.collect.Lists;
 
 /**

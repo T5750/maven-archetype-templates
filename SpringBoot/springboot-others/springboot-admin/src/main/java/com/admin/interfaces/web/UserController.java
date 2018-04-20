@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.admin.application.MenuService;
 import com.admin.application.UserService;
-import com.admin.domain.modle.User;
+import com.admin.domain.model.User;
 import com.admin.interfaces.facade.assembler.UserAssembler;
 import com.admin.interfaces.facade.commondobject.ProfileCommand;
 import com.admin.interfaces.facade.commondobject.UserCommond;

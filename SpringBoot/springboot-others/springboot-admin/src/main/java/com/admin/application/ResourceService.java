@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.admin.domain.modle.Resource;
+import com.admin.domain.model.Resource;
 import com.admin.domain.repository.ResourceRepository;
 import com.admin.domain.repository.RoleRepository;
 

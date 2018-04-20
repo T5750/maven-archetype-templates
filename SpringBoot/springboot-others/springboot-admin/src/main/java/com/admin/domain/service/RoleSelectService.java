@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.admin.domain.modle.Role;
-import com.admin.domain.modle.SelectRole;
+import com.admin.domain.model.Role;
+import com.admin.domain.model.SelectRole;
 
 /**
  * @author Jonsy

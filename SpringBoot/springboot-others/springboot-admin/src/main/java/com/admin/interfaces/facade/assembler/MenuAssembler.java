@@ -1,6 +1,6 @@
 package com.admin.interfaces.facade.assembler;
 
-import com.admin.domain.modle.Menu;
+import com.admin.domain.model.Menu;
 import com.admin.infrastructure.BeanUtil;
 import com.admin.interfaces.facade.commondobject.MenuCreateCommand;
 import com.admin.interfaces.facade.commondobject.MenuUpdateCommond;
