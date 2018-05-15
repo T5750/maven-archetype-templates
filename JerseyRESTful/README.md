@@ -1,8 +1,8 @@
 # JerseyRESTful
 
 ## Runtime Environment
-- [Java 6](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
-- [Jersey 1.0.3](https://jersey.java.net/)
+- [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
+- [Jersey 1.9](https://jersey.java.net/)
 - [Maven 3](http://maven.apache.org/)
 - [Tomcat 7](http://tomcat.apache.org/)
 

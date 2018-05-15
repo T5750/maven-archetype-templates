@@ -11,8 +11,9 @@
 
 	<!--<groupId>com.evangel</groupId>-->
 	<artifactId>JerseyRESTful</artifactId>
+	<packaging>war</packaging>
 	<properties>
-		<jersey.version>1.0.3</jersey.version>
+		<jersey.version>1.9</jersey.version>
 	</properties>
 
 	<dependencies>
