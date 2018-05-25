@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50638
 File Encoding         : 65001
 
-Date: 2018-01-04 15:34:53
+Date: 2018-05-25 13:49:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -132,3 +132,138 @@ CREATE TABLE `user_role` (
 -- ----------------------------
 -- Records of user_role
 -- ----------------------------
+
+-- ----------------------------
+-- Procedure structure for `delete_menu`
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `delete_menu`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `delete_menu`(IN `menuid` int)
+BEGIN
+
+	DECLARE rowNUM INT DEFAULT 0;
+	create temporary table if not exists menu_del_temp -- 不存在则创建临时表
+  (
+     id INT
+  );
+	create temporary table if not exists menu_del_temp2 -- 不存在则创建临时表
+  (
+     id INT
+  );
+create temporary table if not exists menu_del_temp3 -- 不存在则创建临时表
+  (
+     id INT
+  );
+	TRUNCATE TABLE menu_del_temp2;
+	TRUNCATE TABLE menu_del_temp; -- 清空临时表
+		INSERT INTO menu_del_temp SELECT id FROM  menu where parent_id=menuid;
+	-- DELETE FROM category WHERE ID IN (SELECT id FROM category_del_temp);
+	INSERT INTO menu_del_temp2 SELECT id FROM  menu where parent_id IN (SELECT id FROM menu_del_temp);
+	SELECT COUNT(id) INTO rowNUM FROM menu_del_temp2;
+	WHILE rowNUM > 0 DO
+		INSERT INTO menu_del_temp SELECT id FROM menu_del_temp2;
+		TRUNCATE TABLE menu_del_temp3;
+		INSERT INTO menu_del_temp3 SELECT id FROM menu_del_temp2;
+		TRUNCATE TABLE menu_del_temp2;
+		INSERT INTO menu_del_temp2 SELECT id FROM  menu where parent_id IN (SELECT id FROM menu_del_temp3);
+		SELECT COUNT(id) INTO rowNUM FROM menu_del_temp2;
+	END WHILE;
+	INSERT INTO menu_del_temp(id) values(menuid);
+	DELETE FROM menu WHERE id IN (SELECT id FROM menu_del_temp);
+	DELETE FROM role_menu WHERE menuid IN (SELECT id FROM menu_del_temp);
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for `role_menu_update`
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `role_menu_update`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `role_menu_update`(IN menuids varchar(3000),IN i_roleid INT,IN userid INT)
+BEGIN
+
+-- 拆分结果
+
+DECLARE cnt INT DEFAULT 0;
+
+DECLARE i INT DEFAULT 0;
+
+SET cnt = func_split_TotalLength(menuids,',');
+DELETE FROM role_menu WHERE roleid = i_roleid;
+
+WHILE i < cnt
+
+DO
+
+    SET i = i + 1;
+
+    INSERT INTO role_menu(roleid,menuid,creator) VALUES (i_roleid,func_split(menuids,',',i),userid);
+
+END WHILE;
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Procedure structure for `user_role_update`
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `user_role_update`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `user_role_update`(IN roleids varchar(3000),IN i_userid INT,IN i_creator INT)
+BEGIN
+
+-- 拆分结果
+
+DECLARE cnt INT DEFAULT 0;
+
+DECLARE i INT DEFAULT 0;
+
+SET cnt = func_split_TotalLength(roleids,',');
+DELETE FROM user_role WHERE userid = i_userid;
+
+WHILE i < cnt
+
+DO
+
+    SET i = i + 1;
+
+    INSERT INTO user_role(userid,roleid,creator) VALUES (i_userid,func_split(roleids,',',i),i_creator);
+
+END WHILE;
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Function structure for `func_split`
+-- ----------------------------
+DROP FUNCTION IF EXISTS `func_split`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_split`(f_string varchar(1000),f_delimiter varchar(5),f_order int) RETURNS varchar(255) CHARSET utf8
+BEGIN
+        declare result varchar(255) default '';
+
+        set result = reverse(substring_index(reverse(substring_index(f_string,f_delimiter,f_order)),f_delimiter,1));
+
+        return result;
+
+END
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Function structure for `func_split_TotalLength`
+-- ----------------------------
+DROP FUNCTION IF EXISTS `func_split_TotalLength`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_split_TotalLength`(f_string varchar(1000),f_delimiter varchar(5)) RETURNS int(11)
+BEGIN
+
+    return 1+(length(f_string) - length(replace(f_string,f_delimiter,'')));
+
+END
+;;
+DELIMITER ;
