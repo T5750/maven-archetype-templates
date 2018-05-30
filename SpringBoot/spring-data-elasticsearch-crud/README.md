@@ -4,6 +4,11 @@
 - [Spring Boot 1.5.2.RELEASE](https://projects.spring.io/spring-boot)
 - [Elasticsearch 2.3.2](https://www.elastic.co/downloads/past-releases/elasticsearch-2-3-2)
 
+Spring Boot Version (x)  |  Spring Data Elasticsearch Version (y)  |  Elasticsearch Version (z)
+---|---|---
+x <= 1.3.5  |  y <= 1.3.4  |  z <= 1.7.2*
+x >= 1.4.x  |  2.0.0 <=y < 5.0.0  |  2.0.0 <= z < 5.0.0
+    
 ## Quick Process
 ### 一、Elasticsearch 安装
 #### 1. .tar.gz 安装包安装 Elasticsearch
