@@ -26,6 +26,7 @@
 		<module>springboot-properties</module>
 		<module>springboot-elasticsearch</module>
 		<module>springboot-others</module>
+		<module>spring-data-elasticsearch-crud</module>
 	</modules>
 
 	<properties>

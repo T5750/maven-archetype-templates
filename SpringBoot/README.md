@@ -66,16 +66,24 @@
 ### 『 提升 – 源码篇 』
 * 《Spring Boot 启动原理解析》
 
+### 『 其他篇 - Elasticsearch 篇 』
+* [《Spring Boot 整合 Elasticsearch》](http://www.bysocket.com/?p=1829)
+* [《深入浅出 spring-data-elasticsearch 之 ElasticSearch 架构初探（一）》](http://www.bysocket.com/?p=1889)
+* [《深入浅出 spring-data-elasticsearch 系列 – 概述及入门（二）》](http://www.bysocket.com/?p=1894)
+* [《深入浅出 spring-data-elasticsearch – 基本案例详解（三）》](http://www.bysocket.com/?p=1899)
+* [《深入浅出 spring-data-elasticsearch – 实战案例详解（四）》](http://www.bysocket.com/?p=1902)
+
 ### 『 其他篇 』
 * [《Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例》](http://www.bysocket.com/?p=1681)
 * [《Spring Boot 中如何使用 Dubbo Activate 扩展点》](http://www.bysocket.com/?p=1782)
 * [《Spring Boot Dubbo applications.properties 配置清单》](http://www.bysocket.com/?p=1805)
-* [《Spring Boot 整合 Elasticsearch》](http://www.bysocket.com/?p=1829)
 * 《Spring Boot 整合 Quartz》
 
 ## Tips
 * 检查[spring-boot-dependencies pom](https://github.com/spring-projects/spring-boot/blob/v1.5.2.RELEASE/spring-boot-dependencies/pom.xml)以获取支持的属性列表
-* springboot-learning-example: Commits on May 19, 2017
+* [springboot-learning-example](https://github.com/JeffLi1993/springboot-learning-example):
+	- Commits on May 19, 2017
+	- Commits on May 5, 2018
 
 ## Links
 - [Spring Boot 那些事](http://www.bysocket.com/?page_id=1639)
