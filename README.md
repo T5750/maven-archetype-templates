@@ -74,6 +74,7 @@ maven-archetype-templates/
 │    ├── springboot-properties
 │    ├── springboot-elasticsearch
 │    ├── [v0.13.0.1] spring-data-elasticsearch-crud
+│    ├── [v0.13.0.2] spring-data-elasticsearch-query
 │    └── springboot-others
 │        ├── [v0.13.1] springboot-undertow
 │        ├── [v0.13.2] springboot-swagger-druid
