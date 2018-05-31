@@ -76,6 +76,7 @@ maven-archetype-templates/
 │    ├── [v0.13.0.1] spring-data-elasticsearch-crud
 │    ├── [v0.13.0.2] spring-data-elasticsearch-query
 │    ├── [v0.13.0.3] springboot-configuration
+│    ├── [v0.13.0.4] springboot-mybatis-redis-annotation
 │    └── springboot-others
 │        ├── [v0.13.1] springboot-undertow
 │        ├── [v0.13.2] springboot-swagger-druid

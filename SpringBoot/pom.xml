@@ -29,6 +29,7 @@
 		<module>spring-data-elasticsearch-crud</module>
 		<module>spring-data-elasticsearch-query</module>
 		<module>springboot-configuration</module>
+		<module>springboot-mybatis-redis-annotation</module>
 	</modules>
 
 	<properties>
