@@ -5,7 +5,8 @@
 	<parent>
 		<artifactId>springboot-all-parent</artifactId>
 		<groupId>com.evangel</groupId>
-		<version>1.0-SNAPSHOT</version>
+		<!--suppress MavenPropertyInParent -->
+		<version>${maven-archetype-templates.version}</version>
 		<relativePath>../springboot-all-parent/pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>

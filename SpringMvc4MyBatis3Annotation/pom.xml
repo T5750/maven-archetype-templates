@@ -3,7 +3,8 @@
 	<parent>
 		<artifactId>maven-archetype-templates</artifactId>
 		<groupId>com.evangel</groupId>
-		<version>1.0-SNAPSHOT</version>
+		<!--suppress MavenPropertyInParent -->
+		<version>${maven-archetype-templates.version}</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<!--<groupId>com.evangel</groupId>-->
