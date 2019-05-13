@@ -19,6 +19,7 @@
 		<module>Struts2FileUpload</module>
 		<module>Struts2Example</module>
 		<module>struts2-csrf</module>
+		<module>struts2-login-interceptor</module>
 	</modules>
 
 	<properties>
