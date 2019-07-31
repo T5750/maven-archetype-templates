@@ -10,9 +10,6 @@
 - [**Tomcat 7**](http://tomcat.apache.org/)
 > **NOTE**: Can not run in Tomcat 6!
 
-## Project Structure
-![Project Structure](http://img.my.csdn.net/uploads/201704/12/1491961289_2384.png)
-
 ## Quick Process
 * 将源代码导入IDEA中
 * 执行maven-archetype-templates\SpringMvcHibernateJavaBased\sql\usersdb.sql
@@ -34,9 +31,6 @@
 6. Updating User Listing Page
 7. Coding User Form Page
 8. Testing the Application
-
-## Result
-![Result](http://img.my.csdn.net/uploads/201704/12/1491961300_1354.png)
 
 ## Links
 - [Spring 4 and Hibernate 4 Integration Tutorial Part 2: Java-based Configuration](http://www.codejava.net/frameworks/spring/spring-4-and-hibernate-4-integration-tutorial-part-2-java-based-configuration)

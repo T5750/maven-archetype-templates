@@ -1,6 +1,7 @@
 package com.evangel.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +12,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.evangel.model.UserInfo;
 
-/**
- * Created by ZHR on 2016/4/27.
- */
 @Controller
 @RequestMapping(value = "")
 public class IndexController {
@@ -23,10 +21,10 @@ public class IndexController {
 		return mav;
 	}
 
-	@RequestMapping(value = "/doLogin")
+	@RequestMapping(value = "/doLogin", produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public String doLogin(HttpServletRequest HttpServletRequest,
-			String userName, String userPwd) {
+			HttpServletResponse response, String userName, String userPwd) {
 		JSONObject jsonObject = new JSONObject();
 		if ("bill".equals(userName) && "123456".equals(userPwd)) {
 			UserInfo userInfo = new UserInfo();

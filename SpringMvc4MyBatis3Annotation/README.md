@@ -10,12 +10,7 @@
 - [Tomcat 7](http://tomcat.apache.org/)
 - [Jetty 8](https://www.eclipse.org/jetty/previousversions.html)
 
-## Project Structure
-
-![Project Structure](http://img.my.csdn.net/uploads/201704/13/1492071599_7615.png)
-
 ## Quick Process
-
 * 将源代码导入IDEA中
 * 执行maven-archetype-templates\SpringMvc4MyBatis3Annotation\sql\usersdb.sql
 * 部署项目，启动tomcat服务器
@@ -24,10 +19,6 @@
     * 首页点击Login Page进入登录页面
     * 首页点击Home进入欢迎页面
     * 首页点击Logout进行注销
-
-## Result
-
-![Result](http://img.my.csdn.net/uploads/201704/14/1492132405_8083.png)
 
 ## Links
 - [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)

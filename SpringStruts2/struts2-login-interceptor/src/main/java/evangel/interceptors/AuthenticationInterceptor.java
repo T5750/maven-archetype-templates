@@ -47,7 +47,7 @@ public class AuthenticationInterceptor implements Interceptor {
 			if (queryString == null) {
 				queryString = "";
 			}
-			// 拼凑得到登陆之前的地址
+			// 拼凑得到登录之前的地址
 			String realPath = path + "?" + queryString;
 			ActionContext context = actionInvocation.getInvocationContext();
 			// 获取session

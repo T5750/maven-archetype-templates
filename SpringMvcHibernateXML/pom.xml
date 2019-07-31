@@ -17,7 +17,6 @@
     <url>http://maven.apache.org</url>
     <properties>
         <java-version>1.7</java-version>
-        <org.springframework-version>4.0.3.RELEASE</org.springframework-version>
     </properties>
     <dependencies>
         <dependency>
@@ -30,18 +29,18 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${org.springframework-version}</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${org.springframework-version}</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${org.springframework-version}</version>
+            <version>${spring.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -80,7 +79,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.30</version>
+			<version>${mysql.connector.version}</version>
         </dependency>
     </dependencies>
     <build>

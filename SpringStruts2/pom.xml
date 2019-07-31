@@ -23,15 +23,11 @@
 		<module>struts2-login</module>
 	</modules>
 
-	<properties>
-		<org.apache.struts.version>2.3.15.1</org.apache.struts.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
-			<version>${org.apache.struts.version}</version>
+			<version>${struts2.version}</version>
 		</dependency>
 	</dependencies>
 

@@ -7,9 +7,6 @@
 - [Maven 3](http://maven.apache.org/)
 - [Tomcat 7](http://tomcat.apache.org/)
 
-## Project Structure
-![Project Structure](http://img.my.csdn.net/uploads/201704/12/1491982717_9230.png)
-
 ## Quick Process
 * 将源代码导入IDEA中
 * 部署项目，启动tomcat服务器

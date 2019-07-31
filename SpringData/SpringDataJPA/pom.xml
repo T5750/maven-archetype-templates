@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
-			<version>1.11.3.RELEASE</version>
+			<version>1.11.22.RELEASE</version>
 		</dependency>
 
 		<dependency>
@@ -33,7 +33,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.32</version>
+			<version>${mysql.connector.version}</version>
 		</dependency>
 
 		<!-- Hibernate4 -->

@@ -22,7 +22,7 @@ public class LoginAction extends ActionSupport implements SessionAware,
 				&& namePassword.equals(user.getPassword())) {
 			user.setUserName(namePassword);
 			sessionAttributes.put("USER", user);
-			// 获取跳转到登陆界面之前的页面地址，由拦截器提供
+			// 获取跳转到登录界面之前的页面地址，由拦截器提供
 			prePage = (String) sessionAttributes.get("prePage");
 			// 清除session中的数据
 			sessionAttributes.remove("prePage");

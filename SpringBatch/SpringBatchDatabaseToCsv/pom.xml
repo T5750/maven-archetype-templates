@@ -12,9 +12,6 @@
 	<packaging>jar</packaging>
 
 	<artifactId>SpringBatchDatabaseToCsv</artifactId>
-	<properties>
-		<mysql.version>5.1.39</mysql.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -26,7 +23,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.version}</version>
+			<version>${mysql.connector.version}</version>
 		</dependency>
 	</dependencies>
 </project>

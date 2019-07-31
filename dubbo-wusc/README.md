@@ -73,9 +73,6 @@ dubbo-wusc/
     └── src\main\webapp
 ```
 
-## Result
-![Result](http://img.my.csdn.net/uploads/201705/02/1493716965_2731.png)
-
 ## Notes
 > Caused by: java.lang.IllegalStateException: Duplicate spring bean id pmsUserFacade
 

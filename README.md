@@ -131,5 +131,7 @@ maven-archetype-templates/
      ├── [v0.20.2] Struts2ExecAndWait
      ├── [v0.20.3] Struts2FileUpload
      ├── [v0.20.4] Struts2Example
-     └── [v0.20.5] struts2-csrf
+     ├── [v0.20.5] struts2-csrf
+     ├── struts2-login-interceptor
+     └── struts2-login
 ```

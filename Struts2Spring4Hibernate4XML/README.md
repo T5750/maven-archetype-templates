@@ -9,9 +9,6 @@
 - [Tomcat 7](http://tomcat.apache.org/)
 - [Apache Commons DBCP](http://commons.apache.org/proper/commons-dbcp/)
 
-## Project Structure
-![Project Structure](http://img.my.csdn.net/uploads/201704/12/1491985608_4120.png)
-
 ## Quick Process
 * 将源代码导入IDEA中
 * 执行maven-archetype-templates\Struts2Spring4Hibernate4XML\sql\usersdb.sql

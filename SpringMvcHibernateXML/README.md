@@ -7,11 +7,7 @@
 - [Maven 3](http://maven.apache.org/)
 - [Tomcat 6](http://tomcat.apache.org/)
 
-## Project Structure
-![Project Structure](http://img.my.csdn.net/uploads/201704/11/1491874576_1112.png)
-
 ## Quick Process
-
 * 将源代码导入IDEA中
 * 执行maven-archetype-templates\SpringMvcHibernateXML\sql\usersdb.sql
 * 部署项目，启动tomcat服务器
@@ -38,9 +34,6 @@
 5. Coding Controller Classes
 6. Coding View Page
 7. Testing the Application
-
-## Result
-![Result](http://img.my.csdn.net/uploads/201704/11/1491876303_9434.png)
 
 ## Links
 - [Spring 4和Hibernate 4集成教程第1部分：XML配置](http://blog.csdn.net/evangel_z/article/details/69791766)

@@ -5,6 +5,7 @@ target
 .project
 .idea
 *.iml
-logs
 out
 .idea*.zip
+### *.log & *.log.* ###
+*.log*

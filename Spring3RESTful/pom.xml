@@ -12,16 +12,13 @@
 
 	<!--<groupId>com.evangel</groupId>-->
 	<artifactId>Spring3RESTful</artifactId>
-	<properties>
-		<spring.version>3.0.3.RELEASE</spring.version>
-	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-asm -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-asm</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework</groupId>-->
+			<!--<artifactId>spring-asm</artifactId>-->
+			<!--<version>${spring.version}</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>

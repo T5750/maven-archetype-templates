@@ -13,9 +13,6 @@
 
 ![配置之间的关系](http://s1.wailian.download/2017/11/21/dubbo.jpg)
 
-## Project Structure
-![Project Structure](http://img.my.csdn.net/uploads/201704/20/1492672291_4276.png)
-
 ## Quick Process
 * ZooKeeper的配置安装
 * Dubbo-admin配置安装
