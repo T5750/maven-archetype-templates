@@ -22,7 +22,6 @@
 	</modules>
 
 	<properties>
-		<springframework.version>4.3.17.RELEASE</springframework.version>
 		<springbatch.version>3.0.10.RELEASE</springbatch.version>
 		<joda-time.version>2.3</joda-time.version>
 	</properties>
@@ -31,12 +30,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${springframework.version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
-			<version>${springframework.version}</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.batch</groupId>

@@ -54,8 +54,8 @@
 		<!-- timer projects -->
 
 		<!-- frameworks -->
-		<org.springframework.version>3.2.4.RELEASE</org.springframework.version>
-		<org.apache.struts.version>2.3.15.1</org.apache.struts.version>
+		<org.springframework.version>4.3.18.RELEASE</org.springframework.version>
+		<org.apache.struts.version>2.3.35</org.apache.struts.version>
 
 	</properties>
 
@@ -122,7 +122,7 @@
 			<dependency>
 				<groupId>ognl</groupId>
 				<artifactId>ognl</artifactId>
-				<version>3.0.6</version>
+				<version>3.0.21</version>
 			</dependency>
 			<dependency>
 				<groupId>oro</groupId>
@@ -335,11 +335,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>spring-struts</artifactId>
-				<version>${org.springframework.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
 				<version>${org.springframework.version}</version>
 				<scope>test</scope>
@@ -434,7 +429,7 @@
 			<dependency>
 				<groupId>org.freemarker</groupId>
 				<artifactId>freemarker</artifactId>
-				<version>2.3.19</version>
+				<version>2.3.28</version>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
