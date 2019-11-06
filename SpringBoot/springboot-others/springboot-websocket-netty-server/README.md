@@ -4,7 +4,7 @@
 - [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Spring Framework 4.3.8.RELEASE](http://projects.spring.io/spring-framework)
 - [Spring Boot 1.5.3.RELEASE](https://projects.spring.io/spring-boot)
-- [Netty 4.1.12.Final](http://netty.io/downloads.html)
+- [Netty 4.1.x.Final](http://netty.io/downloads.html)
 
 ## From terminal
 Go on the project's root folder, then type:

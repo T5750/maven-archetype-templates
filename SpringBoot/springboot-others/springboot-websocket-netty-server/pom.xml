@@ -14,7 +14,6 @@
 	<artifactId>springboot-websocket-netty-server</artifactId>
 
 	<dependencies>
-		<!-- Netty4.1.12 -->
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
