@@ -1,35 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.gege</groupId>
-		<artifactId>api</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../api</relativePath>
+		<artifactId>SpringMvcDubbo</artifactId>
+		<groupId>com.evangel</groupId>
+		<!--suppress MavenPropertyInParent -->
+		<version>${springMvcDubbo.version}</version>
 	</parent>
+	<modelVersion>4.0.0</modelVersion>
 	<artifactId>consumer</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<version>${consumer.version}</version>
-	<name>consumer</name>
+	<name>SpringMvcDubbo-consumer</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
+			<groupId>com.gege</groupId>
+			<artifactId>api</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>2.5.3</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
-			<version>0.11</version>
 		</dependency>
-		<!-- spring相关 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -78,11 +73,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
 		</dependency>
-		<!--<dependency>-->
-		<!--<groupId>com.gege</groupId>-->
-		<!--<artifactId>provider</artifactId>-->
-		<!--<version>0.0.1-SNAPSHOT</version>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -91,13 +81,10 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.14</version>
 		</dependency>
-
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
-			<version>2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>
@@ -106,14 +93,11 @@
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
-			<version>1.1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
-
-		<!-- 映入JSON -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
@@ -127,12 +111,10 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.9.9</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.9.10.1</version>
 		</dependency>
 	</dependencies>
 	<build>
