@@ -79,5 +79,5 @@ dubbo-wusc/
 * changed pmsUserBiz to pmsUserFacade for actions in edu-web-boss
 
 ## Links
-- [基于Dubbo的分布式系统架构实战](http://www.roncoo.com/course/view/85d6008fe77c4199b0cdd2885eaeee53#boxTwo)
+- [基于Dubbo的分布式系统架构实战](https://www.roncoo.com/view/23)
 - [安装Dubbo注册中心(Zookeeper-3.4.6)](http://www.roncoo.com/article/detail/125953)
