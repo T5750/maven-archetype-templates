@@ -6,6 +6,7 @@
 	<!-- 配置数据源 -->
 	<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<property name="url" value="${db_url}"/>
+		<property name="driverClassName" value="${driverClassName}"/>
 		<property name="username" value="${db_user}"/>
 		<property name="password" value="${db_password}"/>
 		<!-- 初始化连接大小 -->
