@@ -4,7 +4,7 @@
 - [Java 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html)
 - [Spring Framework 4.0.6.RELEASE](http://projects.spring.io/spring-framework)
 - [Spring Batch 3.0.1.RELEASE](https://projects.spring.io/spring-batch/)
-- [Quartz 2.2.1](http://www.quartz-scheduler.org/)
+- [Quartz 2.3.x](http://www.quartz-scheduler.org/)
 
 ## Short & Quick introduction
 ### Prepare the input flat files and corresponding domain object / mapped POJO
