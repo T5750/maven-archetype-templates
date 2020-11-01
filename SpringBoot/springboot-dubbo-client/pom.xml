@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.1.RELEASE</version>
+		<version>1.5.3.RELEASE</version>
 	</parent>
 	<properties>
 		<dubbo-spring-boot>1.0.0</dubbo-spring-boot>
