@@ -47,6 +47,7 @@
 		<freemarker.version>2.3.28</freemarker.version>
 		<log4j2.version>2.13.2</log4j2.version>
 		<maven-archetype-templates.version>1.0-SNAPSHOT</maven-archetype-templates.version>
+		<junit.version>4.13.1</junit.version>
 	</properties>
 
 	<build>
