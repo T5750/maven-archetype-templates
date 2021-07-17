@@ -22,7 +22,7 @@
 	</modules>
 
 	<properties>
-		<springbatch.version>3.0.10.RELEASE</springbatch.version>
+		<springbatch.version>4.0.0.RELEASE</springbatch.version>
 		<joda-time.version>2.3</joda-time.version>
 	</properties>
 
