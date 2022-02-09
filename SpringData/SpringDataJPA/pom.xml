@@ -14,7 +14,7 @@
 	<artifactId>SpringDataJPA</artifactId>
 
 	<properties>
-		<org.hibernate-version>4.3.5.Final</org.hibernate-version>
+		<org.hibernate-version>5.4.24.Final</org.hibernate-version>
 	</properties>
 
 	<dependencies>
