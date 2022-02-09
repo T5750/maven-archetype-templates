@@ -55,7 +55,7 @@
 
 		<!-- frameworks -->
 		<org.springframework.version>4.3.18.RELEASE</org.springframework.version>
-		<org.apache.struts.version>2.3.35</org.apache.struts.version>
+		<org.apache.struts.version>2.5.26</org.apache.struts.version>
 
 	</properties>
 
