@@ -20,7 +20,7 @@
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.18.RELEASE</spring.version>
+		<spring.version>5.3.19</spring.version>
 		<springMvcDubbo.version>0.0.1-SNAPSHOT</springMvcDubbo.version>
 		<api.version>0.0.1-SNAPSHOT</api.version>
 		<provider.version>0.0.1-SNAPSHOT</provider.version>
