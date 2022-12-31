@@ -45,7 +45,7 @@
 		<jackson.databind.version>2.9.10.1</jackson.databind.version>
 		<mysql.connector.version>5.1.40</mysql.connector.version>
 		<freemarker.version>2.3.28</freemarker.version>
-		<log4j2.version>2.13.2</log4j2.version>
+		<log4j2.version>2.17.0</log4j2.version>
 		<maven-archetype-templates.version>1.0-SNAPSHOT</maven-archetype-templates.version>
 		<junit.version>4.13.1</junit.version>
 	</properties>
