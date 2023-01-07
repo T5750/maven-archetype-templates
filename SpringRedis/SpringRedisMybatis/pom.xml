@@ -16,7 +16,7 @@
 
 	<properties>
 		<springframework.version>5.2.7.RELEASE</springframework.version>
-		<httpcomponents.version>4.4-alpha1</httpcomponents.version>
+		<httpcomponents.version>4.5.13</httpcomponents.version>
 		<quartz.version>2.2.1</quartz.version>
 	</properties>
 
