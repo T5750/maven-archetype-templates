@@ -15,7 +15,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<springframework.version>5.2.7.RELEASE</springframework.version>
+		<springframework.version>5.2.23.RELEASE</springframework.version>
 		<httpcomponents.version>4.4-alpha1</httpcomponents.version>
 		<quartz.version>2.2.1</quartz.version>
 	</properties>
